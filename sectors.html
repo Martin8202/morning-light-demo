@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a4b46">
+<title>早安亮點 2026/08/18｜主流族群</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15201e; --paper:#eef1ef; --card:#fff;
+  --teal-deep:#0a4b46; --teal:#12837a; --teal-soft:#e3efed;
+  --gold:#a8823a;
+  --up:#cf2a21; --up-soft:#fbe9e7;
+  --down:#1b8a55; --down-soft:#e6f4ec;
+  --muted:#6d7a77; --line:#d6dedb;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Noto Sans TC",system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;
+  font-size:15px; line-height:1.72;}
+.num{font-family:"Roboto Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)}
+.app{max-width:480px; margin:0 auto; background:var(--paper); padding-bottom:60px}
+
+.mast{background:var(--teal-deep); color:#fff; padding:22px 18px 16px; position:relative}
+.mast::after{content:""; position:absolute; left:0; right:0; bottom:0; height:3px;
+  background:linear-gradient(90deg,var(--gold) 0 26%,rgba(255,255,255,.18) 26%)}
+.mast .brand{font-size:11px; letter-spacing:.2em; color:#9fc9c4}
+.mast h1{font-family:"Noto Serif TC",serif; font-weight:900; font-size:29px; margin:5px 0 3px; letter-spacing:.05em}
+.mast .date{font-size:12px; color:#a9d0cb; letter-spacing:.08em}
+.mast .more{position:absolute; right:16px; top:19px; display:inline-flex; align-items:center; gap:4px;
+  padding:6px 13px; border:1px solid rgba(168,130,58,.6); border-radius:16px;
+  background:rgba(255,255,255,.07); color:var(--gold); font-size:12.5px; letter-spacing:.08em;
+  text-decoration:none; white-space:nowrap}
+.mast .more:active{background:rgba(255,255,255,.18)}
+
+.nav{position:sticky; top:0; z-index:20; background:var(--teal-deep);
+  display:flex; overflow-x:auto; scrollbar-width:none; box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:1 0 auto; text-align:center; padding:11px 12px; font-size:12.5px; color:#bfdcd8;
+  text-decoration:none; white-space:nowrap}
+.nav a b{color:var(--gold); font-family:"Roboto Mono",monospace; font-size:10.5px; margin-right:4px}
+.nav a:active{background:rgba(255,255,255,.08)}
+
+.brief{background:var(--card); border-left:4px solid var(--gold); padding:16px 16px 14px; margin:14px 14px 22px}
+.brief h2{font-family:"Noto Serif TC",serif; font-size:16px; margin:0 0 11px; color:var(--teal-deep); letter-spacing:.06em}
+.brief ul{margin:0; padding:0; list-style:none}
+.brief li{padding-left:19px; position:relative; margin-bottom:9px; font-size:14px}
+.brief li::before{content:""; position:absolute; left:3px; top:10px; width:6px; height:6px; background:var(--teal); transform:rotate(45deg)}
+.brief li:last-child{margin-bottom:0}
+
+section{margin-bottom:24px; scroll-margin-top:48px}
+.shead{display:flex; align-items:baseline; gap:10px; background:var(--teal-deep); color:#fff; padding:11px 14px}
+.shead .idx{font-family:"Roboto Mono",monospace; font-size:11px; font-weight:700; color:var(--gold); letter-spacing:.1em}
+.shead h2{font-family:"Noto Serif TC",serif; font-size:19px; margin:0; letter-spacing:.05em}
+.shead .sub{margin-left:auto; font-size:11px; color:#a9d0cb}
+
+.card{background:var(--card); padding:15px 16px; margin:12px 14px}
+.card h3{font-size:13.5px; margin:0 0 13px; color:var(--teal-deep); letter-spacing:.06em; font-weight:700;
+  display:flex; align-items:center; gap:8px}
+.card h3::before{content:""; width:13px; height:2px; background:var(--gold); flex:none}
+.card h3 em{font-style:normal; margin-left:auto; font-size:10.5px; color:var(--muted); font-weight:400;
+  letter-spacing:0; text-align:right; line-height:1.35; flex:none}
+.note{font-size:12.5px; color:var(--muted); margin:10px 0 0; line-height:1.7}
+
+/* 橫向分歧長條 */
+.hrow{display:grid; grid-template-columns:70px 1fr 46px; align-items:center; gap:8px; margin-bottom:5px}
+.hlbl{font-size:11.5px; color:var(--muted); line-height:1.25}
+.hlbl b{color:var(--ink); font-weight:500}
+.hlbl small{display:block; font-size:10px; font-family:"Roboto Mono",monospace}
+.htrack{position:relative; height:15px; background:#f0f3f2}
+.htrack .z{position:absolute; top:-2px; bottom:-2px; width:1px; background:#9fadaa}
+.htrack i{position:absolute; top:0; bottom:0; display:block}
+.hval{font-size:11.5px; font-weight:700; text-align:right; font-family:"Roboto Mono",monospace}
+
+/* 美股指標股 雙欄格 */
+.usg{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line)}
+.usc{background:var(--card); padding:9px 10px}
+.usc .nm{font-size:12px; font-weight:700; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.usc .pr{display:flex; align-items:baseline; justify-content:space-between; gap:6px;
+  line-height:1.3; margin:1px 0; font-family:"Roboto Mono",monospace; font-variant-numeric:tabular-nums}
+.usc .pr b{font-size:16px; font-weight:700}
+.usc .pr em{font-style:normal; font-size:12.5px; font-weight:700}
+.usc .yr{display:flex; align-items:baseline; justify-content:flex-end; gap:4px;
+  font-size:10.5px; font-family:"Roboto Mono",monospace; font-variant-numeric:tabular-nums; line-height:1.4}
+.usc .yr s{text-decoration:none; color:var(--muted); font-family:"Noto Sans TC",sans-serif}
+
+/* 關鍵數字 整列（加權指數） */
+.statwide{background:var(--card); padding:11px 12px 12px}
+.statwide .lb{font-size:11px; color:var(--muted)}
+.statwide .vlrow{display:flex; align-items:baseline; gap:10px; margin:2px 0 2px; flex-wrap:wrap}
+.statwide .vl{font-size:26px; font-weight:700; font-family:"Roboto Mono",monospace; line-height:1.15}
+.statwide .dl{font-size:14px; font-weight:700; font-family:"Roboto Mono",monospace}
+.stat .vl.blank{color:var(--muted); font-weight:400; font-size:13px}
+
+/* 統計圖卡 */
+.stats{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line)}
+.stat{background:var(--card); padding:11px 12px}
+.stat .lb{font-size:11px; color:var(--muted)}
+.stat .vl{font-size:19px; font-weight:700; line-height:1.25; margin:2px 0 1px; font-family:"Roboto Mono",monospace}
+.stat .nt{font-size:11px; color:var(--muted); line-height:1.4}
+
+/* 緊湊族群卡 */
+.fg{border-top:1px solid var(--line); padding-top:12px; margin-top:12px}
+.fg:first-of-type{border-top:none; padding-top:0; margin-top:0}
+.fghd{margin-bottom:9px}
+.fghd b{font-size:13.5px; color:var(--teal-deep); letter-spacing:.03em}
+.fghd span{display:block; font-size:11.5px; color:var(--muted); line-height:1.55; margin-top:2px}
+.fgrid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; background:var(--line)}
+.fgc{background:var(--card); padding:8px 7px; text-align:center}
+.fgc .nm{font-size:11px; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.fgc .nm b{display:block; font-weight:700; font-size:11.5px; color:var(--ink)}
+.fgc .pr{font-size:15px; font-weight:700; font-family:"Roboto Mono",monospace; line-height:1.35; margin:2px 0 0}
+.fgc .ch{font-size:11px; font-weight:700; font-family:"Roboto Mono",monospace}
+.fgc .vo{font-size:9.5px; color:var(--muted); font-family:"Roboto Mono",monospace; margin-top:1px}
+
+/* 法人排行列（03 段） */
+.rk{display:grid; grid-template-columns:20px 1fr auto; gap:9px; align-items:baseline;
+  padding:9px 0; border-bottom:1px solid var(--line)}
+.rk:last-of-type{border-bottom:none; padding-bottom:0}
+.rk i{font-style:normal; font-family:"Roboto Mono",monospace; font-size:10.5px; color:var(--muted)}
+.rkm b{display:block; font-size:13.5px; font-weight:700; line-height:1.35}
+.rkm span{display:block; font-size:11px; color:var(--muted); line-height:1.5; margin-top:1px}
+.rk em{font-style:normal; font-family:"Roboto Mono",monospace; font-weight:700; font-size:14px}
+
+.kv{border-bottom:1px solid var(--line); padding:10px 0}
+.kv:first-of-type{padding-top:0}
+.kv:last-of-type{border-bottom:none; padding-bottom:0}
+.kv .k{font-size:13.5px; font-weight:700; display:flex; justify-content:space-between; align-items:baseline; gap:10px}
+.kv .k em{font-style:normal; font-family:"Roboto Mono",monospace; font-size:14px}
+.kv .v{font-size:12.5px; color:var(--muted); margin-top:3px}
+
+.pc-col{padding:14px 16px; margin:12px 14px}
+.pc-pos{background:var(--up-soft); border-top:3px solid var(--up)}
+.pc-neg{background:var(--down-soft); border-top:3px solid var(--down)}
+.pc-col h4{margin:0 0 9px; font-size:13px; letter-spacing:.06em}
+.pc-pos h4{color:var(--up)} .pc-neg h4{color:var(--down)}
+.pc-col ol{margin:0; padding-left:19px; font-size:13.5px}
+.pc-col li{margin-bottom:5px} .pc-col li:last-child{margin-bottom:0}
+
+/* 分類總覽與圖例 */
+.ov{border:1px solid var(--line); background:#fbfcfb}
+.ovrow{display:grid; grid-template-columns:1fr auto; align-items:center; gap:10px;
+  padding:10px 12px; border-bottom:1px solid var(--line); border-left:5px solid var(--teal-deep);
+  text-decoration:none; color:inherit}
+.ovrow:active{background:var(--teal-soft)}
+.ovnm{font-size:14px; line-height:1.45; font-weight:700; color:var(--teal-deep)}
+.ovnm small{display:block; font-weight:400; font-size:11.5px; color:var(--muted); margin-top:1px}
+.ovn{font-family:"Roboto Mono",monospace; font-weight:700; font-size:19px; line-height:1}
+.ovn::after{content:" 檔"; font-family:"Noto Sans TC",sans-serif; font-size:11px; font-weight:400; color:var(--muted)}
+.c-1{border-left-color:var(--teal-deep)}
+.c-2{border-left-color:var(--teal)}
+.c-3{border-left-color:var(--gold)}
+.c-4{border-left-color:#b8c2bf}
+.ovsum{display:flex; justify-content:space-between; padding:9px 12px 9px 17px;
+  background:var(--teal-soft); font-size:13px; font-weight:700; color:var(--teal-deep)}
+.lgd{margin-top:14px; padding:12px 14px; background:#f5f7f6; border:1px dashed var(--line)}
+.lgd-t{font-size:12px; font-weight:700; color:var(--teal-deep); margin-bottom:9px; letter-spacing:.06em}
+.lgd-row{display:flex; gap:12px; align-items:flex-start; font-size:12.5px; color:var(--muted); line-height:1.75}
+.lgd-row .meter{flex:none; margin-top:4px}
+
+.meter{display:inline-grid; grid-template-columns:1fr 1fr; gap:2px; width:66px; vertical-align:middle}
+.meter span{height:15px; font-size:9.5px; line-height:15px; text-align:center; color:#fff; background:#c3cbc8}
+.m-buy{background:var(--up)!important} .m-sell{background:var(--down)!important}
+
+details.grp{background:var(--card); margin:12px 14px; border-top:3px solid var(--teal-deep); scroll-margin-top:52px}
+details.t-1{border-top-color:var(--teal-deep)}
+details.t-2{border-top-color:var(--teal)}
+details.t-3{border-top-color:var(--gold)}
+details.t-4{border-top-color:#b8c2bf}
+details.grp>summary{list-style:none; cursor:pointer; padding:13px 16px; position:relative}
+details.grp>summary::-webkit-details-marker{display:none}
+details.grp>summary::after{content:"＋"; position:absolute; right:16px; top:13px; color:var(--gold); font-size:15px; font-weight:700}
+details.grp[open]>summary::after{content:"−"}
+details.grp>summary h3{margin:0 0 3px; font-size:15px; color:var(--teal-deep); padding-right:26px; letter-spacing:.03em}
+details.grp>summary p{margin:0; font-size:12px; color:var(--muted); padding-right:26px}
+details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; color:var(--gold); font-weight:700; display:block; margin-bottom:2px}
+
+.stk{padding:13px 16px; border-top:1px solid var(--line)}
+.stk .id{font-size:15px; font-weight:700; color:var(--teal-deep); display:flex; align-items:baseline; justify-content:space-between; gap:8px}
+.stk .id small{font-weight:400; font-size:11px; color:var(--muted); text-align:right; flex:none}
+.stk .sig{font-size:13.5px; margin-top:6px}
+.tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; align-items:center}
+.tag{font-size:10.5px; padding:2px 7px; background:var(--teal-soft); color:var(--teal-deep)}
+.tag.t1{background:#fbeeda; color:#8a6520}
+.tag.t2{background:var(--teal-soft); color:var(--teal-deep)}
+.tag.t3{background:#e6eae8; color:var(--muted)}
+
+.sumup{margin-top:16px; padding-top:14px; border-top:1px dashed var(--line)}
+.sumup h4{margin:0 0 9px; font-size:12.5px; color:var(--teal-deep); letter-spacing:.06em}
+.sumup ul{margin:0; padding:0; list-style:none}
+.sumup li{position:relative; padding-left:16px; font-size:13px; margin-bottom:8px}
+.sumup li:last-child{margin-bottom:0}
+.sumup li::before{content:""; position:absolute; left:2px; top:9px; width:5px; height:5px; background:var(--gold); transform:rotate(45deg)}
+
+.disc{background:#e2e7e5; padding:16px; margin:20px 14px 0; font-size:11px; color:#4d5a57; line-height:1.7}
+.disc h4{margin:0 0 7px; font-size:12px; color:var(--ink); letter-spacing:.08em}
+.disc p{margin:0 0 7px} .disc p:last-child{margin:0}
+.top{display:block; text-align:center; padding:16px; font-size:12.5px; color:var(--teal); text-decoration:none}
+.subh{padding:11px 16px 2px; font-size:11px; color:var(--gold); font-weight:700;
+  letter-spacing:.1em; border-top:1px solid var(--line); background:#fbfcfb}
+.subh+.stk{border-top:none}
+</style>
+
+</head>
+<body>
+<div class="app">
+<header class="mast" id="top">
+  <a class="more" href="index.html">‹ 返回</a>
+  <div class="brand">中國信託證券 × 中信投顧</div>
+  <h1>早安亮點</h1>
+  <div class="date num">2026 / 08 / 18　週二　·　主流族群</div>
+</header>
+
+
+<!-- ===== 01 主流族群 ===== -->
+<section id="s1">
+  <div class="shead"><span class="idx">01</span><h2>主流族群</h2><span class="sub">週一資金分布</span></div>
+
+  <div class="card">
+    <h3>當沖資金流向　依類股金額<em>占總當沖金額比</em></h3>
+    <div class="hrow"><span class="hlbl"><b>半導體</b><small>1,344 億</small></span><span class="htrack"><i style="left:0;width:100%;background:var(--teal)"></i></span><span class="hval">35%</span></div>
+    <div class="hrow"><span class="hlbl"><b>電子零組件</b><small>1,105 億</small></span><span class="htrack"><i style="left:0;width:82%;background:var(--teal)"></i></span><span class="hval">28%</span></div>
+    <div class="hrow"><span class="hlbl"><b>電腦及週邊設備</b><small>362 億</small></span><span class="htrack"><i style="left:0;width:27%;background:var(--teal)"></i></span><span class="hval">9%</span></div>
+    <div class="hrow"><span class="hlbl"><b>光電</b><small>224 億</small></span><span class="htrack"><i style="left:0;width:17%;background:var(--teal)"></i></span><span class="hval">6%</span></div>
+    <div class="hrow"><span class="hlbl"><b>塑膠類</b><small>181 億</small></span><span class="htrack"><i style="left:0;width:13%;background:var(--teal)"></i></span><span class="hval">5%</span></div>
+  </div>
+
+  <div class="card">
+    <h3>三大主流族群<em>收盤／漲跌／5 日均量</em></h3>
+
+    <div class="fg">
+      <div class="fghd"><b>貨櫃航運</b><span>SCFI 指數連三週上漲，貨櫃航運業者 7 月營收皆出現明顯年增，三檔週一同步收紅。</span></div>
+      <div class="fgrid">
+        <div class="fgc"><div class="nm"><b>長榮</b>2603</div><div class="pr">231.5</div><div class="ch up">+5.7%</div><div class="vo">15,980 張</div></div>
+        <div class="fgc"><div class="nm"><b>陽明</b>2609</div><div class="pr">54.7</div><div class="ch up">+6.0%</div><div class="vo">33,884 張</div></div>
+        <div class="fgc"><div class="nm"><b>萬海</b>2615</div><div class="pr">99.6</div><div class="ch up">+9.9%</div><div class="vo">22,148 張</div></div>
+      </div>
+    </div>
+
+    <div class="fg">
+      <div class="fghd"><b>先進封測設備</b><span>七月營收動能延續，先進封裝與 OSAT 擴產帶動設備需求，三檔成交量能相對輕薄。</span></div>
+      <div class="fgrid">
+        <div class="fgc"><div class="nm"><b>均華</b>6640</div><div class="pr">1,070</div><div class="ch down">−1.4%</div><div class="vo">447 張</div></div>
+        <div class="fgc"><div class="nm"><b>竑騰</b>7751</div><div class="pr">1,480</div><div class="ch up">+2.4%</div><div class="vo">391 張</div></div>
+        <div class="fgc"><div class="nm"><b>弘塑</b>3131</div><div class="pr">2,500</div><div class="ch down">−1.4%</div><div class="vo">647 張</div></div>
+      </div>
+    </div>
+
+    <div class="fg">
+      <div class="fghd"><b>被動元件</b><span>AI 伺服器帶動需求增長，機櫃被動元件產值自 1,000～1,500 美元提升至 2,500～3,500 美元。</span></div>
+      <div class="fgrid">
+        <div class="fgc"><div class="nm"><b>國巨*</b>2327</div><div class="pr">608</div><div class="ch down">−2.3%</div><div class="vo">59,008 張</div></div>
+        <div class="fgc"><div class="nm"><b>華新科</b>2492</div><div class="pr">291.5</div><div class="ch down">−3.6%</div><div class="vo">44,809 張</div></div>
+        <div class="fgc"><div class="nm"><b>禾伸堂</b>3026</div><div class="pr">689</div><div class="ch up">+6.5%</div><div class="vo">15,111 張</div></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="disc">
+  <h4>資料來源與免責聲明</h4>
+  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》、《國際市場晨報》、《主動式 ETF 籌碼追蹤》2026/08/18。所有數據為 2026/08/17（週一）收盤資料。文中排名均指該項排行榜內之名次。</p>
+  <p>本報告係本公司於特定日期就現有資訊所提出，雖已力求正確與完整，但因時間及市場客觀因素改變所造成產業、市場或個股之相關條件改變，本公司將不做預告或更新；且本報告並非依特定投資目的或特定對象之財務狀況所完成，其目的並非針對客戶於買賣證券、選擇權、期貨或其他證券相關商品提供詢價或推介服務，亦非進行交易之要約。</p>
+  <p>本報告所列個股僅為籌碼與技術面資訊之整理，不構成任何買賣建議或獲利保證。個股分組僅依所屬產業類股排列，不代表對個股之評價或未來表現之預期。投資人應自行考量本身之需求、投資風險及承受度，並就投資結果自行負責。非經本公司同意，任何人不得將本報告加以引用或轉載。</p>
+  <p>中國信託證券投資顧問股份有限公司獨立經營管理　·　台北市南港區經貿二路 188 號 5 樓及 18 樓　·　(02) 5569-1988　·　營業執照字號：114 金管投顧新字第 014 號</p>
+</div>
+
+<a class="top" href="#top">↑ 回到頂端</a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# 原始資料與內部檔案 — 不對外公開
+參考來源/
+*.pdf
+*.csv
+*.pptx
+*.PNG
+*.png
+*.jpg
+*.jpeg
+
+# 每日產出的日期版 HTML（只發布 index.html 與 sectors.html）
+早安亮點_*_手機版.html
+證券投資早報_*_手機版.html
+
+# 其他
+*.md
+!README.md
+Thumbs.db
+desktop.ini
