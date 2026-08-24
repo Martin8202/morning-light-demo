@@ -48,14 +48,9 @@ body{margin:0; background:var(--paper); color:var(--ink);
 .brief{background:var(--card); border-left:4px solid var(--gold); padding:16px 16px 14px; margin:14px 14px 22px}
 .brief h2{font-family:"Noto Serif TC",serif; font-size:16px; margin:0 0 11px; color:var(--teal-deep); letter-spacing:.06em}
 .brief ul{margin:0; padding:0; list-style:none}
-.brief>ul>li{padding-left:19px; position:relative; margin-bottom:13px; font-size:14px}
-.brief>ul>li::before{content:""; position:absolute; left:3px; top:10px; width:6px; height:6px; background:var(--teal); transform:rotate(45deg)}
-.brief>ul>li:last-child{margin-bottom:0}
-.brief li ul{margin:5px 0 0; padding:0; list-style:none}
-.brief li ul li{padding-left:13px; position:relative; margin-bottom:5px; font-size:13px;
-  color:#3f4c49; line-height:1.68; overflow-wrap:break-word}
-.brief li ul li::before{content:""; position:absolute; left:0; top:11px; width:6px; height:1.5px; background:#a9b5b2}
-.brief li ul li:last-child{margin-bottom:0}
+.brief li{padding-left:19px; position:relative; margin-bottom:9px; font-size:14px}
+.brief li::before{content:""; position:absolute; left:3px; top:10px; width:6px; height:6px; background:var(--teal); transform:rotate(45deg)}
+.brief li:last-child{margin-bottom:0}
 
 section{margin-bottom:24px; scroll-margin-top:48px}
 .shead{display:flex; align-items:baseline; gap:10px; background:var(--teal-deep); color:#fff; padding:11px 14px;
@@ -235,42 +230,11 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 <div class="brief">
   <h2>今日重點</h2>
   <ul>
-    <li><b>焦點個股：創意、愛普*、一詮</b>
-      <ul>
-        <li>IC 設計服務的創意獲主動式 ETF 00403A 增持 60 張、金額 3.4 億，居主動式 ETF 買進金額第 1，同為「你可能喜歡」名單股，外資七日 4/7 日買超、累積 58.1 億，投信單日買超 5.7 億居投信單日買超金額排行第 7、七日 5/7 日買超累積 22.3 億。</li>
-        <li>記憶體 IC 設計的愛普* 獲 00982A 增持 210 張、金額 1.9 億，外資七日 6/7 日買超、累積 41.6 億，投信由賣轉買、單日買超 2.0 億。</li>
-        <li>導線架的一詮獲 00982A 新增持有 950 張、金額 2.3 億，投信單日買超 1,888 張居投信單日買超張數排行第 5。</li>
-      </ul>
-    </li>
-    <li><b>美股週五收紅、費半逆勢 <b class="down">−0.51%</b>。</b>
-      <ul>
-        <li>美國 8 月綜合 PMI 初值由 54.5 升至 56.0，創 2022 年 4 月以來新高，服務業 PMI 56.8、製造業 53.2。</li>
-        <li>美加貿易談判破裂，美國對約 200 億美元加拿大商品加徵 50% 關稅，加拿大宣布 9 月 8 日起等額反制。</li>
-        <li>10 年期美債殖利率 4.73% 仍處高位，比特幣 <b class="up">+6.66%</b> 至 77,504 美元、金價 4,624.10 美元 <b class="up">+2.39%</b>。</li>
-        <li>道瓊 <b class="up">+0.98%</b>、S&amp;P 500 <b class="up">+0.43%</b>、Nasdaq 100 <b class="up">+0.33%</b>；強勢族群為原材料與醫療保健，弱勢族群為公用事業與能源。</li>
-      </ul>
-    </li>
-    <li><b>台股加權週五收 45,224.29（+290.55 點、<b class="up">+0.65%</b>）。</b>
-      <ul>
-        <li>OTC 單日 <b class="down">−0.7%</b>。</li>
-        <li>上市均線糾結、成交量三連縮。</li>
-        <li>當沖比 44.1%、單日增加 0.7 個百分點。</li>
-      </ul>
-    </li>
-    <li><b>外資買超 283 億、連 2 買，投信買超 21 億、由賣轉買。</b>
-      <ul>
-        <li>外資買超集中於記憶體、金融、航運與 PCB 上下游，賣超偏向矽晶圓、CPO 與被動元件。</li>
-        <li>投信擴大加碼 CPO 相關標的，賣超集中於台光電，買賣超榜約八成與外資對作。</li>
-        <li>融資由連 2 增轉減，單日減少 14 億至 5,469 億。</li>
-        <li>外資期貨淨空單 82,594 口，單日增加 171 口。</li>
-      </ul>
-    </li>
-    <li><b>「你可能喜歡」共 19 檔，以航運與電子供應鏈為主。</b>
-      <ul>
-        <li>交通運輸及航運 4 檔、電腦及週邊設備 3 檔，合計占 <b>37%</b>。</li>
-        <li>其餘 12 檔分屬半導體 2 檔、印刷電路板 2 檔、建材營造 2 檔，以及通信網路、金融、風力發電、製藥、智慧電網、其他等 6 個類股各 1 檔。</li>
-      </ul>
-    </li>
+    <li><b>IC 設計服務、記憶體 IC 設計、導線架為主流類股。</b>IC 設計服務的創意獲主動式 ETF 00403A 增持 60 張、金額 3.4 億，居主動式 ETF 買進金額第 1，同為「你可能喜歡」名單股，外資七日 4/7 日買超、累積 58.1 億，投信單日買超 5.7 億居投信單日買超金額排行第 7、七日 5/7 日買超累積 22.3 億。記憶體 IC 設計的愛普* 獲 00982A 增持 210 張、金額 1.9 億，外資七日 6/7 日買超、累積 41.6 億，投信由賣轉買、單日買超 2.0 億。導線架的一詮獲 00982A 新增持有 950 張、金額 2.3 億，投信單日買超 1,888 張居投信單日買超張數排行第 5。</li>
+    <li><b>美股週五收紅、費半逆勢 <b class="down">−0.51%</b>。</b>美國 8 月綜合 PMI 初值由 54.5 升至 56.0，創 2022 年 4 月以來新高，服務業 PMI 56.8、製造業 53.2；美加貿易談判破裂，美國對約 200 億美元加拿大商品加徵 50% 關稅，加拿大宣布 9 月 8 日起等額反制。10 年期美債殖利率 4.73% 仍處高位，比特幣 <b class="up">+6.66%</b> 至 77,504 美元、金價 4,624.10 美元 <b class="up">+2.39%</b>。道瓊 <b class="up">+0.98%</b>、S&amp;P 500 <b class="up">+0.43%</b>、Nasdaq 100 <b class="up">+0.33%</b>；強勢族群為原材料與醫療保健，弱勢族群為公用事業與能源。</li>
+    <li><b>台股加權週五收 45,224.29（+290.55 點、<b class="up">+0.65%</b>）。</b>OTC 單日 <b class="down">−0.7%</b>，上市均線糾結、成交量三連縮，當沖比 44.1%、單日增加 0.7 個百分點。</li>
+    <li><b>外資買超 283 億、連 2 買，投信買超 21 億、由賣轉買。</b>外資買超集中於記憶體、金融、航運與 PCB 上下游，賣超偏向矽晶圓、CPO 與被動元件；投信擴大加碼 CPO 相關標的，賣超集中於台光電，買賣超榜約八成與外資對作。融資由連 2 增轉減，單日減少 14 億至 5,469 億；外資期貨淨空單 82,594 口，單日增加 171 口。</li>
+    <li><b>「你可能喜歡」共 19 檔，以航運與電子供應鏈為主</b>：交通運輸及航運 4 檔、電腦及週邊設備 3 檔，合計占 <b>37%</b>，其餘 12 檔分屬半導體 2 檔、印刷電路板 2 檔、建材營造 2 檔，以及通信網路、金融、風力發電、製藥、智慧電網、其他等 6 個類股各 1 檔。</li>
   </ul>
 </div>
 <section id="s1">
