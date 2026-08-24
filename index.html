@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a4b46">
-<title>早安亮點 2026/08/21｜手機版</title>
+<title>早安亮點 2026/08/24｜手機版</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -35,11 +35,6 @@ body{margin:0; background:var(--paper); color:var(--ink);
 .mast .brand{font-size:11px; letter-spacing:.2em; color:#9fc9c4}
 .mast h1{font-family:"Noto Serif TC",serif; font-weight:900; font-size:29px; margin:5px 0 3px; letter-spacing:.05em}
 .mast .date{font-size:12px; color:#a9d0cb; letter-spacing:.08em}
-.mast .more{position:absolute; right:16px; top:19px; display:inline-flex; align-items:center; gap:4px;
-  padding:6px 13px; border:1px solid rgba(168,130,58,.6); border-radius:16px;
-  background:rgba(255,255,255,.07); color:var(--gold); font-size:12.5px; letter-spacing:.08em;
-  text-decoration:none; white-space:nowrap}
-.mast .more:active{background:rgba(255,255,255,.18)}
 
 .nav{position:sticky; top:0; z-index:20; background:var(--teal-deep);
   display:flex; overflow-x:auto; scrollbar-width:none; box-shadow:0 2px 8px rgba(0,0,0,.14)}
@@ -53,9 +48,14 @@ body{margin:0; background:var(--paper); color:var(--ink);
 .brief{background:var(--card); border-left:4px solid var(--gold); padding:16px 16px 14px; margin:14px 14px 22px}
 .brief h2{font-family:"Noto Serif TC",serif; font-size:16px; margin:0 0 11px; color:var(--teal-deep); letter-spacing:.06em}
 .brief ul{margin:0; padding:0; list-style:none}
-.brief li{padding-left:19px; position:relative; margin-bottom:9px; font-size:14px}
-.brief li::before{content:""; position:absolute; left:3px; top:10px; width:6px; height:6px; background:var(--teal); transform:rotate(45deg)}
-.brief li:last-child{margin-bottom:0}
+.brief>ul>li{padding-left:19px; position:relative; margin-bottom:13px; font-size:14px}
+.brief>ul>li::before{content:""; position:absolute; left:3px; top:10px; width:6px; height:6px; background:var(--teal); transform:rotate(45deg)}
+.brief>ul>li:last-child{margin-bottom:0}
+.brief li ul{margin:5px 0 0; padding:0; list-style:none}
+.brief li ul li{padding-left:13px; position:relative; margin-bottom:5px; font-size:13px;
+  color:#3f4c49; line-height:1.68; overflow-wrap:break-word}
+.brief li ul li::before{content:""; position:absolute; left:0; top:11px; width:6px; height:1.5px; background:#a9b5b2}
+.brief li ul li:last-child{margin-bottom:0}
 
 section{margin-bottom:24px; scroll-margin-top:48px}
 .shead{display:flex; align-items:baseline; gap:10px; background:var(--teal-deep); color:#fff; padding:11px 14px;
@@ -223,8 +223,7 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 <header class="mast" id="top">
   <div class="brand">中國信託證券 × 中信投顧</div>
   <h1>早安亮點</h1>
-  <div class="date num">2026 / 08 / 21　週五</div>
-  <a class="more" href="sectors.html">更多 ›</a>
+  <div class="date num">2026 / 08 / 24　週一</div>
 </header>
 
 <nav class="nav">
@@ -236,109 +235,140 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 <div class="brief">
   <h2>今日重點</h2>
   <ul>
-    <li><b>製藥、IC 設計服務、光學鏡頭為主流類股</b>，三個類股的對應個股同時為「你可能喜歡」名單股。製藥的保瑞獲主動式 ETF 00982A 新增持有 258 張、金額 1.1 億，外資七日 5/7 日買超，投信由賣轉買、單日買超 2.1 億。IC 設計服務的創意獲 00981A 增持 141 張、00403A 增持 40 張，合計金額 10.2 億，居主動式 ETF 買進金額第 1，投信單日買超 12.2 億居投信單日買超金額排行第 2；光學鏡頭的大立光獲 00982A 增持 9 張、金額 0.5 億，投信七日 7/7 日買超、累積 34.4 億。</li>
-    <li><b>美股三大指數週四收黑、費半逆勢 +0.53%。</b>川普預告對伊朗實施史上最嚴厲經濟制裁，荷姆茲海峽通航僵局延續，WTI 原油 +2.33% 至 87.83 美元；美國財政部擴大長債回購未能壓低殖利率，30 年期公債殖利率回升至 5.25%，沃爾瑪美國同店銷售增速降至六年低點、股價 <b class="down">−9.15%</b>。道瓊 −1.32%、S&amp;P 500 −0.87%、Nasdaq 100 −0.72%；強勢族群為能源與房地產，弱勢族群為日常消費品與非日常生活消費品。</li>
-    <li><b>台股加權週四收 44,933.74（+214.39 點、+0.48%）。</b>OTC 單日 +1.3% 收紅但未站上五日均線，上市下降壓力線與季均線重疊，上市櫃 KD 指標死亡交叉開口續放大，成交量 9,040,608 張。</li>
-    <li><b>外資由賣轉買、買超 73 億，投信賣超 20 億、連 2 賣。</b>外資買超集中於貨櫃航運、記憶體與 PCB，賣超集中於被動元件；投信買超集中於 PCB，賣超集中於記憶體。融資連 2 增，單日增加 2 億至 5,484 億；外資期貨淨空單 82,423 口，單日增加 922 口。</li>
-    <li><b>「你可能喜歡」共 19 檔，以電子與航運供應鏈為主</b>：半導體 4 檔、交通運輸及航運 4 檔，合計占 <b>42%</b>，其餘 11 檔分屬印刷電路板 3 檔、其他 8 檔。</li>
+    <li><b>焦點個股：創意、愛普*、一詮</b>
+      <ul>
+        <li>IC 設計服務的創意獲主動式 ETF 00403A 增持 60 張、金額 3.4 億，居主動式 ETF 買進金額第 1，同為「你可能喜歡」名單股，外資七日 4/7 日買超、累積 58.1 億，投信單日買超 5.7 億居投信單日買超金額排行第 7、七日 5/7 日買超累積 22.3 億。</li>
+        <li>記憶體 IC 設計的愛普* 獲 00982A 增持 210 張、金額 1.9 億，外資七日 6/7 日買超、累積 41.6 億，投信由賣轉買、單日買超 2.0 億。</li>
+        <li>導線架的一詮獲 00982A 新增持有 950 張、金額 2.3 億，投信單日買超 1,888 張居投信單日買超張數排行第 5。</li>
+      </ul>
+    </li>
+    <li><b>美股週五收紅、費半逆勢 <b class="down">−0.51%</b>。</b>
+      <ul>
+        <li>美國 8 月綜合 PMI 初值由 54.5 升至 56.0，創 2022 年 4 月以來新高，服務業 PMI 56.8、製造業 53.2。</li>
+        <li>美加貿易談判破裂，美國對約 200 億美元加拿大商品加徵 50% 關稅，加拿大宣布 9 月 8 日起等額反制。</li>
+        <li>10 年期美債殖利率 4.73% 仍處高位，比特幣 <b class="up">+6.66%</b> 至 77,504 美元、金價 4,624.10 美元 <b class="up">+2.39%</b>。</li>
+        <li>道瓊 <b class="up">+0.98%</b>、S&amp;P 500 <b class="up">+0.43%</b>、Nasdaq 100 <b class="up">+0.33%</b>；強勢族群為原材料與醫療保健，弱勢族群為公用事業與能源。</li>
+      </ul>
+    </li>
+    <li><b>台股加權週五收 45,224.29（+290.55 點、<b class="up">+0.65%</b>）。</b>
+      <ul>
+        <li>OTC 單日 <b class="down">−0.7%</b>。</li>
+        <li>上市均線糾結、成交量三連縮。</li>
+        <li>當沖比 44.1%、單日增加 0.7 個百分點。</li>
+      </ul>
+    </li>
+    <li><b>外資買超 283 億、連 2 買，投信買超 21 億、由賣轉買。</b>
+      <ul>
+        <li>外資買超集中於記憶體、金融、航運與 PCB 上下游，賣超偏向矽晶圓、CPO 與被動元件。</li>
+        <li>投信擴大加碼 CPO 相關標的，賣超集中於台光電，買賣超榜約八成與外資對作。</li>
+        <li>融資由連 2 增轉減，單日減少 14 億至 5,469 億。</li>
+        <li>外資期貨淨空單 82,594 口，單日增加 171 口。</li>
+      </ul>
+    </li>
+    <li><b>「你可能喜歡」共 19 檔，以航運與電子供應鏈為主。</b>
+      <ul>
+        <li>交通運輸及航運 4 檔、電腦及週邊設備 3 檔，合計占 <b>37%</b>。</li>
+        <li>其餘 12 檔分屬半導體 2 檔、印刷電路板 2 檔、建材營造 2 檔，以及通信網路、金融、風力發電、製藥、智慧電網、其他等 6 個類股各 1 檔。</li>
+      </ul>
+    </li>
   </ul>
 </div>
 <section id="s1">
-  <div class="shead"><span class="idx">01</span><h2>國際盤勢</h2><span class="sub">08/20 收盤</span></div>
+  <div class="shead"><span class="idx">01</span><h2>國際盤勢</h2><span class="sub">08/21 收盤</span></div>
   <div class="card">
     <h3>國際市場　單日漲跌<em>單位：%</em></h3>
-    <div class="hrow"><span class="hlbl">韓 <b>KOSPI</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:81.69%;background:var(--up)"></i></span><span class="hval up">+5.89</span></div>
-    <div class="hrow"><span class="hlbl">日 <b>日經225</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:18.86%;background:var(--up)"></i></span><span class="hval up">+1.36</span></div>
-    <div class="hrow"><span class="hlbl">台 <b>OTC</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:18.03%;background:var(--up)"></i></span><span class="hval up">+1.30</span></div>
-    <div class="hrow"><span class="hlbl">印 <b>SENSEX</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:11.37%;background:var(--up)"></i></span><span class="hval up">+0.82</span></div>
-    <div class="hrow"><span class="hlbl">港 <b>恆生</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:11.10%;background:var(--up)"></i></span><span class="hval up">+0.80</span></div>
-    <div class="hrow"><span class="hlbl">美 <b>費半</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:7.35%;background:var(--up)"></i></span><span class="hval up">+0.53</span></div>
-    <div class="hrow"><span class="hlbl">台 <b>上市</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:6.66%;background:var(--up)"></i></span><span class="hval up">+0.48</span></div>
-    <div class="hrow"><span class="hlbl">中 <b>上證</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:3.33%;background:var(--up)"></i></span><span class="hval up">+0.24</span></div>
-    <div class="hrow"><span class="hlbl">英 <b>FTSE 100</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="left:18.31%;width:0.55%;background:var(--up)"></i></span><span class="hval up">+0.04</span></div>
-    <div class="hrow"><span class="hlbl">德 <b>DAX</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="right:81.69%;width:5.83%;background:var(--down)"></i></span><span class="hval down">−0.42</span></div>
-    <div class="hrow"><span class="hlbl">法 <b>CAC 40</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="right:81.69%;width:7.91%;background:var(--down)"></i></span><span class="hval down">−0.57</span></div>
-    <div class="hrow"><span class="hlbl">美 <b>Nasdaq100</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="right:81.69%;width:9.99%;background:var(--down)"></i></span><span class="hval down">−0.72</span></div>
-    <div class="hrow"><span class="hlbl">美 <b>S&amp;P500</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="right:81.69%;width:12.07%;background:var(--down)"></i></span><span class="hval down">−0.87</span></div>
-    <div class="hrow"><span class="hlbl">美 <b>道瓊</b></span><span class="htrack"><span class="z" style="left:18.31%"></span><i style="right:81.69%;width:18.31%;background:var(--down)"></i></span><span class="hval down">−1.32</span></div>
+    <div class="hrow"><span class="hlbl">港 <b>恆生</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:63.35%;background:var(--up)"></i></span><span class="hval up">+1.21</span></div>
+    <div class="hrow"><span class="hlbl">美 <b>道瓊</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:51.31%;background:var(--up)"></i></span><span class="hval up">+0.98</span></div>
+    <div class="hrow"><span class="hlbl">韓 <b>KOSPI</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:46.07%;background:var(--up)"></i></span><span class="hval up">+0.88</span></div>
+    <div class="hrow"><span class="hlbl">台 <b>上市</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:34.03%;background:var(--up)"></i></span><span class="hval up">+0.65</span></div>
+    <div class="hrow"><span class="hlbl">英 <b>FTSE 100</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:33.51%;background:var(--up)"></i></span><span class="hval up">+0.64</span></div>
+    <div class="hrow"><span class="hlbl">德 <b>DAX</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:30.89%;background:var(--up)"></i></span><span class="hval up">+0.59</span></div>
+    <div class="hrow"><span class="hlbl">美 <b>S&amp;P500</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:22.51%;background:var(--up)"></i></span><span class="hval up">+0.43</span></div>
+    <div class="hrow"><span class="hlbl">法 <b>CAC 40</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:19.37%;background:var(--up)"></i></span><span class="hval up">+0.37</span></div>
+    <div class="hrow"><span class="hlbl">美 <b>Nasdaq100</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:17.28%;background:var(--up)"></i></span><span class="hval up">+0.33</span></div>
+    <div class="hrow"><span class="hlbl">中 <b>上證</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="left:36.65%;width:2.09%;background:var(--up)"></i></span><span class="hval up">+0.04</span></div>
+    <div class="hrow"><span class="hlbl">印 <b>SENSEX</b></span><span class="htrack"><span class="z" style="left:36.65%"></span></span><span class="hval flat">0.00</span></div>
+    <div class="hrow"><span class="hlbl">日 <b>日經225</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="right:63.35%;width:15.71%;background:var(--down)"></i></span><span class="hval down">−0.30</span></div>
+    <div class="hrow"><span class="hlbl">美 <b>費半</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="right:63.35%;width:26.70%;background:var(--down)"></i></span><span class="hval down">−0.51</span></div>
+    <div class="hrow"><span class="hlbl">台 <b>OTC</b></span><span class="htrack"><span class="z" style="left:36.65%"></span><i style="right:63.35%;width:36.65%;background:var(--down)"></i></span><span class="hval down">−0.7</span></div>
   </div>
   <div class="card">
     <h3>S&amp;P 500 分類產業　單日漲跌<em>單位：%</em></h3>
-    <div class="hrow"><span class="hlbl">能源</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="left:87.88%;width:12.12%;background:var(--up)"></i></span><span class="hval up">+0.4</span></div>
-    <div class="hrow"><span class="hlbl">原材料</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="left:87.88%;width:3.03%;background:var(--up)"></i></span><span class="hval up">+0.1</span></div>
-    <div class="hrow"><span class="hlbl">房地產</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="left:87.88%;width:3.03%;background:var(--up)"></i></span><span class="hval up">+0.1</span></div>
-    <div class="hrow"><span class="hlbl">通訊服務</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="right:12.12%;width:6.06%;background:var(--down)"></i></span><span class="hval down">−0.2</span></div>
-    <div class="hrow"><span class="hlbl">資訊科技</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="right:12.12%;width:15.15%;background:var(--down)"></i></span><span class="hval down">−0.5</span></div>
-    <div class="hrow"><span class="hlbl">公用事業</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="right:12.12%;width:18.18%;background:var(--down)"></i></span><span class="hval down">−0.6</span></div>
-    <div class="hrow"><span class="hlbl">金融</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="right:12.12%;width:39.39%;background:var(--down)"></i></span><span class="hval down">−1.3</span></div>
-    <div class="hrow"><span class="hlbl">工業</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="right:12.12%;width:39.39%;background:var(--down)"></i></span><span class="hval down">−1.3</span></div>
-    <div class="hrow"><span class="hlbl">醫療保健</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="right:12.12%;width:51.52%;background:var(--down)"></i></span><span class="hval down">−1.7</span></div>
-    <div class="hrow"><span class="hlbl">非日常生活消費品</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="right:12.12%;width:57.58%;background:var(--down)"></i></span><span class="hval down">−1.9</span></div>
-    <div class="hrow"><span class="hlbl">日常消費品</span><span class="htrack"><span class="z" style="left:87.88%"></span><i style="right:12.12%;width:87.88%;background:var(--down)"></i></span><span class="hval down">−2.9</span></div>
+    <div class="hrow"><span class="hlbl">原材料</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="left:55.56%;width:44.44%;background:var(--up)"></i></span><span class="hval up">+2.0</span></div>
+    <div class="hrow"><span class="hlbl">醫療保健</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="left:55.56%;width:28.89%;background:var(--up)"></i></span><span class="hval up">+1.3</span></div>
+    <div class="hrow"><span class="hlbl">通訊服務</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="left:55.56%;width:17.78%;background:var(--up)"></i></span><span class="hval up">+0.8</span></div>
+    <div class="hrow"><span class="hlbl">金融</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="left:55.56%;width:15.56%;background:var(--up)"></i></span><span class="hval up">+0.7</span></div>
+    <div class="hrow"><span class="hlbl">工業</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="left:55.56%;width:11.11%;background:var(--up)"></i></span><span class="hval up">+0.5</span></div>
+    <div class="hrow"><span class="hlbl">日常消費品</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="left:55.56%;width:8.89%;background:var(--up)"></i></span><span class="hval up">+0.4</span></div>
+    <div class="hrow"><span class="hlbl">資訊科技</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="left:55.56%;width:4.44%;background:var(--up)"></i></span><span class="hval up">+0.2</span></div>
+    <div class="hrow"><span class="hlbl">非日常生活消費品</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="left:55.56%;width:4.44%;background:var(--up)"></i></span><span class="hval up">+0.2</span></div>
+    <div class="hrow"><span class="hlbl">房地產</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="right:44.44%;width:4.44%;background:var(--down)"></i></span><span class="hval down">−0.2</span></div>
+    <div class="hrow"><span class="hlbl">能源</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="right:44.44%;width:6.67%;background:var(--down)"></i></span><span class="hval down">−0.3</span></div>
+    <div class="hrow"><span class="hlbl">公用事業</span><span class="htrack"><span class="z" style="left:55.56%"></span><i style="right:44.44%;width:55.56%;background:var(--down)"></i></span><span class="hval down">−2.5</span></div>
   </div>
   <div class="card">
     <h3>重要美股指標股<em>收盤價／日漲跌</em></h3>
     <div class="usg">
-      <div class="usc"><div class="nm">應用材料 AMAT</div><div class="pr"><b>496.2</b><em class="flat">0.0%</em></div><div class="yr"><s>今年</s><span class="up">+93.1%</span></div></div>
-      <div class="usc"><div class="nm">Meta</div><div class="pr"><b>545.8</b><em class="flat">0.0%</em></div><div class="yr"><s>今年</s><span class="down">−17.3%</span></div></div>
-      <div class="usc"><div class="nm">Netflix</div><div class="pr"><b>80.1</b><em class="down">−0.1%</em></div><div class="yr"><s>今年</s><span class="down">−14.5%</span></div></div>
-      <div class="usc"><div class="nm">英偉達 NVDA</div><div class="pr"><b>216.9</b><em class="down">−0.3%</em></div><div class="yr"><s>今年</s><span class="up">+16.3%</span></div></div>
-      <div class="usc"><div class="nm">微軟 MSFT</div><div class="pr"><b>481.2</b><em class="down">−0.7%</em></div><div class="yr"><s>今年</s><span class="down">−0.5%</span></div></div>
-      <div class="usc"><div class="nm">高通 QCOM</div><div class="pr"><b>160.7</b><em class="down">−0.7%</em></div><div class="yr"><s>今年</s><span class="down">−6.0%</span></div></div>
-      <div class="usc"><div class="nm">Alphabet</div><div class="pr"><b>340.7</b><em class="down">−1.2%</em></div><div class="yr"><s>今年</s><span class="up">+8.8%</span></div></div>
-      <div class="usc"><div class="nm">特斯拉 TSLA</div><div class="pr"><b>345.1</b><em class="down">−1.7%</em></div><div class="yr"><s>今年</s><span class="down">−23.3%</span></div></div>
-      <div class="usc"><div class="nm">蘋果 AAPL</div><div class="pr"><b>311.3</b><em class="down">−1.8%</em></div><div class="yr"><s>今年</s><span class="up">+14.5%</span></div></div>
-      <div class="usc"><div class="nm">亞馬遜 AMZN</div><div class="pr"><b>260.1</b><em class="down">−2.2%</em></div><div class="yr"><s>今年</s><span class="up">+12.7%</span></div></div>
+      <div class="usc"><div class="nm">特斯拉 TSLA</div><div class="pr"><b>362.9</b><em class="up">+5.1%</em></div><div class="yr"><s>今年</s><span class="down">−19.3%</span></div></div>
+      <div class="usc"><div class="nm">Alphabet</div><div class="pr"><b>344.8</b><em class="up">+1.2%</em></div><div class="yr"><s>今年</s><span class="up">+10.2%</span></div></div>
+      <div class="usc"><div class="nm">Meta</div><div class="pr"><b>549.9</b><em class="up">+0.8%</em></div><div class="yr"><s>今年</s><span class="down">−16.7%</span></div></div>
+      <div class="usc"><div class="nm">微軟 MSFT</div><div class="pr"><b>483.2</b><em class="up">+0.4%</em></div><div class="yr"><s>今年</s><span class="down">−0.1%</span></div></div>
+      <div class="usc"><div class="nm">高通 QCOM</div><div class="pr"><b>160.8</b><em class="flat">0.0%</em></div><div class="yr"><s>今年</s><span class="down">−6.0%</span></div></div>
+      <div class="usc"><div class="nm">蘋果 AAPL</div><div class="pr"><b>309.4</b><em class="down">−0.6%</em></div><div class="yr"><s>今年</s><span class="up">+13.8%</span></div></div>
+      <div class="usc"><div class="nm">亞馬遜 AMZN</div><div class="pr"><b>258.6</b><em class="down">−0.6%</em></div><div class="yr"><s>今年</s><span class="up">+12.1%</span></div></div>
+      <div class="usc"><div class="nm">Netflix</div><div class="pr"><b>79.6</b><em class="down">−0.7%</em></div><div class="yr"><s>今年</s><span class="down">−15.1%</span></div></div>
+      <div class="usc"><div class="nm">應用材料 AMAT</div><div class="pr"><b>492.3</b><em class="down">−0.8%</em></div><div class="yr"><s>今年</s><span class="up">+91.6%</span></div></div>
+      <div class="usc"><div class="nm">英偉達 NVDA</div><div class="pr"><b>214.7</b><em class="down">−1.0%</em></div><div class="yr"><s>今年</s><span class="up">+15.1%</span></div></div>
     </div>
   </div>
   <div class="card">
     <h3>國際重點新聞</h3>
     <div class="sumup" style="margin-top:0; padding-top:0; border-top:none">
       <ul>
-        <li><b>川普預告對伊朗實施美國史上最嚴厲經濟制裁，美伊對抗由軍事衝突轉向經濟封鎖。</b>川普同時警告持續與伊朗貿易往來的國家可能面臨懲罰措施；伊朗外交部長阿拉格齊強硬回應，並堅稱在美國履行先前協議前不會恢復荷姆茲海峽正常開放。該海峽承載全球約五分之一原油與 LNG 運輸，WTI 原油收 87.83 美元、+2.33%，布蘭特原油 93.78 美元、+2.36%。美國 2 年期公債殖利率 4.19%、10 年期 4.70%、30 年期 5.25%，美元指數 98.90，VIX +7.52%。</li>
-        <li><b>美國財長貝森特力挺長債回購，但 30 年期殖利率快速回升。</b>貝森特表示財政部擁有充足工具穩定債市，不排除將長債回購規模擴大至 40 億美元以上，並認為目前 30 年期美債殖利率未反映美國經濟基本面。擴大回購僅短暫壓低殖利率，市場對財政赤字、通膨與長債供給壓力的疑慮未解除；貝森特並重申維持強勢美元政策。</li>
-        <li><b>美光宣布成立 Micron Research Labs，未來 10 年投入 100 億美元。</b>研究中心設於愛達荷州波伊西，聚焦次世代記憶體、運算架構、先進封裝及未來半導體製造技術，此筆金額獨立於先前宣布的 2,500 億美元美國製造與研發計畫之外。美光 FY2026 資本支出規劃上調至 270 億美元、年增 95.7%，收盤 974.33 美元、+3.97%。</li>
-        <li><b>CoreWeave 與量化交易巨頭 HRT 達成數十億美元多年合作協議。</b>HRT 將透過 CoreWeave 的 AI 雲平台與 NVIDIA Vera Rubin 基礎設施建構下一代交易研究模型，成為首批大規模採用該晶片的客戶之一。Waymo 亦發表自研 Robotaxi ASIC 晶片，算力超過 1,000 TOPS、採用台積電 5 奈米製程。</li>
-        <li><b>沃爾瑪財報優於預期，但美國同店銷售創六年來最低增速。</b>FY2Q27 營收 1,879 億美元、EPS 0.81 美元雙雙優於預期，美國同店銷售（不含燃油）年增 2.6%，藥品價格管制與高油價壓抑消費為主要拖累；第三季財測低於市場預期，收盤 −9.15%。阿里巴巴本季營收年增 9% 至 2,690 億元人民幣，但因 AI 基礎設施投資激增，淨利潤年減 75% 至 105 億元人民幣，AI 相關產品 ARR 達 495 億元人民幣。</li>
+        <li><b>美國 8 月綜合 PMI 初值升至 56.0，創 2022 年 4 月以來新高。</b>服務業 PMI 攀升至 56.8 成為擴張主引擎，製造業 PMI 則降至 53.2，成長動能由製造業轉向服務業。調查顯示第三季美國 GDP 年化增速接近 3%，遠高於第二季的 1.5%；企業新增聘僱速度創今年以來最大增幅，對未來 12 個月的景氣信心升至去年 11 月以來高點。企業投入成本與銷售價格漲幅同步放緩，顯示通膨尚未隨經濟加速而再度升溫。</li>
+        <li><b>美加貿易談判破裂，美國對約 200 億美元加拿大商品加徵 50% 關稅。</b>美方依據《斯穆特-霍利關稅法》第 338 條實施，涵蓋葡萄酒、乳製品、水泥與服飾等產品；加拿大總理卡尼指美方最後提出涉及主權、文化與汽車產業的條款無法接受，並宣布自 9 月 8 日起對美國商品採取等額報復性關稅。此舉將擾亂北美汽車、鋼鋁與木材供應鏈，並提高企業成本與通膨壓力，也增添《美墨加協定》續簽的不確定性。</li>
+        <li><b>記憶體漲價推升 AI 伺服器成本，明年初報價可能調升逾 15%。</b>搭載輝達 Grace Blackwell 與下一代 Vera Rubin 平台的 AI 伺服器，受 DRAM、NAND 與 HBM 價格上漲影響而面臨調價，其中 HBM 溢價已超過 300%，單台 AI 伺服器所需 DRAM 容量約為傳統伺服器的 8 至 10 倍。輝達收 214.72 美元、<b class="down">−0.98%</b>。</li>
+        <li><b>特斯拉、Waymo 與 Uber 獲准在克拉克郡營運 Robotaxi，未來 12 個月合計可部署 7,000 輛。</b>其中特斯拉獲准最多 5,000 輛，並將於 9 月 3 日發表取消方向盤與踏板的專屬車型 Cybercab，收盤 <b class="up">+5.14%</b>。另一方面，阿里巴巴宣布港股上市以來首次配售新股、募資 800 億港元，資金全數投入 AI 基礎設施，目前 AI 相關產品 ARR 已達 495 億元人民幣，港股收 <b class="down">−2.54%</b>。</li>
+        <li><b>博通洽談規模約 700 億至 800 億美元的 AI 基礎設施融資。</b>資金將用於支援 Anthropic 等公司採購晶片與擴建算力，建立在黑石與 Apollo 先前主導的 350 億美元融資之上。Anthropic 同步聘請前 Google TPU 負責人成立自研晶片團隊，並提前鎖定 2027 年約 3.5GW TPU 容量；蘋果則傳出裁撤逾 200 名員工，主要集中於 Vision Pro、Siri 及部分 AI 軟體團隊。</li>
       </ul>
     </div>
   </div>
 </section>
 <section id="s2">
-  <div class="shead"><span class="idx">02</span><h2>台股盤勢</h2><span class="sub">週四收 44,933.74</span></div>
+  <div class="shead"><span class="idx">02</span><h2>台股盤勢</h2><span class="sub">週五收 45,224.29</span></div>
 
   <div class="card">
     <h3>關鍵數字</h3>
     <div class="statwide">
       <div class="lb">加權指數收盤</div>
-      <div class="vlrow"><span class="vl">44,933.74</span><span class="dl up">+214.39 點　+0.48%</span></div>
+      <div class="vlrow"><span class="vl">45,224.29</span><span class="dl up">+290.55 點　+0.65%</span></div>
     </div>
     <div class="stats">
-      <div class="stat"><div class="lb">外資買賣超</div><div class="vl up">+73 億</div><div class="nt">賣轉買</div></div>
-      <div class="stat"><div class="lb">投信買賣超</div><div class="vl down">−20 億</div><div class="nt">連 2 賣</div></div>
-      <div class="stat"><div class="lb">融資金額增減</div><div class="vl up">+2 億</div><div class="nt">餘額 5,484 億，連 2 增</div></div>
-      <div class="stat"><div class="lb">外資期貨未平倉增減</div><div class="vl down">−922 口</div><div class="nt">淨空單 82,423 口</div></div>
+      <div class="stat"><div class="lb">外資買賣超</div><div class="vl up">+283 億</div><div class="nt">連 2 買</div></div>
+      <div class="stat"><div class="lb">投信買賣超</div><div class="vl up">+21 億</div><div class="nt">賣轉買</div></div>
+      <div class="stat"><div class="lb">融資金額增減</div><div class="vl down">−14 億</div><div class="nt">餘額 5,469 億，增轉減</div></div>
+      <div class="stat"><div class="lb">外資期貨未平倉增減</div><div class="vl down">−171 口</div><div class="nt">淨空單 82,594 口</div></div>
     </div>
   </div>
 
   <div class="pc-col pc-pos">
     <h4>台股利多因子</h4>
     <ol>
-      <li>美非農弱預期／市場升息預期遞延</li>
-      <li>美股／台股第二季財報多數優於預期</li>
-      <li>NVIDIA 即將開法說會市場期待利多</li>
-      <li>台股產業產能吃緊報價上揚題材不變</li>
-      <li>台股各均線維持上揚趨勢提供下檔支撐</li>
+      <li>美股與台股產業輪動結構維持健康</li>
+      <li>美國財政部持續且擴大債券回購</li>
+      <li>機器人展／半導體展將接力報到</li>
+      <li>盤勢震盪之際權值股發揮穩盤力量</li>
+      <li>漲跌家數比維持偏多發展</li>
     </ol>
   </div>
   <div class="pc-col pc-neg">
     <h4>台股利空因子</h4>
     <ol>
-      <li>中東談判進程陷入僵局且立場趨於強硬</li>
-      <li>道瓊指數跌破月均線</li>
-      <li>日美債殖利率上行壓力仍大</li>
-      <li>上市櫃 KD 指標死亡交叉開口續放大</li>
-      <li>外資投信個股操作買賣超不同調</li>
+      <li>中東衝突擴大成經濟制裁導致油價續漲</li>
+      <li>長天期美債殖利率維持高檔震盪</li>
+      <li>美股／台股同步陷入量縮整理期</li>
+      <li>量能未延續致使技術指標偏向弱化</li>
+      <li>外資投信買賣超無慣性且不同調加劇震盪</li>
     </ol>
   </div>
 </section>
@@ -346,59 +376,58 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   <div class="shead"><span class="idx">03</span><h2>法人買什麼</h2></div>
   <div class="card">
     <h3>外資、投信、主動 ETF 同步買進</h3>
-      <div class="rk"><i>01</i><div class="rkm"><b>旺矽 6223</b><span>外資七日 3/7 日買超　·　投信單日買超 10.9 億居第 4、七日 4/7 日買超　·　00981A 增持 44 張、00403A 增持 40 張</span></div></div>
-      <div class="rk"><i>02</i><div class="rkm"><b>保瑞 6472</b><span>外資七日 5/7 日買超　·　投信由賣轉買、單日買超 2.1 億　·　00982A 新增持有 258 張　·　你可能喜歡名單</span></div></div>
+      <div class="rk"><i>01</i><div class="rkm"><b>創意 3443</b><span>外資七日 4/7 日買超、累積 58.1 億　·　投信單日買超 5.7 億居第 7、七日 5/7 日買超　·　00403A 增持 60 張　·　你可能喜歡名單</span></div></div>
+      <div class="rk"><i>02</i><div class="rkm"><b>愛普* 6531</b><span>外資七日 6/7 日買超、累積 41.6 億　·　投信由賣轉買、單日買超 2.0 億　·　00982A 增持 210 張</span></div></div>
   </div>
   <div class="gsub">外資買什麼</div>
   <div class="card">
     <h3>外資　七日買超前 5<em>七日累積買超（億元）</em></h3>
-      <div class="rk"><i>01</i><div class="rkm"><b>欣興 3037</b><span>外資 7/7 日買超</span></div><em class="up">+467.8</em></div>
-      <div class="rk"><i>02</i><div class="rkm"><b>聯發科 2454</b><span>外資 4/7 日買超　·　00981A 減持 200 張</span></div><em class="up">+250.8</em></div>
-      <div class="rk"><i>03</i><div class="rkm"><b>南亞科 2408</b><span>外資 4/7 日買超　·　你可能喜歡名單</span></div><em class="up">+238.7</em></div>
-      <div class="rk"><i>04</i><div class="rkm"><b>長榮 2603</b><span>外資 6/7 日買超　·　你可能喜歡名單</span></div><em class="up">+165.7</em></div>
-      <div class="rk"><i>05</i><div class="rkm"><b>奇鋐 3017</b><span>外資 6/7 日買超　·　00982A 減持 38 張</span></div><em class="up">+125.2</em></div>
+      <div class="rk"><i>01</i><div class="rkm"><b>欣興 3037</b><span>外資 7/7 日買超</span></div><em class="up">+470.5</em></div>
+      <div class="rk"><i>02</i><div class="rkm"><b>南亞科 2408</b><span>外資 5/7 日買超　·　你可能喜歡名單</span></div><em class="up">+342.6</em></div>
+      <div class="rk"><i>03</i><div class="rkm"><b>長榮 2603</b><span>外資 7/7 日買超　·　你可能喜歡名單</span></div><em class="up">+190.8</em></div>
+      <div class="rk"><i>04</i><div class="rkm"><b>華邦電 2344</b><span>外資 5/7 日買超</span></div><em class="up">+171.7</em></div>
+      <div class="rk"><i>05</i><div class="rkm"><b>日月光投控 3711</b><span>外資 7/7 日買超</span></div><em class="up">+144.9</em></div>
   </div>
   <div class="card">
     <h3>外資　七日賣超前 5<em>七日累積賣超（億元）</em></h3>
-      <div class="rk"><i>01</i><div class="rkm"><b>國巨* 2327</b><span>外資 6/7 日賣超　·　00982A 減持 236 張</span></div><em class="down">−249.9</em></div>
-      <div class="rk"><i>02</i><div class="rkm"><b>華新科 2492</b><span>外資 5/7 日賣超</span></div><em class="down">−127.2</em></div>
-      <div class="rk"><i>03</i><div class="rkm"><b>金像電 2368</b><span>外資 6/7 日賣超</span></div><em class="down">−112.9</em></div>
-      <div class="rk"><i>04</i><div class="rkm"><b>臻鼎-KY 4958</b><span>外資 4/7 日賣超</span></div><em class="down">−111.3</em></div>
-      <div class="rk"><i>05</i><div class="rkm"><b>南電 8046</b><span>外資 6/7 日賣超</span></div><em class="down">−97.0</em></div>
+      <div class="rk"><i>01</i><div class="rkm"><b>國巨* 2327</b><span>外資 6/7 日賣超</span></div><em class="down">−187.0</em></div>
+      <div class="rk"><i>02</i><div class="rkm"><b>鴻海 2317</b><span>外資 6/7 日賣超</span></div><em class="down">−167.0</em></div>
+      <div class="rk"><i>03</i><div class="rkm"><b>華新科 2492</b><span>外資 5/7 日賣超</span></div><em class="down">−94.5</em></div>
+      <div class="rk"><i>04</i><div class="rkm"><b>嘉澤 3533</b><span>外資 7/7 日賣超</span></div><em class="down">−81.1</em></div>
+      <div class="rk"><i>05</i><div class="rkm"><b>南電 8046</b><span>外資 5/7 日賣超</span></div><em class="down">−80.4</em></div>
   </div>
   <div class="gsub">投信買什麼</div>
   <div class="card">
     <h3>投信　七日買超前 5<em>七日累積買超（億元）</em></h3>
-      <div class="rk"><i>01</i><div class="rkm"><b>南電 8046</b><span>投信 6/7 日買超</span></div><em class="up">+65.1</em></div>
-      <div class="rk"><i>02</i><div class="rkm"><b>金像電 2368</b><span>投信 4/7 日買超</span></div><em class="up">+62.9</em></div>
-      <div class="rk"><i>03</i><div class="rkm"><b>富世達 6805</b><span>投信 7/7 日買超</span></div><em class="up">+52.1</em></div>
-      <div class="rk"><i>04</i><div class="rkm"><b>高力 8996</b><span>投信 7/7 日買超</span></div><em class="up">+48.8</em></div>
-      <div class="rk"><i>05</i><div class="rkm"><b>健策 3653</b><span>投信 5/7 日買超　·　你可能喜歡名單</span></div><em class="up">+45.5</em></div>
+      <div class="rk"><i>01</i><div class="rkm"><b>川湖 2059</b><span>投信 4/7 日買超</span></div><em class="up">+54.6</em></div>
+      <div class="rk"><i>02</i><div class="rkm"><b>南電 8046</b><span>投信 5/7 日買超</span></div><em class="up">+53.1</em></div>
+      <div class="rk"><i>03</i><div class="rkm"><b>健策 3653</b><span>投信 6/7 日買超　·　你可能喜歡名單</span></div><em class="up">+51.2</em></div>
+      <div class="rk"><i>04</i><div class="rkm"><b>高力 8996</b><span>投信 7/7 日買超</span></div><em class="up">+46.9</em></div>
+      <div class="rk"><i>05</i><div class="rkm"><b>聯亞 3081</b><span>投信 5/7 日買超　·　你可能喜歡名單</span></div><em class="up">+46.4</em></div>
   </div>
   <div class="card">
     <h3>投信　七日賣超前 5<em>七日累積賣超（億元）</em></h3>
-      <div class="rk"><i>01</i><div class="rkm"><b>聯發科 2454</b><span>投信 7/7 日賣超　·　00981A 減持 200 張</span></div><em class="down">−249.9</em></div>
-      <div class="rk"><i>02</i><div class="rkm"><b>日月光投控 3711</b><span>投信 7/7 日賣超　·　00982A 減持 57 張</span></div><em class="down">−156.1</em></div>
-      <div class="rk"><i>03</i><div class="rkm"><b>華邦電 2344</b><span>投信 5/7 日賣超　·　00403A 減持 3,000 張</span></div><em class="down">−100.9</em></div>
-      <div class="rk"><i>04</i><div class="rkm"><b>聯電 2303</b><span>投信 6/7 日賣超　·　00403A 減持 10,000 張、00982A 減持 3,824 張</span></div><em class="down">−100.9</em></div>
-      <div class="rk"><i>05</i><div class="rkm"><b>貿聯-KY 3665</b><span>投信 5/7 日賣超　·　00981A 增持 56 張</span></div><em class="down">−45.3</em></div>
+      <div class="rk"><i>01</i><div class="rkm"><b>聯發科 2454</b><span>投信 7/7 日賣超</span></div><em class="down">−250.4</em></div>
+      <div class="rk"><i>02</i><div class="rkm"><b>日月光投控 3711</b><span>投信 7/7 日賣超</span></div><em class="down">−153.3</em></div>
+      <div class="rk"><i>03</i><div class="rkm"><b>聯電 2303</b><span>投信 6/7 日賣超</span></div><em class="down">−94.5</em></div>
+      <div class="rk"><i>04</i><div class="rkm"><b>華邦電 2344</b><span>投信 4/7 日賣超</span></div><em class="down">−80.7</em></div>
+      <div class="rk"><i>05</i><div class="rkm"><b>旺矽 6223</b><span>投信 4/7 日賣超</span></div><em class="down">−42.1</em></div>
   </div>
   <div class="gsub">主動 ETF 買什麼</div>
   <div class="card">
     <h3>主動式 ETF　買進前 5<em>追蹤 00981A、00982A、00403A（億元）</em></h3>
-      <div class="rk"><i>01</i><div class="rkm"><b>創意 3443</b><span>00981A 增持 141 張、00403A 增持 40 張　·　投信七日買超　·　你可能喜歡名單</span></div><em class="up">+10.2</em></div>
-      <div class="rk"><i>02</i><div class="rkm"><b>興勤 2428</b><span>00982A 增持 1,904 張</span></div><em class="up">+5.1</em></div>
-      <div class="rk"><i>03</i><div class="rkm"><b>日電貿 3090</b><span>00982A 增持 2,864 張</span></div><em class="up">+4.9</em></div>
-      <div class="rk"><i>04</i><div class="rkm"><b>旺矽 6223</b><span>00981A 增持 44 張、00403A 增持 40 張　·　投信七日買超</span></div><em class="up">+4.8</em></div>
-      <div class="rk"><i>05</i><div class="rkm"><b>大毅 2478</b><span>00982A 增持 3,767 張</span></div><em class="up">+4.8</em></div>
+      <div class="rk"><i>01</i><div class="rkm"><b>創意 3443</b><span>00403A 增持 60 張　·　外資七日買超、投信七日買超　·　你可能喜歡名單</span></div><em class="up">+3.4</em></div>
+      <div class="rk"><i>02</i><div class="rkm"><b>一詮 2486</b><span>00982A 新增持有 950 張</span></div><em class="up">+2.3</em></div>
+      <div class="rk"><i>03</i><div class="rkm"><b>愛普* 6531</b><span>00982A 增持 210 張　·　外資七日買超、投信七日賣超</span></div><em class="up">+1.9</em></div>
+      <div class="rk"><i>04</i><div class="rkm"><b>台燿 6274</b><span>00403A 增持 120 張　·　外資七日賣超</span></div><em class="up">+1.8</em></div>
+      <div class="rk"><i>05</i><div class="rkm"><b>保瑞 6472</b><span>00982A 增持 258 張　·　你可能喜歡名單</span></div><em class="up">+1.2</em></div>
   </div>
   <div class="card">
     <h3>主動式 ETF　賣出前 5<em>追蹤 00981A、00982A、00403A（億元）</em></h3>
-      <div class="rk"><i>01</i><div class="rkm"><b>聯電 2303</b><span>00403A 減持 10,000 張、00982A 減持 3,824 張　·　外資七日買超、投信七日賣超</span></div><em class="down">−16.0</em></div>
-      <div class="rk"><i>02</i><div class="rkm"><b>聖暉* 5536</b><span>00982A 減持 1,558 張　·　外資七日買超、投信七日賣超</span></div><em class="down">−13.7</em></div>
-      <div class="rk"><i>03</i><div class="rkm"><b>聯發科 2454</b><span>00981A 減持 200 張　·　外資七日買超、投信七日賣超</span></div><em class="down">−7.4</em></div>
-      <div class="rk"><i>04</i><div class="rkm"><b>華邦電 2344</b><span>00403A 減持 3,000 張　·　外資七日買超、投信七日賣超</span></div><em class="down">−5.3</em></div>
-      <div class="rk"><i>05</i><div class="rkm"><b>萬潤 6187</b><span>00981A 減持 350 張　·　外資七日買超、投信七日買超</span></div><em class="down">−4.4</em></div>
+      <div class="rk"><i>01</i><div class="rkm"><b>致茂 2360</b><span>00981A 減持 293 張　·　外資七日買超、投信七日賣超</span></div><em class="down">−6.2</em></div>
+      <div class="rk"><i>02</i><div class="rkm"><b>欣銓 3264</b><span>00982A 減持 795 張</span></div><em class="down">−1.6</em></div>
+      <div class="rk"><i>03</i><div class="rkm"><b>強茂 2481</b><span>00403A 減持 699 張　·　外資七日賣超</span></div><em class="down">−0.9</em></div>
+      <div class="rk"><i>04</i><div class="rkm"><b>金像電 2368</b><span>00981A 減持 43 張　·　外資七日賣超</span></div><em class="down">−0.4</em></div>
   </div>
 </section>
 <section id="s4">
@@ -406,71 +435,43 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   <div class="card">
     <h3>名單速覽</h3>
     <p style="margin:0 0 13px; font-size:13.5px">
-      「你可能喜歡」共 <b>19 檔</b>，以電子與航運供應鏈為主：半導體 4 檔、交通運輸及航運 4 檔，合計占 <b>42%</b>，其餘 11 檔分屬印刷電路板 3 檔、其他 8 檔。
+      「你可能喜歡」共 <b>19 檔</b>，以航運與電子供應鏈為主：交通運輸及航運 4 檔、電腦及週邊設備 3 檔，合計占 <b>37%</b>，其餘 12 檔分屬半導體 2 檔、印刷電路板 2 檔、建材營造 2 檔，以及通信網路、金融、風力發電、製藥、智慧電網、其他等 6 個類股各 1 檔。
     </p>
     <div class="ov">
-      <a class="ovrow c-1" href="#g1"><span class="ovnm">半導體</span><span class="ovn">4</span></a>
-      <a class="ovrow c-2" href="#g2"><span class="ovnm">交通運輸及航運</span><span class="ovn">4</span></a>
-      <a class="ovrow c-3" href="#g3"><span class="ovnm">印刷電路板</span><span class="ovn">3</span></a>
-      <a class="ovrow c-4" href="#g4"><span class="ovnm">其他<small>通信網路 2、電腦及週邊設備 1、風力發電 1、金融 1、製藥 1、紡織 1、建材營造 1</small></span><span class="ovn">8</span></a>
+      <a class="ovrow c-1" href="#g1"><span class="ovnm">交通運輸及航運</span><span class="ovn">4</span></a>
+      <a class="ovrow c-2" href="#g2"><span class="ovnm">電腦及週邊設備</span><span class="ovn">3</span></a>
+      <a class="ovrow c-4" href="#g3"><span class="ovnm">其他<small>半導體 2、印刷電路板 2、建材營造 2、通信網路 1、金融 1、風力發電 1、製藥 1、智慧電網 1、其他 1</small></span><span class="ovn">12</span></a>
       <div class="ovsum"><span>合計</span><span>19 檔</span></div>
     </div>
 
     <div class="sumup">
       <h4>名單特徵</h4>
       <ul>
-        <li><b>南亞科居外資單日買超金額排行第 1。</b>單日買超 26,278 張、135.2 億，七日 4/7 日買超、累積 238.7 億，居外資七日買超排行第 3。</li>
-        <li><b>健策、創意分居投信單日買超金額排行第 1 與第 2。</b>健策單日買超 13.4 億、七日累積 45.5 億；創意單日買超 12.2 億、七日累積 29.4 億。</li>
-        <li><b>貨櫃航運 3 檔全數進入外資單日與七日買超排行。</b>陽明單日買超 54,759 張居外資單日買超張數排行第 1，長榮單日買超 39.9 億居買超金額排行第 3，萬海七日累積 52.9 億。</li>
-        <li><b>創意、保瑞、大立光同時獲主動式 ETF 增持。</b>創意合計 10.2 億，居主動式 ETF 買進金額第 1；保瑞為 00982A 新增持有、金額 1.1 億，大立光 00982A 增持金額 0.5 億。</li>
+        <li><b>南亞科居當沖金額排行第 1、外資單日買超金額排行第 3。</b>單日買超 31.5 億，七日 5/7 日買超、累積 342.6 億，居外資七日買超排行第 2；當沖金額 216.67 億、占其成交量 63.5%。</li>
+        <li><b>聯亞居投信單日買超金額排行第 1。</b>單日買超 14.9 億，七日 5/7 日買超、累積 46.4 億，居投信七日買超排行第 5。</li>
+        <li><b>貨櫃航運 3 檔全數進入外資七日買超排行。</b>長榮 7/7 日買超、累積 190.8 億居第 3，陽明 6/7 日買超、累積 94.4 億居第 8，萬海 6/7 日買超、累積 73.0 億居第 9。</li>
+        <li><b>創意、保瑞同時獲主動式 ETF 增持。</b>創意由 00403A 增持 60 張、金額 3.4 億，居主動式 ETF 買進金額第 1；保瑞由 00982A 增持 258 張、金額 1.2 億。</li>
       </ul>
     </div>
   </div>
   <details class="grp t-1" id="g1" open>
-    <summary><span class="cnt">4 檔</span><h3>半導體</h3><p>涵蓋記憶體、IC 設計服務、散熱均熱片與導線架</p></summary>
-    <div class="stk">
-      <div class="id"><span>南亞科 2408</span><small>記憶體</small></div>
-      <div class="sig"><b>外資單日買超 26,278 張、135.2 億，分居外資單日買超張數排行第 4、買超金額排行第 1；七日 4/7 日買超、累積 238.7 億，居外資七日買超排行第 3</b>。投信七日 6/7 日買超、累積 19.9 億。當沖金額 232.34 億、占其成交量 51.3%，居當沖金額排行第 1；融資單日減少 6,692 張，居融資單日減少排行第 2。收盤 <b class="up">+7.5%</b>，五日均量 81,927 張。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="m-buy">投</span></span><span class="tag t1">外資買超金額第 1</span><span class="tag t1">外資七日買超第 3</span><span class="tag t1">投信七日買超</span><span class="tag t2">當沖金額排行第 1</span><span class="tag t3">記憶體</span></div>
-      </div>
-    </div>
-    <div class="stk">
-      <div class="id"><span>創意 3443</span><small>IC 設計服務</small></div>
-      <div class="sig"><b>投信單日買超 12.2 億，居投信單日買超金額排行第 2；七日 5/7 日買超、累積 29.4 億</b>。<b>主動式 ETF 00981A 增持 141 張、00403A 增持 40 張，合計金額 10.2 億，居主動式 ETF 買進金額第 1</b>。外資單日賣超 19.5 億，居外資單日賣超金額排行第 5；當沖金額 72.36 億、占其成交量 50.3%，居當沖金額排行第 15，收盤 <b class="up">+6.3%</b>，五日均量 2,696 張。
-        <div class="tags"><span class="meter"><span class="m-sell">外</span><span class="m-buy">投</span></span><span class="tag t1">外資單日賣超第 5</span><span class="tag t1">投信單日買超第 2</span><span class="tag t1">ETF 增持第 1</span><span class="tag t2">當沖金額排行第 15</span><span class="tag t3">IC 設計服務</span></div>
-      </div>
-    </div>
-    <div class="stk">
-      <div class="id"><span>健策 3653</span><small>散熱均熱片</small></div>
-      <div class="sig"><b>投信單日買超 13.4 億，居投信單日買超金額排行第 1；七日 5/7 日買超、累積 45.5 億，居投信七日買超排行第 5</b>。屬散熱均熱片與 AI 伺服器導熱供應鏈，五日均量 2,140 張。
-        <div class="tags"><span class="meter"><span class="">外</span><span class="m-buy">投</span></span><span class="tag t1">投信單日買超第 1</span><span class="tag t1">投信七日買超第 5</span><span class="tag t3">散熱均熱片</span></div>
-      </div>
-    </div>
-    <div class="stk">
-      <div class="id"><span>一詮 2486</span><small>導線架</small></div>
-      <div class="sig"><b>外資由買轉賣、單日賣超 0.7 億</b>。當沖張數 10,201 張、較五日均量增加 81%，居當沖張數增幅排行第 5，占股本 42.4%，收盤 <b class="up">+6.8%</b>。
-        <div class="tags"><span class="meter"><span class="m-sell">外</span><span class="">投</span></span><span class="tag t1">外資由買轉賣</span><span class="tag t2">當沖張數增 81%</span><span class="tag t3">導線架</span></div>
-      </div>
-    </div>
-  </details>
-  <details class="grp t-2" id="g2">
-    <summary><span class="cnt">4 檔</span><h3>交通運輸及航運</h3><p>貨櫃航運三檔全數進入外資單日與七日買超排行，另含散裝航運 1 檔</p></summary>
+    <summary><span class="cnt">4 檔</span><h3>交通運輸及航運</h3><p>貨櫃航運三檔全數進入外資七日買超排行，另含散裝航運 1 檔</p></summary>
     <div class="stk">
       <div class="id"><span>陽明 2609</span><small>貨櫃航運</small></div>
-      <div class="sig"><b>外資單日買超 54,759 張、32.7 億，分居外資單日買超張數排行第 1、買超金額排行第 5；七日 5/7 日買超、累積 70.2 億，居外資七日買超排行第 9</b>。當沖張數 63,756 張、較五日均量增加 66%，居當沖張數排行第 5；融券單日增加 884 張，居融券單日增加排行第 5。收盤 <b class="up">+2.2%</b>，五日均量 94,721 張。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="">投</span></span><span class="tag t1">外資買超張數第 1</span><span class="tag t1">外資七日買超第 9</span><span class="tag t2">當沖張數排行第 5</span><span class="tag t2">融券增加</span><span class="tag t3">貨櫃航運</span></div>
-      </div>
-    </div>
-    <div class="stk">
-      <div class="id"><span>長榮 2603</span><small>貨櫃航運</small></div>
-      <div class="sig"><b>外資單日買超 39.9 億，居外資單日買超金額排行第 3；七日 6/7 日買超、累積 165.7 億，居外資七日買超排行第 4</b>。五日均量 26,850 張。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="">投</span></span><span class="tag t1">外資買超金額第 3</span><span class="tag t1">外資七日買超第 4</span><span class="tag t3">貨櫃航運</span></div>
+      <div class="sig"><b>外資單日買超 37,159 張、23.5 億，分居外資單日買超張數排行第 1、買超金額排行第 9；七日 6/7 日買超、累積 94.4 億，居外資七日買超排行第 8</b>。當沖張數 102,814 張居當沖張數排行第 1、占股本 29.4%，較五日均量增加 79%；融資單日增加 3,828 張居融資單日增加排行第 2，融券單日增加 897 張居融券單日增加排行第 2。收盤 <b class="up">+6.1%</b>，五日均量 130,173 張。
+        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="">投</span></span><span class="tag t1">外資買超張數第 1</span><span class="tag t1">外資七日買超第 8</span><span class="tag t2">當沖張數排行第 1</span><span class="tag t2">融資融券同步增加</span><span class="tag t3">貨櫃航運</span></div>
       </div>
     </div>
     <div class="stk">
       <div class="id"><span>萬海 2615</span><small>貨櫃航運</small></div>
-      <div class="sig"><b>外資單日買超 17,723 張、19.4 億，分居外資單日買超張數排行第 10、買超金額排行第 9；七日 5/7 日買超、累積 52.9 億，居外資七日買超排行第 11</b>。當沖張數 40,209 張、較五日均量增加 66%，居當沖張數排行第 12；融券單日增加 525 張，居融券單日增加排行第 8。收盤 <b class="up">+6.6%</b>，五日均量 54,531 張。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="">投</span></span><span class="tag t1">外資買超金額第 9</span><span class="tag t1">外資七日買超第 11</span><span class="tag t2">當沖張數排行第 12</span><span class="tag t2">融券增加</span><span class="tag t3">貨櫃航運</span></div>
+      <div class="sig"><b>外資單日買超 16,239 張，居外資單日買超張數排行第 7；七日 6/7 日買超、累積 73.0 億，居外資七日買超排行第 9</b>。當沖張數 38,536 張居當沖張數排行第 9、占股本 13.7%；融券單日增加 1,541 張，居融券單日增加排行第 1。收盤 <b class="up">+9.7%</b>，五日均量 66,381 張。
+        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="">投</span></span><span class="tag t1">外資買超張數第 7</span><span class="tag t1">外資七日買超第 9</span><span class="tag t2">當沖張數排行第 9</span><span class="tag t2">融券增加第 1</span><span class="tag t3">貨櫃航運</span></div>
+      </div>
+    </div>
+    <div class="stk">
+      <div class="id"><span>長榮 2603</span><small>貨櫃航運</small></div>
+      <div class="sig"><b>外資七日 7/7 日買超、累積 190.8 億，居外資七日買超排行第 3</b>。當沖張數 11,455 張、較五日均量增加 33%，居當沖張數增幅排行第 14、占股本 5.3%。收盤 <b class="up">+2.2%</b>，五日均量 30,810 張。
+        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="">投</span></span><span class="tag t1">外資七日買超第 3</span><span class="tag t2">當沖張數增 33%</span><span class="tag t3">貨櫃航運</span></div>
       </div>
     </div>
     <div class="stk">
@@ -480,75 +481,102 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
       </div>
     </div>
   </details>
-  <details class="grp t-3" id="g3">
-    <summary><span class="cnt">3 檔</span><h3>印刷電路板</h3><p>涵蓋玻纖布、銅箔基板與 PCB 製造，三檔同屬 PCB 上游供應鏈</p></summary>
+  <details class="grp t-2" id="g2">
+    <summary><span class="cnt">3 檔</span><h3>電腦及週邊設備</h3><p>涵蓋記憶體、光學鏡頭與 LED 光電元件</p></summary>
     <div class="stk">
-      <div class="id"><span>富喬 1815</span><small>玻纖布</small></div>
-      <div class="sig"><b>外資單日買超 21,750 張、23.1 億，分居外資單日買超張數排行第 7、買超金額排行第 8；七日 7/7 日買超、累積 37.5 億</b>。<b>投信單日買超 3,335 張，居投信單日買超張數排行第 6</b>。當沖張數 76,844 張居當沖張數排行第 4、占股本 131.2%；融資單日增加 9,058 張，居融資單日增加排行第 1。收盤 <b class="up">+9.2%</b>，五日均量 53,437 張。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="m-buy">投</span></span><span class="tag t1">外資買超張數第 7</span><span class="tag t1">外資七日買超</span><span class="tag t1">投信買超張數第 6</span><span class="tag t2">當沖張數排行第 4</span><span class="tag t3">玻纖布</span></div>
+      <div class="id"><span>南亞科 2408</span><small>記憶體</small></div>
+      <div class="sig"><b>外資單日買超 31.5 億，居外資單日買超金額排行第 3；七日 5/7 日買超、累積 342.6 億，居外資七日買超排行第 2</b>。<b>投信七日 6/7 日買超、累積 20.9 億</b>。當沖金額 216.67 億、占其成交量 63.5%，居當沖金額排行第 1；融資單日減少 3,894 張，居融資單日減少排行第 1。收盤 <b class="up">+2.1%</b>，五日均量 74,084 張。
+        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="m-buy">投</span></span><span class="tag t1">外資買超金額第 3</span><span class="tag t1">外資七日買超第 2</span><span class="tag t1">投信七日買超</span><span class="tag t2">當沖金額排行第 1</span><span class="tag t3">記憶體</span></div>
       </div>
     </div>
     <div class="stk">
-      <div class="id"><span>台光電 2383</span><small>銅箔基板</small></div>
-      <div class="sig"><b>外資單日買超 34.1 億，居外資單日買超金額排行第 4；七日 6/7 日買超、累積 124.7 億，居外資七日買超排行第 6</b>。主動式 ETF 00982A 減持 7 張、金額 0.4 億。當沖金額 63.63 億、占其成交量 42.7%，居當沖金額排行第 18，收盤 <b class="up">+1.8%</b>，五日均量 2,507 張。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="">投</span></span><span class="tag t1">外資買超金額第 4</span><span class="tag t1">外資七日買超第 6</span><span class="tag t1">ETF 減持</span><span class="tag t2">當沖金額排行第 18</span><span class="tag t3">銅箔基板</span></div>
+      <div class="id"><span>大立光 3008</span><small>光學鏡頭</small></div>
+      <div class="sig"><b>投信單日買超 5.3 億，居投信單日買超金額排行第 10；七日 7/7 日買超、累積 30.6 億，居投信七日買超排行第 10</b>。<b>外資單日賣超 19.4 億，居外資單日賣超金額排行第 3</b>，內外資方向相反。當沖金額 97.19 億、占其成交量 50.9%，居當沖金額排行第 6，收盤 <b class="up">+1.7%</b>，五日均量 3,474 張。
+        <div class="tags"><span class="meter"><span class="m-sell">外</span><span class="m-buy">投</span></span><span class="tag t1">外資單日賣超第 3</span><span class="tag t1">投信單日買超第 10</span><span class="tag t1">投信七日買超第 10</span><span class="tag t2">當沖金額排行第 6</span><span class="tag t3">光學鏡頭</span></div>
       </div>
     </div>
     <div class="stk">
-      <div class="id"><span>競國 6108</span><small>印刷電路板</small></div>
-      <div class="sig">屬印刷電路板製造，與台光電、富喬同屬 PCB 供應鏈。
-        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t3">印刷電路板</span></div>
+      <div class="id"><span>聯一光電 3441</span><small>LED 光電元件</small></div>
+      <div class="sig">當沖張數 39,235 張居當沖張數排行第 8、占股本 980.9%，較五日均量增加 149%；當沖金額 39.18 億、占其成交量 80.3%，較五日均量增加 163%，居當沖金額增幅排行第 12。融券單日增加 403 張，居融券單日增加排行第 4。收盤 <b class="up">+10.0%</b>。
+        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t2">當沖張數排行第 8</span><span class="tag t2">當沖金額增 163%</span><span class="tag t3">LED 光電元件</span></div>
       </div>
     </div>
   </details>
-  <details class="grp t-4" id="g4">
-    <summary><span class="cnt">8 檔</span><h3>其他</h3><p>涵蓋通信網路 2 檔、電腦及週邊設備 1 檔、風力發電 1 檔、金融 1 檔、製藥 1 檔、紡織 1 檔、建材營造 1 檔</p></summary>
+  <details class="grp t-4" id="g3">
+    <summary><span class="cnt">12 檔</span><h3>其他</h3><p>涵蓋半導體 2 檔、印刷電路板 2 檔、建材營造 2 檔、通信網路 1 檔、金融 1 檔、風力發電 1 檔、製藥 1 檔、智慧電網 1 檔、其他 1 檔</p></summary>
+    <div class="subh">法人買超</div>
     <div class="stk">
-      <div class="id"><span>大立光 3008</span><small>光學鏡頭</small></div>
-      <div class="sig"><b>投信七日 7/7 日買超、累積 34.4 億，居投信七日買超排行第 8</b>。<b>外資單日賣超 13.5 億，居外資單日賣超金額排行第 10</b>，內外資方向相反。主動式 ETF 00982A 增持 9 張、金額 0.5 億；當沖金額 75.48 億、占其成交量 46.2%，居當沖金額排行第 13，收盤 <b class="down">−0.6%</b>，五日均量 3,154 張。
-        <div class="tags"><span class="meter"><span class="m-sell">外</span><span class="m-buy">投</span></span><span class="tag t1">外資單日賣超第 10</span><span class="tag t1">投信七日買超第 8</span><span class="tag t1">ETF 增持</span><span class="tag t2">當沖金額排行第 13</span><span class="tag t3">光學鏡頭</span></div>
+      <div class="id"><span>創意 3443</span><small>IC 設計服務</small></div>
+      <div class="sig"><b>投信單日買超 5.7 億，居投信單日買超金額排行第 7；七日 5/7 日買超、累積 22.3 億，居投信七日買超排行第 14</b>。<b>外資七日 4/7 日買超、累積 58.1 億，居外資七日買超排行第 11</b>。<b>主動式 ETF 00403A 增持 60 張、金額 3.4 億，居主動式 ETF 買進金額第 1</b>。當沖金額 95.63 億、占其成交量 53.1%，居當沖金額排行第 7，收盤 <b class="down">−0.5%</b>，五日均量 2,797 張。
+        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="m-buy">投</span></span><span class="tag t1">外資七日買超第 11</span><span class="tag t1">投信單日買超第 7</span><span class="tag t1">ETF 增持第 1</span><span class="tag t2">當沖金額排行第 7</span><span class="tag t3">IC 設計服務</span></div>
       </div>
     </div>
     <div class="stk">
       <div class="id"><span>聯亞 3081</span><small>光通訊</small></div>
-      <div class="sig"><b>投信七日 5/7 日買超、累積 36.6 億，居投信七日買超排行第 7</b>。<b>外資七日 5/7 日賣超、累積 34.6 億，居外資七日賣超排行第 18</b>，內外資方向相反。當沖金額 82.73 億、占其成交量 63.7%，居當沖金額排行第 10，收盤 <b class="up">+3.7%</b>，五日均量 3,775 張。
-        <div class="tags"><span class="meter"><span class="m-sell">外</span><span class="m-buy">投</span></span><span class="tag t1">外資七日賣超第 18</span><span class="tag t1">投信七日買超第 7</span><span class="tag t2">當沖金額排行第 10</span><span class="tag t3">光通訊</span></div>
+      <div class="sig"><b>投信單日買超 14.9 億，居投信單日買超金額排行第 1；七日 5/7 日買超、累積 46.4 億，居投信七日買超排行第 5</b>。<b>外資七日 6/7 日賣超、累積 38.1 億，居外資七日賣超排行第 17</b>，內外資方向相反。當沖金額 87.21 億、占其成交量 60.3%，居當沖金額排行第 10，收盤 <b class="up">+5.0%</b>，五日均量 4,499 張。
+        <div class="tags"><span class="meter"><span class="m-sell">外</span><span class="m-buy">投</span></span><span class="tag t1">外資七日賣超第 17</span><span class="tag t1">投信單日買超第 1</span><span class="tag t1">投信七日買超第 5</span><span class="tag t2">當沖金額排行第 10</span><span class="tag t3">光通訊</span></div>
       </div>
     </div>
     <div class="stk">
-      <div class="id"><span>保瑞 6472</span><small>製藥</small></div>
-      <div class="sig"><b>投信由賣轉買、單日買超 2.1 億</b>；外資七日 5/7 日買超。<b>主動式 ETF 00982A 新增持有 258 張、金額 1.1 億</b>。當沖金額 3.43 億、較五日均量增加 189%，居當沖金額增幅排行第 4，收盤 <b class="up">+10.0%</b>，五日均量 1,020 張。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="m-buy">投</span></span><span class="tag t1">外資七日買超</span><span class="tag t1">投信由賣轉買</span><span class="tag t1">ETF 新增持有</span><span class="tag t2">當沖金額增 189%</span><span class="tag t3">製藥</span></div>
+      <div class="id"><span>富喬 1815</span><small>玻纖布</small></div>
+      <div class="sig"><b>外資單日買超 13,888 張，居外資單日買超張數排行第 10；七日 7/7 日買超、累積 51.5 億，居外資七日買超排行第 13</b>。<b>投信單日買超 3,943 張，居投信單日買超張數排行第 2</b>。當沖張數 75,783 張居當沖張數排行第 4、占股本 129.4%，較五日均量增加 34%。收盤 <b class="up">+4.7%</b>，五日均量 76,088 張。
+        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="m-buy">投</span></span><span class="tag t1">外資買超張數第 10</span><span class="tag t1">外資七日買超第 13</span><span class="tag t1">投信買超張數第 2</span><span class="tag t2">當沖張數排行第 4</span><span class="tag t3">玻纖布</span></div>
       </div>
     </div>
     <div class="stk">
-      <div class="id"><span>亞泥 1102</span><small>水泥</small></div>
-      <div class="sig"><b>外資與投信籌碼面同步偏多，股價突破中期整理區間</b>。收 34.7 元，五日均量 15,497 張，市值 1,231 億。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="m-buy">投</span></span><span class="tag t1">外資籌碼偏多</span><span class="tag t1">投信籌碼偏多</span><span class="tag t2">突破中期區間</span><span class="tag t3">水泥</span></div>
+      <div class="id"><span>台表科 6278</span><small>電子組裝與智慧電表</small></div>
+      <div class="sig"><b>投信由賣轉買、單日買超 2,851 張、5.3 億，分居投信單日買超張數排行第 3、買超金額排行第 9</b>。<b>外資由買轉賣、單日賣超 3,780 張、7.1 億，居外資單日賣超張數排行第 10</b>，內外資方向相反。當沖金額 14.86 億、占其成交量 46.2%，較五日均量增加 145%，居當沖金額增幅排行第 15。收盤 <b class="up">+3.9%</b>，五日均量 7,874 張。
+        <div class="tags"><span class="meter"><span class="m-sell">外</span><span class="m-buy">投</span></span><span class="tag t1">外資由買轉賣</span><span class="tag t1">投信由賣轉買</span><span class="tag t1">投信買超張數第 3</span><span class="tag t2">當沖金額增 145%</span><span class="tag t3">電子組裝</span></div>
       </div>
     </div>
     <div class="stk">
-      <div class="id"><span>台灣大 3045</span><small>電信</small></div>
-      <div class="sig"><b>外資七日 5/7 日買超、累積 36.2 億，居外資七日買超排行第 20</b>。五日均量 16,405 張。
-        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="">投</span></span><span class="tag t1">外資七日買超第 20</span><span class="tag t3">電信</span></div>
+      <div class="id"><span>健策 3653</span><small>散熱均熱片</small></div>
+      <div class="sig"><b>投信單日買超 5.6 億，居投信單日買超金額排行第 8；七日 6/7 日買超、累積 51.2 億，居投信七日買超排行第 3</b>。屬散熱均熱片與 AI 伺服器導熱供應鏈，五日均量 2,129 張。
+        <div class="tags"><span class="meter"><span class="">外</span><span class="m-buy">投</span></span><span class="tag t1">投信單日買超第 8</span><span class="tag t1">投信七日買超第 3</span><span class="tag t3">散熱均熱片</span></div>
       </div>
     </div>
     <div class="stk">
       <div class="id"><span>遠東新 1402</span><small>紡織與石化</small></div>
-      <div class="sig"><b>投信單日買超 5,788 張，居投信單日買超張數排行第 1</b>。屬紡織與石化材料供應鏈。
-        <div class="tags"><span class="meter"><span class="">外</span><span class="m-buy">投</span></span><span class="tag t1">投信買超張數第 1</span><span class="tag t3">紡織與石化</span></div>
+      <div class="sig"><b>投信單日買超 11,110 張，居投信單日買超張數排行第 1</b>。<b>外資單日買超 15,091 張，居外資單日買超張數排行第 8</b>。屬紡織與石化材料供應鏈。
+        <div class="tags"><span class="meter"><span class="m-buy">外</span><span class="m-buy">投</span></span><span class="tag t1">外資買超張數第 8</span><span class="tag t1">投信買超張數第 1</span><span class="tag t3">紡織與石化</span></div>
       </div>
     </div>
-    <div class="stk">
-      <div class="id"><span>興富發 2542</span><small>住宅開發</small></div>
-      <div class="sig">屬住宅開發與都市更新供應鏈。
-        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t3">住宅開發</span></div>
-      </div>
-    </div>
+    <div class="subh">當沖熱門</div>
     <div class="stk">
       <div class="id"><span>中再保 2851</span><small>再保險</small></div>
-      <div class="sig">屬再保險業者，為名單中唯一的金融類股。
-        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t3">再保險</span></div>
+      <div class="sig">當沖張數 11,280 張、較五日均量增加 319%，居當沖張數增幅排行第 1、占股本 14.1%；當沖金額 5.22 億、占其成交量 47.3%，較五日均量增加 329%，居當沖金額增幅排行第 5。融資單日增加 1,618 張，居融資單日增加排行第 8。收盤 <b class="up">+6.6%</b>。
+        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t2">當沖張數增幅第 1</span><span class="tag t2">融資增加</span><span class="tag t3">再保險</span></div>
+      </div>
+    </div>
+    <div class="stk">
+      <div class="id"><span>保瑞 6472</span><small>製藥</small></div>
+      <div class="sig"><b>主動式 ETF 00982A 增持 258 張、金額 1.2 億</b>。當沖金額 6.18 億、占其成交量 44.6%，較五日均量增加 180%，居當沖金額增幅排行第 11。收盤 <b class="up">+2.1%</b>。
+        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t1">ETF 增持</span><span class="tag t2">當沖金額增 180%</span><span class="tag t3">製藥</span></div>
+      </div>
+    </div>
+    <div class="subh">其他籌碼動向</div>
+    <div class="stk">
+      <div class="id"><span>興富發 2542</span><small>住宅開發</small></div>
+      <div class="sig"><b>投信由買轉賣、單日賣超 0.1 億</b>。屬住宅開發與都市更新供應鏈，收 48.8 元，五日均量 12,702 張。
+        <div class="tags"><span class="meter"><span class="">外</span><span class="m-sell">投</span></span><span class="tag t1">投信由買轉賣</span><span class="tag t3">住宅開發</span></div>
+      </div>
+    </div>
+    <div class="stk">
+      <div class="id"><span>競國 6108</span><small>印刷電路板</small></div>
+      <div class="sig">屬印刷電路板製造，與富喬同屬 PCB 上游供應鏈。
+        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t3">印刷電路板</span></div>
+      </div>
+    </div>
+    <div class="stk">
+      <div class="id"><span>汎銓 6830</span><small>材料分析檢測</small></div>
+      <div class="sig">屬半導體材料分析與檢測服務業者，客戶涵蓋晶圓代工與封測廠。
+        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t3">材料分析檢測</span></div>
+      </div>
+    </div>
+    <div class="stk">
+      <div class="id"><span>亞泥 1102</span><small>水泥</small></div>
+      <div class="sig">屬水泥與預拌混凝土業者，為名單中唯一的水泥類股。
+        <div class="tags"><span class="meter"><span class="">外</span><span class="">投</span></span><span class="tag t3">水泥</span></div>
       </div>
     </div>
   </details>
@@ -572,7 +600,7 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 </section>
 <div class="disc">
   <h4>資料來源與免責聲明</h4>
-  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》、《國際市場晨報》、《主動式 ETF 籌碼追蹤》2026/08/21。所有數據為 2026/08/20（週四）收盤資料。文中排名均指該項排行榜內之名次。</p>
+  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》、《國際市場晨報》、《主動式 ETF 籌碼追蹤》2026/08/24。所有數據為 2026/08/21（週五）收盤資料。文中排名均指該項排行榜內之名次。</p>
   <p>本報告係本公司於特定日期就現有資訊所提出，雖已力求正確與完整，但因時間及市場客觀因素改變所造成產業、市場或個股之相關條件改變，本公司將不做預告或更新；且本報告並非依特定投資目的或特定對象之財務狀況所完成，其目的並非針對客戶於買賣證券、選擇權、期貨或其他證券相關商品提供詢價或推介服務，亦非進行交易之要約。</p>
   <p>本報告所列個股僅為籌碼與技術面資訊之整理，不構成任何買賣建議或獲利保證。個股分組僅依所屬產業類股排列，不代表對個股之評價或未來表現之預期。投資人應自行考量本身之需求、投資風險及承受度，並就投資結果自行負責。非經本公司同意，任何人不得將本報告加以引用或轉載。</p>
   <p>中國信託證券投資顧問股份有限公司獨立經營管理　·　台北市南港區經貿二路 188 號 5 樓及 18 樓　·　(02) 5569-1988　·　營業執照字號：114 金管投顧新字第 014 號</p>
