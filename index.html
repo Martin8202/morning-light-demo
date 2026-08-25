@@ -87,6 +87,28 @@ section{margin-bottom:24px; scroll-margin-top:48px}
 .htrack{position:relative; height:15px; background:#f0f3f2}
 .htrack .z{position:absolute; top:-2px; bottom:-2px; width:1px; background:#9fadaa}
 .htrack i{position:absolute; top:0; bottom:0; display:block}
+.osg{margin-top:16px}
+.osg:first-of-type{margin-top:0}
+.osgh{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:4px 8px;
+  padding:6px 9px; background:var(--teal-soft); margin-bottom:9px}
+.osgh b{font-size:13.5px; color:var(--teal-deep); letter-spacing:.02em}
+.osgh span{font-size:11px; color:var(--muted)}
+.osg .usg{margin-top:0}
+.usc .nm small{font-size:9.5px; font-weight:400; color:var(--muted);
+  font-family:"Roboto Mono",monospace; margin-left:5px}
+.osgh em{font-style:normal; font-family:"Roboto Mono",monospace; font-weight:700; font-size:12px}
+.osnote{margin:12px 0 0; font-size:11px; line-height:1.7; color:var(--muted)}
+
+.cal{display:grid; gap:9px}
+.calr{display:grid; grid-template-columns:66px 1fr; gap:9px; align-items:start;
+  padding-bottom:9px; border-bottom:1px solid var(--line)}
+.calr:last-child{border-bottom:none; padding-bottom:0}
+.cald{font-family:"Roboto Mono",monospace; font-size:11.5px; font-weight:700; color:var(--teal-deep)}
+.calx{display:grid; grid-template-columns:32px 1fr; gap:7px; font-size:11.5px; line-height:1.6}
+.calx + .calx{margin-top:4px}
+.calx s{text-decoration:none; color:var(--muted); font-size:10px; padding-top:2px}
+.calx span{min-width:0; overflow-wrap:anywhere}
+
 .hval{font-size:11.5px; font-weight:700; text-align:right; font-family:"Roboto Mono",monospace}
 
 /* 美股指標股 雙欄格 */
@@ -233,6 +255,7 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   <a href="#s4"><b>04</b>投信買</a>
   <a href="#s5"><b>05</b>主動ETF買</a>
   <a href="#s6"><b>06</b>你可能喜歡</a>
+  <a href="#s7"><b>07</b>海外股</a>
 </nav>
 <button class="navar navar-l" type="button" aria-label="向左捲動選單">&#8249;</button>
 <button class="navar navar-r" type="button" aria-label="向右捲動選單">&#8250;</button>
@@ -279,21 +302,6 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
     <div class="hrow"><span class="hlbl">工業</span><span class="htrack"><span class="z" style="left:33.33%"></span><i style="right:66.67%;width:18.52%;background:var(--down)"></i></span><span class="hval down">−0.5</span></div>
     <div class="hrow"><span class="hlbl">能源</span><span class="htrack"><span class="z" style="left:33.33%"></span><i style="right:66.67%;width:29.63%;background:var(--down)"></i></span><span class="hval down">−0.8</span></div>
     <div class="hrow"><span class="hlbl">資訊科技</span><span class="htrack"><span class="z" style="left:33.33%"></span><i style="right:66.67%;width:33.33%;background:var(--down)"></i></span><span class="hval down">−0.9</span></div>
-  </div>
-  <div class="card">
-    <h3>重要美股指標股<em>收盤價／日漲跌</em></h3>
-    <div class="usg">
-      <div class="usc"><div class="nm">Meta</div><div class="pr"><b>559.0</b><em class="up">+1.7%</em></div><div class="yr"><s>今年</s><span class="down">−15.3%</span></div></div>
-      <div class="usc"><div class="nm">亞馬遜 AMZN</div><div class="pr"><b>262.1</b><em class="up">+1.3%</em></div><div class="yr"><s>今年</s><span class="up">+13.5%</span></div></div>
-      <div class="usc"><div class="nm">Alphabet</div><div class="pr"><b>348.1</b><em class="up">+0.9%</em></div><div class="yr"><s>今年</s><span class="up">+11.2%</span></div></div>
-      <div class="usc"><div class="nm">微軟 MSFT</div><div class="pr"><b>487.3</b><em class="up">+0.8%</em></div><div class="yr"><s>今年</s><span class="up">+0.8%</span></div></div>
-      <div class="usc"><div class="nm">Netflix</div><div class="pr"><b>80.0</b><em class="up">+0.5%</em></div><div class="yr"><s>今年</s><span class="down">−14.7%</span></div></div>
-      <div class="usc"><div class="nm">蘋果 AAPL</div><div class="pr"><b>310.3</b><em class="up">+0.3%</em></div><div class="yr"><s>今年</s><span class="up">+14.2%</span></div></div>
-      <div class="usc"><div class="nm">高通 QCOM</div><div class="pr"><b>158.5</b><em class="down">−1.4%</em></div><div class="yr"><s>今年</s><span class="down">−7.3%</span></div></div>
-      <div class="usc"><div class="nm">應用材料 AMAT</div><div class="pr"><b>484.2</b><em class="down">−1.7%</em></div><div class="yr"><s>今年</s><span class="up">+88.4%</span></div></div>
-      <div class="usc"><div class="nm">英偉達 NVDA</div><div class="pr"><b>208.5</b><em class="down">−2.9%</em></div><div class="yr"><s>今年</s><span class="up">+11.8%</span></div></div>
-      <div class="usc"><div class="nm">特斯拉 TSLA</div><div class="pr"><b>349.0</b><em class="down">−3.8%</em></div><div class="yr"><s>今年</s><span class="down">−22.4%</span></div></div>
-    </div>
   </div>
   <div class="card">
     <h3>國際重點新聞</h3>
@@ -574,9 +582,92 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
     </div>
   </div>
 </section>
+<section id="s7">
+  <div class="shead"><span class="idx">07</span><h2>海外股</h2><span class="sub">08/24 收盤</span></div>
+
+  <div class="card">
+    <h3>全球族群漲跌幅<em>單位：%</em></h3>
+    <div class="hrow"><span class="hlbl">運輸</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:23.72%;background:var(--up)"></i></span><span class="hval up">+1.71</span></div>
+    <div class="hrow"><span class="hlbl">食品</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:19.41%;background:var(--up)"></i></span><span class="hval up">+1.40</span></div>
+    <div class="hrow"><span class="hlbl">金融</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:15.84%;background:var(--up)"></i></span><span class="hval up">+1.14</span></div>
+    <div class="hrow"><span class="hlbl">奢侈品</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:15.27%;background:var(--up)"></i></span><span class="hval up">+1.10</span></div>
+    <div class="hrow"><span class="hlbl">零售商</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:14.92%;background:var(--up)"></i></span><span class="hval up">+1.08</span></div>
+    <div class="hrow"><span class="hlbl">商社</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:13.38%;background:var(--up)"></i></span><span class="hval up">+0.97</span></div>
+    <div class="hrow"><span class="hlbl">健康醫療</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:7.25%;background:var(--up)"></i></span><span class="hval up">+0.52</span></div>
+    <div class="hrow"><span class="hlbl">成衣</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:2.46%;background:var(--up)"></i></span><span class="hval up">+0.18</span></div>
+    <div class="hrow"><span class="hlbl">軟體</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="left:76.28%;width:0.69%;background:var(--up)"></i></span><span class="hval up">+0.05</span></div>
+    <div class="hrow"><span class="hlbl">串流媒體</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:1.18%;background:var(--down)"></i></span><span class="hval down">−0.08</span></div>
+    <div class="hrow"><span class="hlbl">區塊鏈</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:7.57%;background:var(--down)"></i></span><span class="hval down">−0.55</span></div>
+    <div class="hrow"><span class="hlbl">原物料</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:8.58%;background:var(--down)"></i></span><span class="hval down">−0.62</span></div>
+    <div class="hrow"><span class="hlbl">手機</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:9.46%;background:var(--down)"></i></span><span class="hval down">−0.68</span></div>
+    <div class="hrow"><span class="hlbl">半導體設備</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:10.94%;background:var(--down)"></i></span><span class="hval down">−0.79</span></div>
+    <div class="hrow"><span class="hlbl">網路</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:22.25%;background:var(--down)"></i></span><span class="hval down">−1.61</span></div>
+    <div class="hrow"><span class="hlbl">資安</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:23.29%;background:var(--down)"></i></span><span class="hval down">−1.68</span></div>
+    <div class="hrow"><span class="hlbl">PC</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:28.98%;background:var(--down)"></i></span><span class="hval down">−2.09</span></div>
+    <div class="hrow"><span class="hlbl">車用</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:29.03%;background:var(--down)"></i></span><span class="hval down">−2.10</span></div>
+    <div class="hrow"><span class="hlbl">通訊</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:30.60%;background:var(--down)"></i></span><span class="hval down">−2.21</span></div>
+    <div class="hrow"><span class="hlbl">汽車</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:30.83%;background:var(--down)"></i></span><span class="hval down">−2.23</span></div>
+    <div class="hrow"><span class="hlbl">晶圓代工</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:37.82%;background:var(--down)"></i></span><span class="hval down">−2.73</span></div>
+    <div class="hrow"><span class="hlbl">GPU</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:44.30%;background:var(--down)"></i></span><span class="hval down">−3.20</span></div>
+    <div class="hrow"><span class="hlbl">AI</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:51.72%;background:var(--down)"></i></span><span class="hval down">−3.74</span></div>
+    <div class="hrow"><span class="hlbl">記憶體</span><span class="htrack"><span class="z" style="left:76.28%"></span><i style="right:23.72%;width:76.28%;background:var(--down)"></i></span><span class="hval down">−5.51</span></div>
+  </div>
+
+  <div class="card">
+    <h3>全球強勢族群<em>各族群僅列 2 檔強勢指標股</em></h3>
+    <div class="osg">
+      <div class="osgh"><b>運輸</b><span>族群平均 <em class="up">+1.71%</em>　·　族群股 3 檔</span></div>
+      <div class="usg">
+        <div class="usc"><div class="nm">馬士基<small>DKK</small></div><div class="pr"><b>22,430.0</b><em class="up">+3.75%</em></div><div class="yr"><s>今年</s><span class="up">+53.21%</span></div></div>
+        <div class="usc"><div class="nm">FedEx<small>USD</small></div><div class="pr"><b>334.1</b><em class="up">+2.76%</em></div><div class="yr"><s>今年</s><span class="up">+43.61%</span></div></div>
+      </div>
+    </div>
+    <div class="osg">
+      <div class="osgh"><b>食品</b><span>族群平均 <em class="up">+1.40%</em>　·　族群股 5 檔</span></div>
+      <div class="usg">
+        <div class="usc"><div class="nm">通用磨坊<small>USD</small></div><div class="pr"><b>40.9</b><em class="up">+2.38%</em></div><div class="yr"><s>今年</s><span class="down">−12.00%</span></div></div>
+        <div class="usc"><div class="nm">聯合利華<small>USD</small></div><div class="pr"><b>65.3</b><em class="up">+1.84%</em></div><div class="yr"><s>今年</s><span class="down">−0.12%</span></div></div>
+      </div>
+    </div>
+    <div class="osg">
+      <div class="osgh"><b>金融</b><span>族群平均 <em class="up">+1.14%</em>　·　族群股 7 檔</span></div>
+      <div class="usg">
+        <div class="usc"><div class="nm">Visa<small>USD</small></div><div class="pr"><b>382.4</b><em class="up">+3.06%</em></div><div class="yr"><s>今年</s><span class="up">+9.04%</span></div></div>
+        <div class="usc"><div class="nm">波克夏<small>USD</small></div><div class="pr"><b>504.3</b><em class="up">+1.71%</em></div><div class="yr"><s>今年</s><span class="up">+0.33%</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>重要美股指標股<em>收盤價／日漲跌</em></h3>
+    <div class="usg">
+      <div class="usc"><div class="nm">Meta</div><div class="pr"><b>559.0</b><em class="up">+1.7%</em></div><div class="yr"><s>今年</s><span class="down">−15.3%</span></div></div>
+      <div class="usc"><div class="nm">亞馬遜 AMZN</div><div class="pr"><b>262.1</b><em class="up">+1.3%</em></div><div class="yr"><s>今年</s><span class="up">+13.5%</span></div></div>
+      <div class="usc"><div class="nm">Alphabet</div><div class="pr"><b>348.1</b><em class="up">+0.9%</em></div><div class="yr"><s>今年</s><span class="up">+11.2%</span></div></div>
+      <div class="usc"><div class="nm">微軟 MSFT</div><div class="pr"><b>487.3</b><em class="up">+0.8%</em></div><div class="yr"><s>今年</s><span class="up">+0.8%</span></div></div>
+      <div class="usc"><div class="nm">Netflix</div><div class="pr"><b>80.0</b><em class="up">+0.5%</em></div><div class="yr"><s>今年</s><span class="down">−14.7%</span></div></div>
+      <div class="usc"><div class="nm">蘋果 AAPL</div><div class="pr"><b>310.3</b><em class="up">+0.3%</em></div><div class="yr"><s>今年</s><span class="up">+14.2%</span></div></div>
+      <div class="usc"><div class="nm">高通 QCOM</div><div class="pr"><b>158.5</b><em class="down">−1.4%</em></div><div class="yr"><s>今年</s><span class="down">−7.3%</span></div></div>
+      <div class="usc"><div class="nm">應用材料 AMAT</div><div class="pr"><b>484.2</b><em class="down">−1.7%</em></div><div class="yr"><s>今年</s><span class="up">+88.4%</span></div></div>
+      <div class="usc"><div class="nm">英偉達 NVDA</div><div class="pr"><b>208.5</b><em class="down">−2.9%</em></div><div class="yr"><s>今年</s><span class="up">+11.8%</span></div></div>
+      <div class="usc"><div class="nm">特斯拉 TSLA</div><div class="pr"><b>349.0</b><em class="down">−3.8%</em></div><div class="yr"><s>今年</s><span class="down">−22.4%</span></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>本週海外行事曆</h3>
+    <div class="cal">
+      <div class="calr"><div class="cald">08/25　二</div><div class="calc"><div class="calx"><s>數據</s><span>美諮商局消費者信心</span></div><div class="calx"><s>財報</s><span>INTU（Intuit）</span></div></div></div>
+      <div class="calr"><div class="cald">08/26　三</div><div class="calc"><div class="calx"><s>數據</s><span>美 GDP、美 PCE 物價指數</span></div><div class="calx"><s>財報</s><span>NVDA（輝達）、SNPS（新思科技）、A、ULTA</span></div></div></div>
+      <div class="calr"><div class="cald">08/27　四</div><div class="calc"><div class="calx"><s>數據</s><span>美初領失業救濟金人數</span></div><div class="calx"><s>財報</s><span>CRWD（CrowdStrike）、BBY、HPQ、WSM、SJM、DG、VEEV</span></div></div></div>
+      <div class="calr"><div class="cald">08/28　五</div><div class="calc"><div class="calx"><s>數據</s><span>美密大消費者信心、歐元區消費者信心、日東京 CPI</span></div><div class="calx"><s>財報</s><span>MRVL（Marvell）、ADSK、BF/B、HRL</span></div></div></div>
+    </div>
+  </div>
+
+</section>
 <div class="disc">
   <h4>資料來源與免責聲明</h4>
-  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》、《國際市場晨報》、《主動式 ETF 籌碼追蹤》2026/08/25。所有數據為 2026/08/24（週一）收盤資料。文中排名均指該項排行榜內之名次。</p>
+  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》、《國際市場晨報》、《主動式 ETF 籌碼追蹤》2026/08/25。所有數據為 2026/08/24（週一）收盤資料。文中排名均指該項排行榜內之名次。海外股段的族群與成分股歸屬依《國際市場晨報》國際重要公司價格追蹤表，共 24 個族群、116 檔；族群平均為該族群全部成分股日漲跌幅的算術平均，未做市值加權，成分股檔數最少者為 2 檔。海外個股收盤價與幣別照抄來源表，未換算為單一幣別；財報行事曆以美股代號表示，部分公司為預估日期。</p>
   <p>本報告係本公司於特定日期就現有資訊所提出，雖已力求正確與完整，但因時間及市場客觀因素改變所造成產業、市場或個股之相關條件改變，本公司將不做預告或更新；且本報告並非依特定投資目的或特定對象之財務狀況所完成，其目的並非針對客戶於買賣證券、選擇權、期貨或其他證券相關商品提供詢價或推介服務，亦非進行交易之要約。</p>
   <p>本報告所列個股僅為籌碼與技術面資訊之整理，不構成任何買賣建議或獲利保證。個股分組僅依所屬產業類股排列，不代表對個股之評價或未來表現之預期。投資人應自行考量本身之需求、投資風險及承受度，並就投資結果自行負責。非經本公司同意，任何人不得將本報告加以引用或轉載。</p>
   <p>中國信託證券投資顧問股份有限公司獨立經營管理　·　台北市南港區經貿二路 188 號 5 樓及 18 樓　·　(02) 5569-1988　·　營業執照字號：114 金管投顧新字第 014 號</p>
