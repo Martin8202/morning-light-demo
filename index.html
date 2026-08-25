@@ -36,16 +36,26 @@ body{margin:0; background:var(--paper); color:var(--ink);
 .mast h1{font-family:"Noto Serif TC",serif; font-weight:900; font-size:29px; margin:5px 0 3px; letter-spacing:.05em}
 .mast .date{font-size:12px; color:#a9d0cb; letter-spacing:.08em}
 
-.nav{position:sticky; top:0; z-index:20; background:var(--teal-deep);
-  display:flex; overflow-x:auto; scrollbar-width:none; box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.navwrap{position:sticky; top:0; z-index:20; background:var(--teal-deep);
+  box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.nav{display:flex; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;
+  -webkit-overflow-scrolling:touch; scroll-behavior:smooth; scroll-padding:0 34px}
 .nav::-webkit-scrollbar{display:none}
-.nav a{flex:1 1 0; min-width:0; text-align:center; padding:11px 3px; font-size:11px; color:#bfdcd8;
+.nav a{flex:0 0 auto; text-align:center; padding:11px 14px; font-size:12px; color:#bfdcd8;
   text-decoration:none; white-space:nowrap}
-@media (max-width:479px){.nav a b{display:none}}
-@media (max-width:379px){.nav a{font-size:10px; padding:11px 2px}}
-@media (max-width:339px){.nav a{font-size:9px; padding:10px 1px}}
 .nav a b{color:var(--gold); font-family:"Roboto Mono",monospace; font-size:10.5px; margin-right:4px}
 .nav a:active{background:rgba(255,255,255,.08)}
+
+.navar{position:absolute; top:0; bottom:0; width:34px; border:0; padding:0; cursor:pointer;
+  display:none; align-items:center; color:var(--gold); font-size:19px; line-height:1;
+  font-family:"Roboto Mono",monospace; -webkit-tap-highlight-color:transparent}
+.navar-l{left:0; justify-content:flex-start; padding-left:6px;
+  background:linear-gradient(to right, var(--teal-deep) 55%, rgba(10,75,70,0))}
+.navar-r{right:0; justify-content:flex-end; padding-right:6px;
+  background:linear-gradient(to left, var(--teal-deep) 55%, rgba(10,75,70,0))}
+.navwrap.can-l .navar-l{display:flex}
+.navwrap.can-r .navar-r{display:flex}
+.navar:active{color:#fff}
 
 .brief{background:var(--card); border-left:4px solid var(--gold); padding:16px 16px 14px; margin:14px 14px 22px}
 .brief h2{font-family:"Noto Serif TC",serif; font-size:16px; margin:0 0 11px; color:var(--teal-deep); letter-spacing:.06em}
@@ -215,7 +225,8 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   <div class="date num">2026 / 08 / 25　週二</div>
 </header>
 
-<nav class="nav">
+<div class="navwrap" id="navwrap">
+<nav class="nav" id="navtrack">
   <a href="#s1"><b>01</b>國際</a>
   <a href="#s2"><b>02</b>台股</a>
   <a href="#s3"><b>03</b>外資買</a>
@@ -223,6 +234,9 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   <a href="#s5"><b>05</b>主動ETF買</a>
   <a href="#s6"><b>06</b>你可能喜歡</a>
 </nav>
+<button class="navar navar-l" type="button" aria-label="向左捲動選單">&#8249;</button>
+<button class="navar navar-r" type="button" aria-label="向右捲動選單">&#8250;</button>
+</div>
 <div class="brief">
   <h2>今日重點</h2>
   <ul>
@@ -573,6 +587,29 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 </div>
 
 <script>
+(function(){
+  var wrap = document.getElementById('navwrap');
+  var track = document.getElementById('navtrack');
+  if(!wrap || !track) return;
+  function update(){
+    var max = track.scrollWidth - track.clientWidth;
+    wrap.classList.toggle('can-l', track.scrollLeft > 1);
+    wrap.classList.toggle('can-r', track.scrollLeft < max - 1);
+  }
+  track.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  wrap.querySelectorAll('.navar').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var step = Math.max(track.clientWidth * 0.7, 120);
+      track.scrollBy({left: btn.classList.contains('navar-l') ? -step : step, behavior:'smooth'});
+    });
+  });
+  update();
+  window.addEventListener('load', update);
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(update); }
+  setTimeout(update, 300);
+})();
+
 document.querySelectorAll('.ov a.ovrow, .nav a').forEach(function(a){
   a.addEventListener('click', function(e){
     var id = a.getAttribute('href');
