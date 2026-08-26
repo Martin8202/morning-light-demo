@@ -35,6 +35,11 @@ body{margin:0; background:var(--paper); color:var(--ink);
 .mast .brand{font-size:11px; letter-spacing:.2em; color:#9fc9c4}
 .mast h1{font-family:"Noto Serif TC",serif; font-weight:900; font-size:29px; margin:5px 0 3px; letter-spacing:.05em}
 .mast .date{font-size:12px; color:#a9d0cb; letter-spacing:.08em}
+.mast .more{position:absolute; right:16px; top:19px; display:inline-flex; align-items:center; gap:4px;
+  padding:6px 13px; border:1px solid rgba(168,130,58,.6); border-radius:16px;
+  background:rgba(255,255,255,.07); color:var(--gold); font-size:12.5px; letter-spacing:.08em;
+  text-decoration:none; white-space:nowrap}
+.mast .more:active{background:rgba(255,255,255,.18)}
 
 .navwrap{position:sticky; top:0; z-index:20; background:var(--teal-deep);
   box-shadow:0 2px 8px rgba(0,0,0,.14)}
@@ -245,6 +250,7 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   <div class="brand">中國信託證券 × 中信投顧</div>
   <h1>早安亮點</h1>
   <div class="date num">2026 / 08 / 25　週二</div>
+  <a class="more" href="sectors.html">更多 ›</a>
 </header>
 
 <div class="navwrap" id="navwrap">
