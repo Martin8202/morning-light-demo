@@ -149,8 +149,9 @@ section{margin-bottom:24px; scroll-margin-top:48px}
 .fghd{margin-bottom:9px}
 .fghd b{font-size:13.5px; color:var(--teal-deep); letter-spacing:.03em}
 .fghd span{display:block; font-size:11.5px; color:var(--muted); line-height:1.55; margin-top:2px}
-.fgrid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; background:var(--line)}
-.fgc{background:var(--card); padding:8px 7px; text-align:center}
+.fgrid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; background:transparent}
+.fgc{background:var(--card); padding:8px 7px; text-align:center; border-left:1px solid var(--line)}
+.fgc:nth-child(3n+1){border-left:none}
 .fgc .nm{font-size:11px; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .fgc .nm b{display:block; font-weight:700; font-size:11.5px; color:var(--ink)}
 .fgc .pr{font-size:15px; font-weight:700; font-family:"Roboto Mono",monospace; line-height:1.35; margin:2px 0 0}
@@ -262,6 +263,7 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   <a href="#s5"><b>05</b>主動ETF買</a>
   <a href="#s6"><b>06</b>你可能喜歡</a>
   <a href="#s7"><b>07</b>海外股</a>
+  <a href="#s8"><b>08</b>債券</a>
 </nav>
 <button class="navar navar-l" type="button" aria-label="向左捲動選單">&#8249;</button>
 <button class="navar navar-r" type="button" aria-label="向右捲動選單">&#8250;</button>
@@ -383,7 +385,7 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
       <div class="rk"><i>02</i><div class="rkm"><b>鴻海 2317</b><span>外資 7/7 日賣超</span></div><em class="down">−142.4</em></div>
       <div class="rk"><i>03</i><div class="rkm"><b>南亞 1303</b><span>外資 6/7 日賣超　·　00403A 增持 1.9 億</span></div><em class="down">−88.7</em></div>
       <div class="rk"><i>04</i><div class="rkm"><b>臻鼎-KY 4958</b><span>外資 4/7 日賣超</span></div><em class="down">−75.6</em></div>
-      <div class="rk"><i>05</i><div class="rkm"><b>緯創 3231</b><span>外資 7/7 日賣超　·　00982A 增持 0.0 億</span></div><em class="down">−74.9</em></div>
+      <div class="rk"><i>05</i><div class="rkm"><b>緯創 3231</b><span>外資 7/7 日賣超　·　00982A 增持</span></div><em class="down">−74.9</em></div>
   </div>
 </section>
 <section id="s4">
@@ -399,9 +401,9 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   <div class="card">
     <h3>投信　七日賣超前 5<em>七日累積賣超（億元）</em></h3>
       <div class="rk"><i>01</i><div class="rkm"><b>聯發科 2454</b><span>投信 7/7 日賣超</span></div><em class="down">−235.0</em></div>
-      <div class="rk"><i>02</i><div class="rkm"><b>日月光投控 3711</b><span>投信 6/7 日賣超　·　00982A 增持 0.0 億</span></div><em class="down">−111.4</em></div>
+      <div class="rk"><i>02</i><div class="rkm"><b>日月光投控 3711</b><span>投信 6/7 日賣超　·　00982A 增持</span></div><em class="down">−111.4</em></div>
       <div class="rk"><i>03</i><div class="rkm"><b>台光電 2383</b><span>投信 5/7 日賣超　·　00982A 增持 0.1 億</span></div><em class="down">−61.6</em></div>
-      <div class="rk"><i>04</i><div class="rkm"><b>聯電 2303</b><span>投信 4/7 日賣超　·　00982A 增持 0.0 億</span></div><em class="down">−51.9</em></div>
+      <div class="rk"><i>04</i><div class="rkm"><b>聯電 2303</b><span>投信 4/7 日賣超　·　00982A 增持</span></div><em class="down">−51.9</em></div>
       <div class="rk"><i>05</i><div class="rkm"><b>愛普* 6531</b><span>投信 5/7 日賣超</span></div><em class="down">−45.1</em></div>
   </div>
 </section>
@@ -637,7 +639,7 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
       <div class="lgd-row">
         <span style="flex:none; display:flex; gap:3px; margin-top:3px">
           <span class="tag buy">買進</span><span class="tag sell">賣出</span><span class="tag mkt">交易</span></span>
-        <span>標籤固定依<b class="up">紅</b>　→　<b class="down">綠</b>　→　金的順序排列：<b class="up">紅色</b>為法人買進（外資、投信買超與主動式 ETF 增持），<b class="down">綠色</b>為法人賣出（賣超、由買轉賣與 ETF 減持），<b>金色</b>為市場交易（當沖、資券、量能與型態）。當日無上述訊號的個股不列標籤。</span>
+        <span><b class="up">紅色</b>為法人買進，<b class="down">綠色</b>為法人賣出，<b>金色</b>為市場交易（當沖、資券、量能與型態）。</span>
       </div>
     </div>
   </div>
@@ -715,18 +717,67 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
   </div>
 
   <div class="card">
-    <h3>本週海外行事曆</h3>
+    <h3>本週海外財報</h3>
     <div class="cal">
-      <div class="calr"><div class="cald">08/26　三</div><div class="calc"><div class="calx"><s>數據</s><span>美 GDP、美 PCE 物價指數</span></div><div class="calx"><s>財報</s><span>NVDA（NVIDIA）、SNPS（新思科技）、A、ULTA</span></div></div></div>
-      <div class="calr"><div class="cald">08/27　四</div><div class="calc"><div class="calx"><s>數據</s><span>美初領失業救濟金人數</span></div><div class="calx"><s>財報</s><span>CRWD（CrowdStrike）、BBY、HPQ、WSM、SJM、DG、VEEV</span></div></div></div>
-      <div class="calr"><div class="cald">08/28　五</div><div class="calc"><div class="calx"><s>數據</s><span>美密大消費者信心、歐元區消費者信心、日東京 CPI</span></div><div class="calx"><s>財報</s><span>MRVL（Marvell）、ADSK、BF/B、HRL</span></div></div></div>
+      <div class="calr"><div class="cald">08/26　三</div><div class="calc"><div class="calx" style="grid-template-columns:minmax(0,1fr)"><span>NVDA（NVIDIA）、SNPS（新思科技）、A、ULTA</span></div></div></div>
+      <div class="calr"><div class="cald">08/27　四</div><div class="calc"><div class="calx" style="grid-template-columns:minmax(0,1fr)"><span>CRWD（CrowdStrike）、BBY、HPQ、WSM、SJM、DG、VEEV</span></div></div></div>
+      <div class="calr"><div class="cald">08/28　五</div><div class="calc"><div class="calx" style="grid-template-columns:minmax(0,1fr)"><span>MRVL（Marvell）、ADSK、BF/B、HRL</span></div></div></div>
+    </div>
+  </div>
+
+</section>
+<section id="s8">
+  <div class="shead"><span class="idx">08</span><h2>債券</h2><span class="sub">08/25 收盤</span></div>
+
+  <div class="card">
+    <h3>聯準會與利率動向</h3>
+    <div class="sumup" style="margin-top:0; padding-top:0; border-top:none">
+      <ul>
+        <li><b>Jackson Hole 年會與核心 PCE 物價指數為本週利率預期的兩大關鍵事件。</b>市場目前聚焦輝達財報、核心 PCE 數據及 Jackson Hole 會議，將成為決定 AI 行情與利率預期的關鍵催化劑；美 GDP 與 PCE 物價指數於 08/26 公布。美國 8 月 Conference Board 消費者信心指數降至 89.4、為今年 1 月以來最低，未來六個月預期指標同步下滑，配合近期零售銷售疲弱，市場將以 PCE 與消費支出數據確認經濟是否進一步降溫。當日全天期公債殖利率同步回落，2 年期 4.17%、10 年期 4.63%、30 年期 5.17%。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>美國公債殖利率<em>殖利率／日漲跌幅／今年漲跌幅</em></h3>
+    <div class="fgrid">
+      <div class="fgc"><div class="nm"><b>2 年期</b></div><div class="pr">4.17%</div><div class="ch down">−1.36%</div><div class="vo"><span style="font-family:'Noto Sans TC',sans-serif">今年</span> <span style="color:var(--up)">+20.19%</span></div></div><div class="fgc"><div class="nm"><b>5 年期</b></div><div class="pr">4.34%</div><div class="ch down">−1.50%</div><div class="vo"><span style="font-family:'Noto Sans TC',sans-serif">今年</span> <span style="color:var(--up)">+16.38%</span></div></div><div class="fgc"><div class="nm"><b>10 年期</b></div><div class="pr">4.63%</div><div class="ch down">−1.43%</div><div class="vo"><span style="font-family:'Noto Sans TC',sans-serif">今年</span> <span style="color:var(--up)">+11.08%</span></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>匯率<em>收盤價／日漲跌幅</em></h3>
+    <div class="usg">
+      <div class="usc"><div class="nm">美元指數</div><div class="pr"><b>98.92</b><em class="down">−0.09%</em></div><div class="yr"><s>今年</s><span class="up">+0.60%</span></div></div>
+      <div class="usc"><div class="nm">歐元<small>EUR/USD</small></div><div class="pr"><b>1.17</b><em class="up">+0.09%</em></div><div class="yr"><s>今年</s><span class="down">−0.60%</span></div></div>
+      <div class="usc"><div class="nm">日圓<small>USD/JPY</small></div><div class="pr"><b>159.19</b><em class="up">+0.05%</em></div><div class="yr"><s>今年</s><span class="down">−1.59%</span></div></div>
+      <div class="usc"><div class="nm">新台幣<small>USD/TWD</small></div><div class="pr"><b>31.88</b><em class="up">+0.03%</em></div><div class="yr"><s>今年</s><span class="down">−1.44%</span></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>原物料<em>收盤價／日漲跌幅</em></h3>
+    <div class="usg">
+      <div class="usc"><div class="nm">WTI 原油<small>USD</small></div><div class="pr"><b>82.36</b><em class="down">−3.12%</em></div><div class="yr"><s>今年</s><span class="up">+41.05%</span></div></div>
+      <div class="usc"><div class="nm">黃金<small>USD</small></div><div class="pr"><b>4,638.10</b><em class="down">−0.06%</em></div><div class="yr"><s>今年</s><span class="up">+6.84%</span></div></div>
+      <div class="usc"><div class="nm">白銀<small>USD</small></div><div class="pr"><b>68.68</b><em class="up">+0.13%</em></div><div class="yr"><s>今年</s><span class="down">−2.29%</span></div></div>
+      <div class="usc"><div class="nm">CRB 商品指數</div><div class="pr"><b>399.87</b><em class="down">−0.75%</em></div><div class="yr"><s>今年</s><span class="up">+33.83%</span></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>本週海外數據</h3>
+    <div class="cal">
+      <div class="calr"><div class="cald">08/26　三</div><div class="calc"><div class="calx" style="grid-template-columns:minmax(0,1fr)"><span>美 GDP、美 PCE 物價指數</span></div></div></div>
+      <div class="calr"><div class="cald">08/27　四</div><div class="calc"><div class="calx" style="grid-template-columns:minmax(0,1fr)"><span>美初領失業救濟金人數</span></div></div></div>
+      <div class="calr"><div class="cald">08/28　五</div><div class="calc"><div class="calx" style="grid-template-columns:minmax(0,1fr)"><span>美密大消費者信心、歐元區消費者信心、日東京 CPI</span></div></div></div>
     </div>
   </div>
 
 </section>
 <div class="disc">
   <h4>資料來源與免責聲明</h4>
-  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》、《國際市場晨報》、《主動式 ETF 籌碼追蹤》2026/08/26。所有數據為 2026/08/25（週二）收盤資料。文中排名均指該項排行榜內之名次。海外股段的族群與成分股歸屬依《國際市場晨報》國際重要公司價格追蹤表，共 24 個族群、116 檔；族群平均為該族群全部成分股日漲跌幅的算術平均，未做市值加權，成分股檔數最少者為 2 檔。海外個股收盤價與幣別照抄來源表，未換算為單一幣別；財報行事曆以美股代號表示，部分公司為預估日期。</p>
+  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》、《國際市場晨報》、《主動式 ETF 籌碼追蹤》2026/08/26。所有數據為 2026/08/25（週二）收盤資料。文中排名均指該項排行榜內之名次。海外股段的族群與成分股歸屬依《國際市場晨報》國際重要公司價格追蹤表，共 24 個族群、116 檔；族群平均為該族群全部成分股日漲跌幅的算術平均，未做市值加權，成分股檔數最少者為 2 檔。海外個股收盤價與幣別照抄來源表，未換算為單一幣別；財報行事曆以美股代號表示，部分公司為預估日期。債券段的殖利率、匯率與原物料報價照抄《國際市場晨報》國際金融市場行情表：公債的「日漲跌幅」與「今年」皆為殖利率本身的變動百分比，非利率的點數或基點變動；匯率沿用來源表的報價慣例，美元指數與歐元為每單位貨幣兌美元，日圓與新台幣為 1 美元兌各該貨幣，數值上升所代表的強弱方向因此不同；原物料報價幣別照抄來源表，未換算。</p>
   <p>本報告係本公司於特定日期就現有資訊所提出，雖已力求正確與完整，但因時間及市場客觀因素改變所造成產業、市場或個股之相關條件改變，本公司將不做預告或更新；且本報告並非依特定投資目的或特定對象之財務狀況所完成，其目的並非針對客戶於買賣證券、選擇權、期貨或其他證券相關商品提供詢價或推介服務，亦非進行交易之要約。</p>
   <p>本報告所列個股僅為籌碼與技術面資訊之整理，不構成任何買賣建議或獲利保證。個股分組僅依所屬產業類股排列，不代表對個股之評價或未來表現之預期。投資人應自行考量本身之需求、投資風險及承受度，並就投資結果自行負責。非經本公司同意，任何人不得將本報告加以引用或轉載。</p>
   <p>中國信託證券投資顧問股份有限公司獨立經營管理　·　台北市南港區經貿二路 188 號 5 樓及 18 樓　·　(02) 5569-1988　·　營業執照字號：114 金管投顧新字第 014 號</p>
