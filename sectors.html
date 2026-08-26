@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a4b46">
-<title>早安亮點 2026/08/25 主流族群｜手機版</title>
+<title>早安亮點 2026/08/26｜主流族群｜手機版</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -41,14 +41,26 @@ body{margin:0; background:var(--paper); color:var(--ink);
   text-decoration:none; white-space:nowrap}
 .mast .more:active{background:rgba(255,255,255,.18)}
 
-.nav{position:sticky; top:0; z-index:20; background:var(--teal-deep);
-  display:flex; overflow-x:auto; scrollbar-width:none; box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.navwrap{position:sticky; top:0; z-index:20; background:var(--teal-deep);
+  box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.nav{display:flex; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;
+  -webkit-overflow-scrolling:touch; scroll-behavior:smooth; scroll-padding:0 34px}
 .nav::-webkit-scrollbar{display:none}
-.nav a{flex:1 1 0; min-width:0; text-align:center; padding:11px 6px; font-size:12px; color:#bfdcd8;
+.nav a{flex:0 0 auto; text-align:center; padding:11px 14px; font-size:12px; color:#bfdcd8;
   text-decoration:none; white-space:nowrap}
-@media (max-width:359px){.nav a{font-size:11.5px} .nav a b{display:none}}
 .nav a b{color:var(--gold); font-family:"Roboto Mono",monospace; font-size:10.5px; margin-right:4px}
 .nav a:active{background:rgba(255,255,255,.08)}
+
+.navar{position:absolute; top:0; bottom:0; width:34px; border:0; padding:0; cursor:pointer;
+  display:none; align-items:center; color:var(--gold); font-size:19px; line-height:1;
+  font-family:"Roboto Mono",monospace; -webkit-tap-highlight-color:transparent}
+.navar-l{left:0; justify-content:flex-start; padding-left:6px;
+  background:linear-gradient(to right, var(--teal-deep) 55%, rgba(10,75,70,0))}
+.navar-r{right:0; justify-content:flex-end; padding-right:6px;
+  background:linear-gradient(to left, var(--teal-deep) 55%, rgba(10,75,70,0))}
+.navwrap.can-l .navar-l{display:flex}
+.navwrap.can-r .navar-r{display:flex}
+.navar:active{color:#fff}
 
 .brief{background:var(--card); border-left:4px solid var(--gold); padding:16px 16px 14px; margin:14px 14px 22px}
 .brief h2{font-family:"Noto Serif TC",serif; font-size:16px; margin:0 0 11px; color:var(--teal-deep); letter-spacing:.06em}
@@ -80,6 +92,28 @@ section{margin-bottom:24px; scroll-margin-top:48px}
 .htrack{position:relative; height:15px; background:#f0f3f2}
 .htrack .z{position:absolute; top:-2px; bottom:-2px; width:1px; background:#9fadaa}
 .htrack i{position:absolute; top:0; bottom:0; display:block}
+.osg{margin-top:16px}
+.osg:first-of-type{margin-top:0}
+.osgh{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:4px 8px;
+  padding:6px 9px; background:var(--teal-soft); margin-bottom:9px}
+.osgh b{font-size:13.5px; color:var(--teal-deep); letter-spacing:.02em}
+.osgh span{font-size:11px; color:var(--muted)}
+.osg .usg{margin-top:0}
+.usc .nm small{font-size:9.5px; font-weight:400; color:var(--muted);
+  font-family:"Roboto Mono",monospace; margin-left:5px}
+.osgh em{font-style:normal; font-family:"Roboto Mono",monospace; font-weight:700; font-size:12px}
+.osnote{margin:12px 0 0; font-size:11px; line-height:1.7; color:var(--muted)}
+
+.cal{display:grid; gap:9px}
+.calr{display:grid; grid-template-columns:66px 1fr; gap:9px; align-items:start;
+  padding-bottom:9px; border-bottom:1px solid var(--line)}
+.calr:last-child{border-bottom:none; padding-bottom:0}
+.cald{font-family:"Roboto Mono",monospace; font-size:11.5px; font-weight:700; color:var(--teal-deep)}
+.calx{display:grid; grid-template-columns:32px 1fr; gap:7px; font-size:11.5px; line-height:1.6}
+.calx + .calx{margin-top:4px}
+.calx s{text-decoration:none; color:var(--muted); font-size:10px; padding-top:2px}
+.calx span{min-width:0; overflow-wrap:anywhere}
+
 .hval{font-size:11.5px; font-weight:700; text-align:right; font-family:"Roboto Mono",monospace}
 
 /* 美股指標股 雙欄格 */
@@ -168,11 +202,6 @@ section{margin-bottom:24px; scroll-margin-top:48px}
 .lgd{margin-top:14px; padding:12px 14px; background:#f5f7f6; border:1px dashed var(--line)}
 .lgd-t{font-size:12px; font-weight:700; color:var(--teal-deep); margin-bottom:9px; letter-spacing:.06em}
 .lgd-row{display:flex; gap:12px; align-items:flex-start; font-size:12.5px; color:var(--muted); line-height:1.75}
-.lgd-row .meter{flex:none; margin-top:4px}
-
-.meter{display:inline-grid; grid-template-columns:1fr 1fr; gap:2px; width:66px; vertical-align:middle}
-.meter span{height:15px; font-size:9.5px; line-height:15px; text-align:center; color:#fff; background:#c3cbc8}
-.m-buy{background:var(--up)!important} .m-sell{background:var(--down)!important}
 
 details.grp{background:var(--card); margin:12px 14px; border-top:3px solid var(--teal-deep); scroll-margin-top:52px}
 details.t-1{border-top-color:var(--teal-deep)}
@@ -193,10 +222,10 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 .stk .id small{font-weight:400; font-size:11px; color:var(--muted); text-align:right; flex:0 1 auto; min-width:0}
 .stk .sig{font-size:13.5px; margin-top:6px}
 .tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; align-items:center}
-.tag{font-size:10.5px; padding:2px 7px; background:var(--teal-soft); color:var(--teal-deep)}
-.tag.t1{background:#fbeeda; color:#8a6520}
-.tag.t2{background:var(--teal-soft); color:var(--teal-deep)}
-.tag.t3{background:#e6eae8; color:var(--muted)}
+.tag{font-size:10.5px; padding:2px 7px; background:#fbeeda; color:#8a6520}
+.tag.buy{background:var(--up-soft); color:var(--up)}
+.tag.sell{background:var(--down-soft); color:var(--down)}
+.tag.mkt{background:#fbeeda; color:#8a6520}
 
 .sumup{margin-top:16px; padding-top:14px; border-top:1px dashed var(--line)}
 .sumup h4{margin:0 0 9px; font-size:12.5px; color:var(--teal-deep); letter-spacing:.06em}
@@ -209,9 +238,6 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 .disc h4{margin:0 0 7px; font-size:12px; color:var(--ink); letter-spacing:.08em}
 .disc p{margin:0 0 7px} .disc p:last-child{margin:0}
 .top{display:block; text-align:center; padding:16px; font-size:12.5px; color:var(--teal); text-decoration:none}
-.gsub{margin:20px 14px 0; padding:8px 12px; background:var(--teal-soft); color:var(--teal-deep);
-  font-size:12.5px; font-weight:700; letter-spacing:.1em; overflow-wrap:anywhere}
-.gsub:first-of-type{margin-top:12px}
 .subh{padding:11px 16px 2px; font-size:11px; color:var(--gold); font-weight:700;
   letter-spacing:.1em; border-top:1px solid var(--line); background:#fbfcfb}
 .subh+.stk{border-top:none}
@@ -223,54 +249,48 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 <header class="mast" id="top">
   <div class="brand">中國信託證券 × 中信投顧</div>
   <h1>早安亮點</h1>
-  <div class="date num">2026 / 08 / 25　週二　·　主流族群</div>
+  <div class="date num">2026 / 08 / 26　週三　·　主流族群</div>
   <a class="more" href="index.html">‹ 早安亮點</a>
 </header>
 
 <section id="s1">
-  <div class="shead"><span class="idx">01</span><h2>主流族群</h2><span class="sub">週一資金分布</span></div>
+  <div class="shead"><span class="idx">01</span><h2>主流族群</h2><span class="sub">週二資金分布</span></div>
 
   <div class="card">
     <h3>當沖資金流向　依類股金額<em>占總當沖金額比</em></h3>
-    <div class="hrow"><span class="hlbl"><b>半導體</b><small>951 億</small></span><span class="htrack"><i style="left:0;width:100.00%;background:var(--teal)"></i></span><span class="hval">35%</span></div>
-    <div class="hrow"><span class="hlbl"><b>電子零組件</b><small>705 億</small></span><span class="htrack"><i style="left:0;width:74.13%;background:var(--teal)"></i></span><span class="hval">26%</span></div>
-    <div class="hrow"><span class="hlbl"><b>光電</b><small>224 億</small></span><span class="htrack"><i style="left:0;width:23.55%;background:var(--teal)"></i></span><span class="hval">8%</span></div>
-    <div class="hrow"><span class="hlbl"><b>運輸類</b><small>193 億</small></span><span class="htrack"><i style="left:0;width:20.29%;background:var(--teal)"></i></span><span class="hval">7%</span></div>
-    <div class="hrow"><span class="hlbl"><b>電腦及週邊設備</b><small>186 億</small></span><span class="htrack"><i style="left:0;width:19.56%;background:var(--teal)"></i></span><span class="hval">7%</span></div>
+    <div class="hrow"><span class="hlbl"><b>半導體</b><small>1,062 億</small></span><span class="htrack"><i style="left:0;width:100.00%;background:var(--teal)"></i></span><span class="hval">32%</span></div>
+    <div class="hrow"><span class="hlbl"><b>電子零組件</b><small>846 億</small></span><span class="htrack"><i style="left:0;width:79.66%;background:var(--teal)"></i></span><span class="hval">26%</span></div>
+    <div class="hrow"><span class="hlbl"><b>電腦及週邊設備</b><small>329 億</small></span><span class="htrack"><i style="left:0;width:30.98%;background:var(--teal)"></i></span><span class="hval">10%</span></div>
+    <div class="hrow"><span class="hlbl"><b>運輸類</b><small>278 億</small></span><span class="htrack"><i style="left:0;width:26.18%;background:var(--teal)"></i></span><span class="hval">8%</span></div>
+    <div class="hrow"><span class="hlbl"><b>光電</b><small>257 億</small></span><span class="htrack"><i style="left:0;width:24.20%;background:var(--teal)"></i></span><span class="hval">8%</span></div>
   </div>
 
   <div class="card">
     <h3>三大主流族群<em>收盤／漲跌／5 日均量</em></h3>
 
     <div class="fg">
-      <div class="fghd"><b>矽晶圓</b><span>近期終端市場需求改善，矽晶圓產業迎接 3 年來首度全面上漲，三檔週一同步收紅。</span></div>
+      <div class="fghd"><b>散裝航運</b><span>中東局勢使全球運期拉長，疊加近期原物料及穀物需求攀升支撐運價，三檔週二同步收紅。</span></div>
       <div class="fgrid">
-        <div class="fgc"><div class="nm"><b>台勝科</b>3532</div><div class="pr">376.5</div><div class="ch up">+9.9%</div><div class="vo">11,925 張</div></div>
-        <div class="fgc"><div class="nm"><b>環球晶</b>6488</div><div class="pr">1,010</div><div class="ch up">+7.3%</div><div class="vo">10,849 張</div></div>
-        <div class="fgc"><div class="nm"><b>合晶</b>6182</div><div class="pr">110.0</div><div class="ch up">+3.8%</div><div class="vo">98,177 張</div></div>
+        <div class="fgc"><div class="nm"><b>裕民</b>2606</div><div class="pr">78</div><div class="ch up">+7.9%</div><div class="vo">19,891 張</div></div><div class="fgc"><div class="nm"><b>萬海</b>2615</div><div class="pr">126.5</div><div class="ch up">+1.6%</div><div class="vo">76,914 張</div></div><div class="fgc"><div class="nm"><b>中航</b>2612</div><div class="pr">63.8</div><div class="ch up">+5.8%</div><div class="vo">3,013 張</div></div>
       </div>
     </div>
     <div class="fg">
-      <div class="fghd"><b>金融保險</b><span>升息預期與高利率環境，利差擴大有利金融類股存放款獲利能力提升，三檔週一漲跌互見。</span></div>
+      <div class="fghd"><b>矽晶圓</b><span>近期終端市場需求改善，矽晶圓產業迎接 3 年來首度全面上漲，三檔週二漲跌互見。</span></div>
       <div class="fgrid">
-        <div class="fgc"><div class="nm"><b>富邦金</b>2881</div><div class="pr">132.0</div><div class="ch down">−1.5%</div><div class="vo">21,127 張</div></div>
-        <div class="fgc"><div class="nm"><b>玉山金</b>2884</div><div class="pr">38.15</div><div class="ch up">+0.4%</div><div class="vo">45,617 張</div></div>
-        <div class="fgc"><div class="nm"><b>台新新光金</b>2887</div><div class="pr">36.5</div><div class="ch down">−2.0%</div><div class="vo">53,362 張</div></div>
+        <div class="fgc"><div class="nm"><b>台勝科</b>3532</div><div class="pr">378</div><div class="ch up">+0.4%</div><div class="vo">12,249 張</div></div><div class="fgc"><div class="nm"><b>環球晶</b>6488</div><div class="pr">980</div><div class="ch down">−3.0%</div><div class="vo">10,080 張</div></div><div class="fgc"><div class="nm"><b>合晶</b>6182</div><div class="pr">108</div><div class="ch down">−1.8%</div><div class="vo">67,923 張</div></div>
       </div>
     </div>
     <div class="fg">
-      <div class="fghd"><b>光通訊</b><span>光模組供需缺口超越 30%，上游原料磷化銦持續短缺，產業趨勢正向，三檔週一同步收黑。</span></div>
+      <div class="fghd"><b>金融保險</b><span>升息預期與高利率環境，利差擴大有利金融類股存放款獲利能力提升，三檔週二同步收紅。</span></div>
       <div class="fgrid">
-        <div class="fgc"><div class="nm"><b>聯亞</b>3081</div><div class="pr">2,765</div><div class="ch down">−5.3%</div><div class="vo">4,845 張</div></div>
-        <div class="fgc"><div class="nm"><b>全新</b>2455</div><div class="pr">381.5</div><div class="ch down">−6.0%</div><div class="vo">16,904 張</div></div>
-        <div class="fgc"><div class="nm"><b>上詮</b>3363</div><div class="pr">567</div><div class="ch down">−5.5%</div><div class="vo">2,606 張</div></div>
+        <div class="fgc"><div class="nm"><b>富邦金</b>2881</div><div class="pr">141.5</div><div class="ch up">+7.2%</div><div class="vo">26,068 張</div></div><div class="fgc"><div class="nm"><b>玉山金</b>2884</div><div class="pr">39</div><div class="ch up">+2.2%</div><div class="vo">43,265 張</div></div><div class="fgc"><div class="nm"><b>台新新光金</b>2887</div><div class="pr">37.15</div><div class="ch up">+1.8%</div><div class="vo">46,865 張</div></div>
       </div>
     </div>
   </div>
 </section>
 <div class="disc">
   <h4>資料來源與免責聲明</h4>
-  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》2026/08/25。所有數據為 2026/08/24（週一）收盤資料。當沖金額占比為當日當沖金額前五大類股之占總當沖金額比。</p>
+  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》2026/08/26。所有數據為 2026/08/25（週二）收盤資料。當沖金額占比為當日當沖金額前五大類股之占總當沖金額比。</p>
   <p>本報告係本公司於特定日期就現有資訊所提出，雖已力求正確與完整，但因時間及市場客觀因素改變所造成產業、市場或個股之相關條件改變，本公司將不做預告或更新；且本報告並非依特定投資目的或特定對象之財務狀況所完成，其目的並非針對客戶於買賣證券、選擇權、期貨或其他證券相關商品提供詢價或推介服務，亦非進行交易之要約。</p>
   <p>本報告所列個股僅為籌碼與技術面資訊之整理，不構成任何買賣建議或獲利保證。族群分類僅依產業屬性排列，不代表對個股之評價或未來表現之預期。投資人應自行考量本身之需求、投資風險及承受度，並就投資結果自行負責。非經本公司同意，任何人不得將本報告加以引用或轉載。</p>
   <p>中國信託證券投資顧問股份有限公司獨立經營管理　·　台北市南港區經貿二路 188 號 5 樓及 18 樓　·　(02) 5569-1988　·　營業執照字號：114 金管投顧新字第 014 號</p>
