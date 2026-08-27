@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a4b46">
+<title>早安亮點 2026/08/27｜全海外股｜手機版</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15201e; --paper:#eef1ef; --card:#fff;
+  --teal-deep:#0a4b46; --teal:#12837a; --teal-soft:#e3efed;
+  --gold:#a8823a;
+  --up:#cf2a21; --up-soft:#fbe9e7;
+  --down:#1b8a55; --down-soft:#e6f4ec;
+  --muted:#6d7a77; --line:#d6dedb;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Noto Sans TC",system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;
+  font-size:15px; line-height:1.72; overflow-wrap:break-word;}
+/* 數值一律不斷行 */
+.hval,.rk em,.stat .vl,.statwide .vl,.statwide .dl,.usc .pr b,.usc .pr em,
+.usc .yr span,.fgc .pr,.fgc .ch,.fgc .vo,.ovn,.kv .k em{white-space:nowrap}
+.num{font-family:"Roboto Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)}
+.app{max-width:480px; margin:0 auto; background:var(--paper); padding-bottom:60px}
+
+.mast{background:var(--teal-deep); color:#fff; padding:22px 18px 16px; position:relative}
+.mast::after{content:""; position:absolute; left:0; right:0; bottom:0; height:3px;
+  background:linear-gradient(90deg,var(--gold) 0 26%,rgba(255,255,255,.18) 26%)}
+.mast .brand{font-size:11px; letter-spacing:.2em; color:#9fc9c4}
+.mast h1{font-family:"Noto Serif TC",serif; font-weight:900; font-size:29px; margin:5px 0 3px; letter-spacing:.05em}
+.mast .date{font-size:12px; color:#a9d0cb; letter-spacing:.08em}
+
+.navwrap{position:sticky; top:0; z-index:20; background:var(--teal-deep);
+  box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.nav{display:flex; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;
+  -webkit-overflow-scrolling:touch; scroll-behavior:smooth; scroll-padding:0 34px}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:0 0 auto; text-align:center; padding:11px 14px; font-size:12px; color:#bfdcd8;
+  text-decoration:none; white-space:nowrap}
+.nav a b{color:var(--gold); font-family:"Roboto Mono",monospace; font-size:10.5px; margin-right:4px}
+.nav a:active{background:rgba(255,255,255,.08)}
+
+.navar{position:absolute; top:0; bottom:0; width:34px; border:0; padding:0; cursor:pointer;
+  display:none; align-items:center; color:var(--gold); font-size:19px; line-height:1;
+  font-family:"Roboto Mono",monospace; -webkit-tap-highlight-color:transparent}
+.navar-l{left:0; justify-content:flex-start; padding-left:6px;
+  background:linear-gradient(to right, var(--teal-deep) 55%, rgba(10,75,70,0))}
+.navar-r{right:0; justify-content:flex-end; padding-right:6px;
+  background:linear-gradient(to left, var(--teal-deep) 55%, rgba(10,75,70,0))}
+.navwrap.can-l .navar-l{display:flex}
+.navwrap.can-r .navar-r{display:flex}
+.navar:active{color:#fff}
+
+.brief{background:var(--card); border-left:4px solid var(--gold); padding:16px 16px 14px; margin:14px 14px 22px}
+.brief h2{font-family:"Noto Serif TC",serif; font-size:16px; margin:0 0 11px; color:var(--teal-deep); letter-spacing:.06em}
+.brief ul{margin:0; padding:0; list-style:none}
+.brief li{padding-left:19px; position:relative; margin-bottom:9px; font-size:14px}
+.brief li::before{content:""; position:absolute; left:3px; top:10px; width:6px; height:6px; background:var(--teal); transform:rotate(45deg)}
+.brief li:last-child{margin-bottom:0}
+
+section{margin-bottom:24px; scroll-margin-top:48px}
+.shead{display:flex; align-items:baseline; gap:10px; background:var(--teal-deep); color:#fff; padding:11px 14px;
+  flex-wrap:wrap; row-gap:2px}
+.shead .idx{font-family:"Roboto Mono",monospace; font-size:11px; font-weight:700; color:var(--gold); letter-spacing:.1em}
+.shead h2{font-family:"Noto Serif TC",serif; font-size:19px; margin:0; letter-spacing:.05em}
+.shead .sub{margin-left:auto; font-size:11px; color:#a9d0cb}
+
+.card{background:var(--card); padding:15px 16px; margin:12px 14px}
+.card h3{font-size:13.5px; margin:0 0 13px; color:var(--teal-deep); letter-spacing:.06em; font-weight:700;
+  display:flex; align-items:center; gap:8px; flex-wrap:wrap; row-gap:3px}
+.card h3::before{content:""; width:13px; height:2px; background:var(--gold); flex:none}
+.card h3 em{font-style:normal; margin-left:auto; font-size:10.5px; color:var(--muted); font-weight:400;
+  letter-spacing:0; text-align:right; line-height:1.35; flex:0 1 auto; min-width:0}
+.note{font-size:12.5px; color:var(--muted); margin:10px 0 0; line-height:1.7}
+
+/* 橫向分歧長條 */
+.hrow{display:grid; grid-template-columns:70px 1fr 46px; align-items:center; gap:8px; margin-bottom:5px}
+.hlbl{font-size:11.5px; color:var(--muted); line-height:1.25; min-width:0; overflow-wrap:anywhere}
+.hlbl b{color:var(--ink); font-weight:500}
+.hlbl small{display:block; font-size:10px; font-family:"Roboto Mono",monospace}
+.htrack{position:relative; height:15px; background:#f0f3f2}
+.htrack .z{position:absolute; top:-2px; bottom:-2px; width:1px; background:#9fadaa}
+.htrack i{position:absolute; top:0; bottom:0; display:block}
+.osg{margin-top:16px}
+.osg:first-of-type{margin-top:0}
+.osgh{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:4px 8px;
+  padding:6px 9px; background:var(--teal-soft); margin-bottom:9px}
+.osgh b{font-size:13.5px; color:var(--teal-deep); letter-spacing:.02em}
+.osgh span{font-size:11px; color:var(--muted)}
+.osg .usg{margin-top:0}
+.usc .nm small{font-size:9.5px; font-weight:400; color:var(--muted);
+  font-family:"Roboto Mono",monospace; margin-left:5px}
+.osgh em{font-style:normal; font-family:"Roboto Mono",monospace; font-weight:700; font-size:12px}
+.osnote{margin:12px 0 0; font-size:11px; line-height:1.7; color:var(--muted)}
+
+.cal{display:grid; gap:9px}
+.calr{display:grid; grid-template-columns:66px 1fr; gap:9px; align-items:start;
+  padding-bottom:9px; border-bottom:1px solid var(--line)}
+.calr:last-child{border-bottom:none; padding-bottom:0}
+.cald{font-family:"Roboto Mono",monospace; font-size:11.5px; font-weight:700; color:var(--teal-deep)}
+.calx{display:grid; grid-template-columns:32px 1fr; gap:7px; font-size:11.5px; line-height:1.6}
+.calx + .calx{margin-top:4px}
+.calx s{text-decoration:none; color:var(--muted); font-size:10px; padding-top:2px}
+.calx span{min-width:0; overflow-wrap:anywhere}
+
+.hval{font-size:11.5px; font-weight:700; text-align:right; font-family:"Roboto Mono",monospace}
+
+/* 美股指標股 雙欄格 */
+.usg{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line)}
+.usc{background:var(--card); padding:9px 10px}
+.usc .nm{font-size:12px; font-weight:700; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.usc .pr{display:flex; align-items:baseline; justify-content:space-between; gap:6px;
+  line-height:1.3; margin:1px 0; font-family:"Roboto Mono",monospace; font-variant-numeric:tabular-nums}
+.usc .pr b{font-size:16px; font-weight:700}
+.usc .pr em{font-style:normal; font-size:12.5px; font-weight:700}
+.usc .yr{display:flex; align-items:baseline; justify-content:flex-end; gap:4px;
+  font-size:10.5px; font-family:"Roboto Mono",monospace; font-variant-numeric:tabular-nums; line-height:1.4}
+.usc .yr s{text-decoration:none; color:var(--muted); font-family:"Noto Sans TC",sans-serif}
+
+/* 關鍵數字 整列（加權指數） */
+.statwide{background:var(--card); padding:11px 12px 12px}
+.statwide .lb{font-size:11px; color:var(--muted)}
+.statwide .vlrow{display:flex; align-items:baseline; gap:10px; margin:2px 0 2px; flex-wrap:wrap}
+.statwide .vl{font-size:26px; font-weight:700; font-family:"Roboto Mono",monospace; line-height:1.15}
+.statwide .dl{font-size:14px; font-weight:700; font-family:"Roboto Mono",monospace}
+.stat .vl.blank{color:var(--muted); font-weight:400; font-size:13px}
+
+/* 統計圖卡 */
+.stats{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line)}
+.stat{background:var(--card); padding:11px 12px}
+.stat .lb{font-size:11px; color:var(--muted)}
+.stat .vl{font-size:19px; font-weight:700; line-height:1.25; margin:2px 0 1px; font-family:"Roboto Mono",monospace}
+.stat .nt{font-size:11px; color:var(--muted); line-height:1.4}
+
+/* 緊湊族群卡 */
+.fg{border-top:1px solid var(--line); padding-top:12px; margin-top:12px}
+.fg:first-of-type{border-top:none; padding-top:0; margin-top:0}
+.fghd{margin-bottom:9px}
+.fghd b{font-size:13.5px; color:var(--teal-deep); letter-spacing:.03em}
+.fghd span{display:block; font-size:11.5px; color:var(--muted); line-height:1.55; margin-top:2px}
+.fgrid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; background:transparent}
+.fgc{background:var(--card); padding:8px 7px; text-align:center; border-left:1px solid var(--line)}
+.fgc:nth-child(3n+1){border-left:none}
+.fgc .nm{font-size:11px; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.fgc .nm b{display:block; font-weight:700; font-size:11.5px; color:var(--ink)}
+.fgc .pr{font-size:15px; font-weight:700; font-family:"Roboto Mono",monospace; line-height:1.35; margin:2px 0 0}
+.fgc .ch{font-size:11px; font-weight:700; font-family:"Roboto Mono",monospace}
+.fgc .vo{font-size:9.5px; color:var(--muted); font-family:"Roboto Mono",monospace; margin-top:1px}
+
+/* 法人排行列（03 段） */
+.rk{display:grid; grid-template-columns:20px minmax(0,1fr) auto; gap:9px; align-items:baseline;
+  padding:9px 0; border-bottom:1px solid var(--line)}
+.rkm{min-width:0}
+.rk:last-of-type{border-bottom:none; padding-bottom:0}
+.rk i{font-style:normal; font-family:"Roboto Mono",monospace; font-size:10.5px; color:var(--muted)}
+.rkm b{display:block; font-size:13.5px; font-weight:700; line-height:1.35}
+.rkm span{display:block; font-size:11px; color:var(--muted); line-height:1.5; margin-top:1px}
+.rk em{font-style:normal; font-family:"Roboto Mono",monospace; font-weight:700; font-size:14px}
+
+.kv{border-bottom:1px solid var(--line); padding:10px 0}
+.kv:first-of-type{padding-top:0}
+.kv:last-of-type{border-bottom:none; padding-bottom:0}
+.kv .k{font-size:13.5px; font-weight:700; display:flex; justify-content:space-between; align-items:baseline;
+  gap:10px; flex-wrap:wrap}
+.kv .k em{font-style:normal; font-family:"Roboto Mono",monospace; font-size:14px}
+.kv .v{font-size:12.5px; color:var(--muted); margin-top:3px}
+
+.pc-col{padding:14px 16px; margin:12px 14px}
+.pc-pos{background:var(--up-soft); border-top:3px solid var(--up)}
+.pc-neg{background:var(--down-soft); border-top:3px solid var(--down)}
+.pc-col h4{margin:0 0 9px; font-size:13px; letter-spacing:.06em}
+.pc-pos h4{color:var(--up)} .pc-neg h4{color:var(--down)}
+.pc-col ol{margin:0; padding-left:19px; font-size:13.5px}
+.pc-col li{margin-bottom:5px} .pc-col li:last-child{margin-bottom:0}
+
+/* 分類總覽與圖例 */
+.ov{border:1px solid var(--line); background:#fbfcfb}
+.ovrow{display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:10px;
+  padding:10px 12px; border-bottom:1px solid var(--line); border-left:5px solid var(--teal-deep);
+  text-decoration:none; color:inherit}
+.ovrow:active{background:var(--teal-soft)}
+.ovnm{font-size:14px; line-height:1.45; font-weight:700; color:var(--teal-deep)}
+.ovnm small{display:block; font-weight:400; font-size:11.5px; color:var(--muted); margin-top:1px}
+.ovn{font-family:"Roboto Mono",monospace; font-weight:700; font-size:19px; line-height:1}
+.ovn::after{content:" 檔"; font-family:"Noto Sans TC",sans-serif; font-size:11px; font-weight:400; color:var(--muted)}
+.c-1{border-left-color:var(--teal-deep)}
+.c-2{border-left-color:var(--teal)}
+.c-3{border-left-color:var(--gold)}
+.c-4{border-left-color:#b8c2bf}
+.ovsum{display:flex; justify-content:space-between; padding:9px 12px 9px 17px;
+  background:var(--teal-soft); font-size:13px; font-weight:700; color:var(--teal-deep)}
+.lgd{margin-top:14px; padding:12px 14px; background:#f5f7f6; border:1px dashed var(--line)}
+.lgd-t{font-size:12px; font-weight:700; color:var(--teal-deep); margin-bottom:9px; letter-spacing:.06em}
+.lgd-row{display:flex; gap:12px; align-items:flex-start; font-size:12.5px; color:var(--muted); line-height:1.75}
+
+details.grp{background:var(--card); margin:12px 14px; border-top:3px solid var(--teal-deep); scroll-margin-top:52px}
+details.t-1{border-top-color:var(--teal-deep)}
+details.t-2{border-top-color:var(--teal)}
+details.t-3{border-top-color:var(--gold)}
+details.t-4{border-top-color:#b8c2bf}
+details.grp>summary{list-style:none; cursor:pointer; padding:13px 16px; position:relative}
+details.grp>summary::-webkit-details-marker{display:none}
+details.grp>summary::after{content:"＋"; position:absolute; right:16px; top:13px; color:var(--gold); font-size:15px; font-weight:700}
+details.grp[open]>summary::after{content:"−"}
+details.grp>summary h3{margin:0 0 3px; font-size:15px; color:var(--teal-deep); padding-right:26px; letter-spacing:.03em}
+details.grp>summary p{margin:0; font-size:12px; color:var(--muted); padding-right:26px}
+details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; color:var(--gold); font-weight:700; display:block; margin-bottom:2px}
+
+.stk{padding:13px 16px; border-top:1px solid var(--line)}
+.stk .id{font-size:15px; font-weight:700; color:var(--teal-deep); display:flex; align-items:baseline;
+  justify-content:space-between; gap:8px; flex-wrap:wrap; row-gap:2px}
+.stk .id small{font-weight:400; font-size:11px; color:var(--muted); text-align:right; flex:0 1 auto; min-width:0}
+.stk .sig{font-size:13.5px; margin-top:6px}
+.tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; align-items:center}
+.tag{font-size:10.5px; padding:2px 7px; background:#fbeeda; color:#8a6520}
+.tag.buy{background:var(--up-soft); color:var(--up)}
+.tag.sell{background:var(--down-soft); color:var(--down)}
+.tag.mkt{background:#fbeeda; color:#8a6520}
+
+.sumup{margin-top:16px; padding-top:14px; border-top:1px dashed var(--line)}
+.sumup h4{margin:0 0 9px; font-size:12.5px; color:var(--teal-deep); letter-spacing:.06em}
+.sumup ul{margin:0; padding:0; list-style:none}
+.sumup li{position:relative; padding-left:16px; font-size:13px; margin-bottom:8px}
+.sumup li:last-child{margin-bottom:0}
+.sumup li::before{content:""; position:absolute; left:2px; top:9px; width:5px; height:5px; background:var(--gold); transform:rotate(45deg)}
+
+.disc{background:#e2e7e5; padding:16px; margin:20px 14px 0; font-size:11px; color:#4d5a57; line-height:1.7}
+.disc h4{margin:0 0 7px; font-size:12px; color:var(--ink); letter-spacing:.08em}
+.disc p{margin:0 0 7px} .disc p:last-child{margin:0}
+.top{display:block; text-align:center; padding:16px; font-size:12.5px; color:var(--teal); text-decoration:none}
+.subh{padding:11px 16px 2px; font-size:11px; color:var(--gold); font-weight:700;
+  letter-spacing:.1em; border-top:1px solid var(--line); background:#fbfcfb}
+.subh+.stk{border-top:none}
+</style>
+
+</head>
+<body>
+<div class="app">
+<header class="mast" id="top">
+  <div class="brand">中國信託證券 × 中信投顧</div>
+  <h1>早安亮點</h1>
+  <div class="date num">2026 / 08 / 27　週四　·　全海外股</div>
+</header>
+
+<div class="navwrap" id="navwrap">
+<nav class="nav" id="navtrack">
+  <a href="#s1"><b>01</b>國際</a>
+  <a href="#s2"><b>02</b>海外股</a>
+</nav>
+<button class="navar navar-l" type="button" aria-label="向左捲動選單">&#8249;</button>
+<button class="navar navar-r" type="button" aria-label="向右捲動選單">&#8250;</button>
+</div>
+<div class="brief">
+  <h2>今日重點</h2>
+  <ul>
+    <li><b>美股週三四大指數漲跌互見，費半 <b class="up">+0.20%</b>。</b>美國 7 月 PCE 月增 0.2%、年增 3.7%，略高於市場預期，核心 PCE 月增 0.2% 與預期一致，通膨黏性使市場重新提高 Fed 升息預期，美元指數 <b class="up">+0.25%</b> 至 99.17、10 年期公債殖利率升至 4.65%。輝達 2Q27 財報全面優於市場預期，資料中心營收年增 117% 至 890 億美元，盤後股價由跌轉漲近 5%。道瓊 <b class="down">−0.21%</b>、S&amp;P 500 <b class="down">−0.02%</b>、Nasdaq 100 <b class="up">+0.05%</b>。</li>
+    <li><b>全球 24 個族群以 PC <b class="up">+1.78%</b>、手機 <b class="up">+1.51%</b>、資安 <b class="up">+1.38%</b> 居前三強。</b>PC 由惠普 <b class="up">+3.39%</b> 與 Dell <b class="up">+2.73%</b> 帶動，手機由小米 <b class="up">+2.52%</b> 與高通 <b class="up">+1.97%</b> 帶動，資安由 Fortinet <b class="up">+2.53%</b> 與 CrowdStrike <b class="up">+2.05%</b> 帶動；區塊鏈 <b class="down">−3.63%</b>、串流媒體 <b class="down">−1.86%</b>、健康醫療 <b class="down">−1.52%</b> 居末三位。</li>
+    <li><b>S&amp;P 500 十一個分類產業以工業 <b class="up">+1.1%</b>、公用事業 <b class="up">+0.5%</b> 居前，醫療保健 <b class="down">−1.1%</b> 居末。</b>能源 <b class="up">+0.2%</b>、資訊科技 <b>0.0%</b>，通訊服務 <b class="down">−0.6%</b>、日常消費品與房地產同為 <b class="down">−0.5%</b>。</li>
+    <li><b>重要美股指標股 10 檔中 4 檔收紅，高通 <b class="up">+2.0%</b> 居首、英偉達 <b class="down">−1.6%</b> 居末。</b>蘋果 <b class="up">+1.2%</b>、Meta <b class="up">+1.1%</b>、微軟 <b class="up">+1.0%</b> 同步收紅；年初至今以應用材料 <b class="up">+86.7%</b> 最高，特斯拉 <b class="down">−23.1%</b> 最低。</li>
+    <li><b>本週剩餘兩個交易日的海外財報集中於資安、PC 與軟體。</b>08/27 有 CRWD（CrowdStrike）、HPQ（惠普）、BBY、WSM、SJM、DG、VEEV；08/28 有 MRVL（Marvell）、ADSK、BF/B、HRL。</li>
+  </ul>
+</div>
+<section id="s1">
+  <div class="shead"><span class="idx">01</span><h2>國際</h2><span class="sub">08/26 收盤</span></div>
+  <div class="card">
+    <h3>國際市場　單日漲跌<em>單位：%</em></h3>
+    <div class="hrow"><span class="hlbl">台 <b>OTC</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:86.96%;background:var(--up)"></i></span><span class="hval up">+1.6</span></div>
+    <div class="hrow"><span class="hlbl">台 <b>上市</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:79.89%;background:var(--up)"></i></span><span class="hval up">+1.47</span></div>
+    <div class="hrow"><span class="hlbl">韓 <b>KOSPI</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:52.72%;background:var(--up)"></i></span><span class="hval up">+0.97</span></div>
+    <div class="hrow"><span class="hlbl">日 <b>日經225</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:33.70%;background:var(--up)"></i></span><span class="hval up">+0.62</span></div>
+    <div class="hrow"><span class="hlbl">中 <b>上證</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:32.07%;background:var(--up)"></i></span><span class="hval up">+0.59</span></div>
+    <div class="hrow"><span class="hlbl">港 <b>恆生</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:30.43%;background:var(--up)"></i></span><span class="hval up">+0.56</span></div>
+    <div class="hrow"><span class="hlbl">法 <b>CAC 40</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:14.67%;background:var(--up)"></i></span><span class="hval up">+0.27</span></div>
+    <div class="hrow"><span class="hlbl">美 <b>費半</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:10.87%;background:var(--up)"></i></span><span class="hval up">+0.20</span></div>
+    <div class="hrow"><span class="hlbl">德 <b>DAX</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:4.35%;background:var(--up)"></i></span><span class="hval up">+0.08</span></div>
+    <div class="hrow"><span class="hlbl">美 <b>Nasdaq100</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="left:13.04%;width:2.72%;background:var(--up)"></i></span><span class="hval up">+0.05</span></div>
+    <div class="hrow"><span class="hlbl">美 <b>S&amp;P500</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="right:86.96%;width:1.09%;background:var(--down)"></i></span><span class="hval down">−0.02</span></div>
+    <div class="hrow"><span class="hlbl">英 <b>FTSE 100</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="right:86.96%;width:3.80%;background:var(--down)"></i></span><span class="hval down">−0.07</span></div>
+    <div class="hrow"><span class="hlbl">美 <b>道瓊</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="right:86.96%;width:11.41%;background:var(--down)"></i></span><span class="hval down">−0.21</span></div>
+    <div class="hrow"><span class="hlbl">印 <b>SENSEX</b></span><span class="htrack"><span class="z" style="left:13.04%"></span><i style="right:86.96%;width:13.04%;background:var(--down)"></i></span><span class="hval down">−0.24</span></div>
+  </div>
+  <div class="card">
+    <h3>S&amp;P 500 分類產業　單日漲跌<em>單位：%</em></h3>
+    <div class="hrow"><span class="hlbl">工業</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="left:50.00%;width:50.00%;background:var(--up)"></i></span><span class="hval up">+1.1</span></div>
+    <div class="hrow"><span class="hlbl">公用事業</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="left:50.00%;width:22.73%;background:var(--up)"></i></span><span class="hval up">+0.5</span></div>
+    <div class="hrow"><span class="hlbl">能源</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="left:50.00%;width:9.09%;background:var(--up)"></i></span><span class="hval up">+0.2</span></div>
+    <div class="hrow"><span class="hlbl">資訊科技</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="left:50.00%;width:0.00%;background:var(--up)"></i></span><span class="hval flat">0.0</span></div>
+    <div class="hrow"><span class="hlbl">金融</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="right:50.00%;width:4.55%;background:var(--down)"></i></span><span class="hval down">−0.1</span></div>
+    <div class="hrow"><span class="hlbl">原材料</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="right:50.00%;width:4.55%;background:var(--down)"></i></span><span class="hval down">−0.1</span></div>
+    <div class="hrow"><span class="hlbl">非日常生活消費品</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="right:50.00%;width:18.18%;background:var(--down)"></i></span><span class="hval down">−0.4</span></div>
+    <div class="hrow"><span class="hlbl">房地產</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="right:50.00%;width:22.73%;background:var(--down)"></i></span><span class="hval down">−0.5</span></div>
+    <div class="hrow"><span class="hlbl">日常消費品</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="right:50.00%;width:22.73%;background:var(--down)"></i></span><span class="hval down">−0.5</span></div>
+    <div class="hrow"><span class="hlbl">通訊服務</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="right:50.00%;width:27.27%;background:var(--down)"></i></span><span class="hval down">−0.6</span></div>
+    <div class="hrow"><span class="hlbl">醫療保健</span><span class="htrack"><span class="z" style="left:50.00%"></span><i style="right:50.00%;width:50.00%;background:var(--down)"></i></span><span class="hval down">−1.1</span></div>
+  </div>
+  <div class="card">
+    <h3>國際重點新聞</h3>
+    <div class="sumup" style="margin-top:0; padding-top:0; border-top:none">
+      <ul>
+        <li><b>美國 7 月 PCE 年增 3.7%、略高於市場預期，市場重新提高升息預期。</b>整體 PCE 月增 0.2%，核心 PCE 月增 0.2% 與預期一致，但仍遠高於聯準會 2% 的目標；商品價格受能源與耐久財價格下跌影響而走弱，服務價格則持續上漲，金融服務、保險及住房成本為主要壓力來源。7 月名目消費支出月增 0.2%，經通膨調整後的實質消費支出幾乎持平，儲蓄率升至 3%；第二季 GDP 季增年率維持 1.5%，個人消費支出上修至 3.4%、非住宅固定投資上修至 8.5%。數據公布後美元與美債殖利率同步走高，美元指數 99.17、+0.25%，10 年期公債殖利率 4.65%、2 年期 4.21%。</li>
+        <li><b>輝達 2Q27 財報全面優於市場預期，資料中心營收年增 117% 至 890 億美元。</b>單季營收 962 億美元、年增 106%，EPS 2.22 美元，資料中心占總營收逾九成。公司預估第三季營收 1,080 億美元、將首度突破單季千億美元，但毛利率指引降至 74%。管理層表示 Rubin 平台已進入全面量產，並預估 2028 財年營收成長約 70%，加上亞馬遜承諾額外部署 200 萬顆 GPU，帶動股價盤後由跌轉漲近 5%；終場收 209.7 美元、−1.6%。</li>
+        <li><b>蘋果將於台灣時間 9 月 10 日凌晨舉行秋季發表會。</b>市場焦點集中在 iPhone 18 Pro 系列與首款摺疊 iPhone，新機預計搭載 2 奈米 A20 Pro 晶片、自研 C2 數據機及更強影像功能，摺疊機型售價可能超過 2,000 美元。Apple Watch、Apple TV、HomePod mini 與 iPad mini 也有機會同步更新，升級重點圍繞 AI 與智慧家庭生態。蘋果收 313.5 美元、+1.2%。</li>
+        <li><b>企業軟體與資安財報同步優於預期，AI 產品成為主要成長引擎。</b>CrowdStrike ARR 年增 25% 至 58.4 億美元，單季新增 ARR 3.33 億美元創新高，上調全年 ARR 成長預期至 34%，超過半數客戶已部署 6 個以上模組；Salesforce 單季營收 113.5 億美元、年增 11%，Agentforce 與 Data 360 ARR 接近 39 億美元、年增逾 210%，並宣布與 Anthropic 合作推出 Claudeforce；HP 上調全年財測，受惠商用 PC、工作站及 AI PC 需求帶動。</li>
+        <li><b>Revolution Medicines 胰臟癌新藥 daraxonrasib 獲 FDA 核准上市。</b>為首款廣泛靶向 RAS 蛋白的口服靶向藥物，華爾街預估該藥 2032 年銷售額有望超過 90 億美元。另一方面，Anthropic 宣布以 450 億美元鎖定 AI 算力，模型大廠競逐 Rubin 世代基礎設施，AI 資本支出競賽持續升溫。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="s2">
+  <div class="shead"><span class="idx">02</span><h2>海外股</h2><span class="sub">08/26 收盤</span></div>
+
+  <div class="card">
+    <h3>全球族群漲跌幅<em>單位：%</em></h3>
+    <div class="hrow"><span class="hlbl">PC</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:32.90%;background:var(--up)"></i></span><span class="hval up">+1.78</span></div>
+    <div class="hrow"><span class="hlbl">手機</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:27.91%;background:var(--up)"></i></span><span class="hval up">+1.51</span></div>
+    <div class="hrow"><span class="hlbl">資安</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:25.51%;background:var(--up)"></i></span><span class="hval up">+1.38</span></div>
+    <div class="hrow"><span class="hlbl">通訊</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:17.19%;background:var(--up)"></i></span><span class="hval up">+0.93</span></div>
+    <div class="hrow"><span class="hlbl">奢侈品</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:13.68%;background:var(--up)"></i></span><span class="hval up">+0.74</span></div>
+    <div class="hrow"><span class="hlbl">網路</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:11.65%;background:var(--up)"></i></span><span class="hval up">+0.63</span></div>
+    <div class="hrow"><span class="hlbl">車用</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:3.51%;background:var(--up)"></i></span><span class="hval up">+0.19</span></div>
+    <div class="hrow"><span class="hlbl">晶圓代工</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:0.74%;background:var(--up)"></i></span><span class="hval up">+0.04</span></div>
+    <div class="hrow"><span class="hlbl">金融</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="left:67.10%;width:0.18%;background:var(--up)"></i></span><span class="hval up">+0.01</span></div>
+    <div class="hrow"><span class="hlbl">半導體設備</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:0.37%;background:var(--down)"></i></span><span class="hval down">−0.02</span></div>
+    <div class="hrow"><span class="hlbl">食品</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:4.62%;background:var(--down)"></i></span><span class="hval down">−0.25</span></div>
+    <div class="hrow"><span class="hlbl">商社</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:7.21%;background:var(--down)"></i></span><span class="hval down">−0.39</span></div>
+    <div class="hrow"><span class="hlbl">AI</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:10.35%;background:var(--down)"></i></span><span class="hval down">−0.56</span></div>
+    <div class="hrow"><span class="hlbl">GPU</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:11.28%;background:var(--down)"></i></span><span class="hval down">−0.61</span></div>
+    <div class="hrow"><span class="hlbl">運輸</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:11.83%;background:var(--down)"></i></span><span class="hval down">−0.64</span></div>
+    <div class="hrow"><span class="hlbl">汽車</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:12.20%;background:var(--down)"></i></span><span class="hval down">−0.66</span></div>
+    <div class="hrow"><span class="hlbl">記憶體</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:12.57%;background:var(--down)"></i></span><span class="hval down">−0.68</span></div>
+    <div class="hrow"><span class="hlbl">原物料</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:17.19%;background:var(--down)"></i></span><span class="hval down">−0.93</span></div>
+    <div class="hrow"><span class="hlbl">成衣</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:17.74%;background:var(--down)"></i></span><span class="hval down">−0.96</span></div>
+    <div class="hrow"><span class="hlbl">零售商</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:18.30%;background:var(--down)"></i></span><span class="hval down">−0.99</span></div>
+    <div class="hrow"><span class="hlbl">軟體</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:19.78%;background:var(--down)"></i></span><span class="hval down">−1.07</span></div>
+    <div class="hrow"><span class="hlbl">健康醫療</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:28.10%;background:var(--down)"></i></span><span class="hval down">−1.52</span></div>
+    <div class="hrow"><span class="hlbl">串流媒體</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:34.38%;background:var(--down)"></i></span><span class="hval down">−1.86</span></div>
+    <div class="hrow"><span class="hlbl">區塊鏈</span><span class="htrack"><span class="z" style="left:67.10%"></span><i style="right:32.90%;width:67.10%;background:var(--down)"></i></span><span class="hval down">−3.63</span></div>
+  </div>
+
+  <div class="card">
+    <h3>全球強勢族群<em>各族群僅列 2 檔強勢指標股</em></h3>
+    <div class="osg">
+      <div class="osgh"><b>PC</b><span>族群平均 <em class="up">+1.78%</em>　·　族群股 3 檔</span></div>
+      <div class="usg">
+      <div class="usc"><div class="nm">惠普<small>USD</small></div><div class="pr"><b>30.5</b><em class="up">+3.39%</em></div><div class="yr"><s>今年</s><span class="up">+36.98%</span></div></div>
+      <div class="usc"><div class="nm">Dell<small>USD</small></div><div class="pr"><b>463.8</b><em class="up">+2.73%</em></div><div class="yr"><s>今年</s><span class="up">+268.46%</span></div></div>
+      </div>
+    </div>
+    <div class="osg">
+      <div class="osgh"><b>手機</b><span>族群平均 <em class="up">+1.51%</em>　·　族群股 6 檔</span></div>
+      <div class="usg">
+      <div class="usc"><div class="nm">小米<small>HKD</small></div><div class="pr"><b>28.5</b><em class="up">+2.52%</em></div><div class="yr"><s>今年</s><span class="down">−27.58%</span></div></div>
+      <div class="usc"><div class="nm">高通<small>USD</small></div><div class="pr"><b>163.7</b><em class="up">+1.97%</em></div><div class="yr"><s>今年</s><span class="down">−4.29%</span></div></div>
+      </div>
+    </div>
+    <div class="osg">
+      <div class="osgh"><b>資安</b><span>族群平均 <em class="up">+1.38%</em>　·　族群股 4 檔</span></div>
+      <div class="usg">
+      <div class="usc"><div class="nm">Fortinet<small>USD</small></div><div class="pr"><b>157.5</b><em class="up">+2.53%</em></div><div class="yr"><s>今年</s><span class="up">+98.39%</span></div></div>
+      <div class="usc"><div class="nm">CrowdStrike<small>USD</small></div><div class="pr"><b>189.2</b><em class="up">+2.05%</em></div><div class="yr"><s>今年</s><span class="up">+61.43%</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>重要美股指標股<em>收盤價／日漲跌</em></h3>
+    <div class="usg">
+      <div class="usc"><div class="nm">高通 QCOM</div><div class="pr"><b>163.7</b><em class="up">+2.0%</em></div><div class="yr"><s>今年</s><span class="down">−4.3%</span></div></div>
+      <div class="usc"><div class="nm">蘋果 AAPL</div><div class="pr"><b>313.5</b><em class="up">+1.2%</em></div><div class="yr"><s>今年</s><span class="up">+15.3%</span></div></div>
+      <div class="usc"><div class="nm">Meta</div><div class="pr"><b>576.1</b><em class="up">+1.1%</em></div><div class="yr"><s>今年</s><span class="down">−12.7%</span></div></div>
+      <div class="usc"><div class="nm">微軟 MSFT</div><div class="pr"><b>496.4</b><em class="up">+1.0%</em></div><div class="yr"><s>今年</s><span class="up">+2.6%</span></div></div>
+      <div class="usc"><div class="nm">應用材料 AMAT</div><div class="pr"><b>479.8</b><em class="down">−0.1%</em></div><div class="yr"><s>今年</s><span class="up">+86.7%</span></div></div>
+      <div class="usc"><div class="nm">亞馬遜 AMZN</div><div class="pr"><b>260.3</b><em class="down">−0.3%</em></div><div class="yr"><s>今年</s><span class="up">+12.8%</span></div></div>
+      <div class="usc"><div class="nm">Netflix</div><div class="pr"><b>81.5</b><em class="down">−0.9%</em></div><div class="yr"><s>今年</s><span class="down">−13.1%</span></div></div>
+      <div class="usc"><div class="nm">特斯拉 TSLA</div><div class="pr"><b>345.8</b><em class="down">−1.3%</em></div><div class="yr"><s>今年</s><span class="down">−23.1%</span></div></div>
+      <div class="usc"><div class="nm">Alphabet</div><div class="pr"><b>342.0</b><em class="down">−1.4%</em></div><div class="yr"><s>今年</s><span class="up">+9.3%</span></div></div>
+      <div class="usc"><div class="nm">英偉達 NVDA</div><div class="pr"><b>209.7</b><em class="down">−1.6%</em></div><div class="yr"><s>今年</s><span class="up">+12.4%</span></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>本週海外財報</h3>
+    <div class="cal">
+      <div class="calr"><div class="cald">08/27　四</div><div class="calc"><div class="calx" style="grid-template-columns:minmax(0,1fr)"><span>CRWD（CrowdStrike）、HPQ（惠普）、BBY、WSM、SJM、DG、VEEV</span></div></div></div>
+      <div class="calr"><div class="cald">08/28　五</div><div class="calc"><div class="calx" style="grid-template-columns:minmax(0,1fr)"><span>MRVL（Marvell）、ADSK、BF/B、HRL</span></div></div></div>
+    </div>
+  </div>
+
+</section>
+<div class="disc">
+  <h4>資料來源與免責聲明</h4>
+  <p><b>資料來源：</b>中國信託證券投資顧問《國際市場晨報》、《今日台股盤勢重點》2026/08/27。所有數據為 2026/08/26（週三）收盤資料。文中排名均指該項排行榜內之名次。海外股段的族群與成分股歸屬依《國際市場晨報》國際重要公司價格追蹤表，共 24 個族群、116 檔；族群平均為該族群全部成分股日漲跌幅的算術平均，未做市值加權，成分股檔數最少者為 2 檔。海外個股收盤價與幣別照抄來源表，未換算為單一幣別；財報行事曆以美股代號表示，部分公司為預估日期。</p>
+  <p>本報告係本公司於特定日期就現有資訊所提出，雖已力求正確與完整，但因時間及市場客觀因素改變所造成產業、市場或個股之相關條件改變，本公司將不做預告或更新；且本報告並非依特定投資目的或特定對象之財務狀況所完成，其目的並非針對客戶於買賣證券、選擇權、期貨或其他證券相關商品提供詢價或推介服務，亦非進行交易之要約。</p>
+  <p>本報告所列個股僅為籌碼與技術面資訊之整理，不構成任何買賣建議或獲利保證。個股分組僅依所屬產業類股排列，不代表對個股之評價或未來表現之預期。投資人應自行考量本身之需求、投資風險及承受度，並就投資結果自行負責。非經本公司同意，任何人不得將本報告加以引用或轉載。</p>
+  <p>中國信託證券投資顧問股份有限公司獨立經營管理　·　台北市南港區經貿二路 188 號 5 樓及 18 樓　·　(02) 5569-1988　·　營業執照字號：114 金管投顧新字第 014 號</p>
+</div>
+
+<a class="top" href="#top">↑ 回到頂端</a>
+
+</div>
+
+<script>
+(function(){
+  var wrap = document.getElementById('navwrap');
+  var track = document.getElementById('navtrack');
+  if(!wrap || !track) return;
+  function update(){
+    var max = track.scrollWidth - track.clientWidth;
+    wrap.classList.toggle('can-l', track.scrollLeft > 1);
+    wrap.classList.toggle('can-r', track.scrollLeft < max - 1);
+  }
+  track.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  wrap.querySelectorAll('.navar').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var step = Math.max(track.clientWidth * 0.7, 120);
+      track.scrollBy({left: btn.classList.contains('navar-l') ? -step : step, behavior:'smooth'});
+    });
+  });
+  update();
+  window.addEventListener('load', update);
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(update); }
+  setTimeout(update, 300);
+})();
+
+document.querySelectorAll('.ov a.ovrow, .nav a').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var id = a.getAttribute('href');
+    if(!id || id.charAt(0) !== '#') return;
+    var el = document.querySelector(id);
+    if(!el) return;
+    e.preventDefault();
+    if(el.tagName.toLowerCase() === 'details'){ el.open = true; }
+    var d = el.closest ? el.closest('details') : null;
+    if(d){ d.open = true; }
+    setTimeout(function(){
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      history.replaceState(null,'',id);
+    }, 60);
+  });
+});
+</script>
+</body>
+</html>
