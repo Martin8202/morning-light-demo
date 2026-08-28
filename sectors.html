@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a4b46">
-<title>早安亮點 2026/08/27｜主流族群｜手機版</title>
+<title>早安亮點 2026/08/28｜主流族群｜手機版</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -117,14 +117,15 @@ section{margin-bottom:24px; scroll-margin-top:48px}
 .hval{font-size:11.5px; font-weight:700; text-align:right; font-family:"Roboto Mono",monospace}
 
 /* 美股指標股 雙欄格 */
-.usg{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line)}
+.usg{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:var(--line)}
 .usc{background:var(--card); padding:9px 10px}
 .usc .nm{font-size:12px; font-weight:700; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .usc .pr{display:flex; align-items:baseline; justify-content:space-between; gap:6px;
+  flex-wrap:wrap; row-gap:0;
   line-height:1.3; margin:1px 0; font-family:"Roboto Mono",monospace; font-variant-numeric:tabular-nums}
 .usc .pr b{font-size:16px; font-weight:700}
-.usc .pr em{font-style:normal; font-size:12.5px; font-weight:700}
-.usc .yr{display:flex; align-items:baseline; justify-content:flex-end; gap:4px;
+.usc .pr em{font-style:normal; font-size:12.5px; font-weight:700; margin-left:auto}
+.usc .yr{display:flex; align-items:baseline; justify-content:flex-end; gap:4px; flex-wrap:wrap;
   font-size:10.5px; font-family:"Roboto Mono",monospace; font-variant-numeric:tabular-nums; line-height:1.4}
 .usc .yr s{text-decoration:none; color:var(--muted); font-family:"Noto Sans TC",sans-serif}
 
@@ -158,7 +159,7 @@ section{margin-bottom:24px; scroll-margin-top:48px}
 .fgc .ch{font-size:11px; font-weight:700; font-family:"Roboto Mono",monospace}
 .fgc .vo{font-size:9.5px; color:var(--muted); font-family:"Roboto Mono",monospace; margin-top:1px}
 
-/* 法人排行列（03 段） */
+/* 法人排行列 */
 .rk{display:grid; grid-template-columns:20px minmax(0,1fr) auto; gap:9px; align-items:baseline;
   padding:9px 0; border-bottom:1px solid var(--line)}
 .rkm{min-width:0}
@@ -250,48 +251,48 @@ details.grp>summary .cnt{font-family:"Roboto Mono",monospace; font-size:11px; co
 <header class="mast" id="top">
   <div class="brand">中國信託證券 × 中信投顧</div>
   <h1>早安亮點</h1>
-  <div class="date num">2026 / 08 / 27　週四　·　主流族群</div>
+  <div class="date num">2026 / 08 / 28　週五　·　主流族群</div>
   <a class="more" href="index.html">‹ 早安亮點</a>
 </header>
 
 <section id="s1">
-  <div class="shead"><span class="idx">01</span><h2>主流族群</h2><span class="sub">週三資金分布</span></div>
+  <div class="shead"><span class="idx">01</span><h2>主流族群</h2><span class="sub">週四資金分布</span></div>
 
   <div class="card">
     <h3>當沖資金流向　依類股金額<em>占總當沖金額比</em></h3>
-    <div class="hrow"><span class="hlbl"><b>半導體</b><small>1,125 億</small></span><span class="htrack"><i style="left:0;width:100.00%;background:var(--teal)"></i></span><span class="hval">33%</span></div>
-    <div class="hrow"><span class="hlbl"><b>電子零組件</b><small>911 億</small></span><span class="htrack"><i style="left:0;width:80.98%;background:var(--teal)"></i></span><span class="hval">27%</span></div>
-    <div class="hrow"><span class="hlbl"><b>電腦及週邊設備</b><small>302 億</small></span><span class="htrack"><i style="left:0;width:26.84%;background:var(--teal)"></i></span><span class="hval">9%</span></div>
-    <div class="hrow"><span class="hlbl"><b>光電</b><small>283 億</small></span><span class="htrack"><i style="left:0;width:25.16%;background:var(--teal)"></i></span><span class="hval">8%</span></div>
-    <div class="hrow"><span class="hlbl"><b>運輸類</b><small>156 億</small></span><span class="htrack"><i style="left:0;width:13.87%;background:var(--teal)"></i></span><span class="hval">5%</span></div>
+    <div class="hrow"><span class="hlbl"><b>半導體</b><small>1,340 億</small></span><span class="htrack"><i style="left:0;width:100.00%;background:var(--teal)"></i></span><span class="hval">34%</span></div>
+    <div class="hrow"><span class="hlbl"><b>電子零組件</b><small>1,122 億</small></span><span class="htrack"><i style="left:0;width:83.73%;background:var(--teal)"></i></span><span class="hval">29%</span></div>
+    <div class="hrow"><span class="hlbl"><b>電腦及週邊設備</b><small>280 億</small></span><span class="htrack"><i style="left:0;width:20.90%;background:var(--teal)"></i></span><span class="hval">7%</span></div>
+    <div class="hrow"><span class="hlbl"><b>光電</b><small>277 億</small></span><span class="htrack"><i style="left:0;width:20.67%;background:var(--teal)"></i></span><span class="hval">7%</span></div>
+    <div class="hrow"><span class="hlbl"><b>塑膠類</b><small>201 億</small></span><span class="htrack"><i style="left:0;width:15.00%;background:var(--teal)"></i></span><span class="hval">5%</span></div>
   </div>
 
   <div class="card">
     <h3>三大主流族群<em>收盤／漲跌／5 日均量</em></h3>
 
     <div class="fg">
-      <div class="fghd"><b>散熱</b><span>多檔個股下半年迎接出貨旺季，液冷滲透率長線提高趨勢仍未改變，三檔週三同步收紅。</span></div>
+      <div class="fghd"><b>PCB</b><span>IC 載板供不應求至 2028 年，原料端玻纖布與銅箔續缺，PCB 上中下游個股表現，三檔週四同步收紅。</span></div>
       <div class="fgrid">
-        <div class="fgc"><div class="nm"><b>奇鋐</b>3017</div><div class="pr">3155</div><div class="ch up">+7.0%</div><div class="vo">3,231 張</div></div><div class="fgc"><div class="nm"><b>健策</b>3653</div><div class="pr">5725</div><div class="ch up">+10.0%</div><div class="vo">1,622 張</div></div><div class="fgc"><div class="nm"><b>雙鴻</b>3324</div><div class="pr">1075</div><div class="ch up">+0.9%</div><div class="vo">2,592 張</div></div>
+        <div class="fgc"><div class="nm"><b>南亞</b>1303</div><div class="pr">227.5</div><div class="ch up">+9.9%</div><div class="vo">88,655 張</div></div><div class="fgc"><div class="nm"><b>南電</b>8046</div><div class="pr">1295</div><div class="ch up">+9.8%</div><div class="vo">9,919 張</div></div><div class="fgc"><div class="nm"><b>金居</b>8358</div><div class="pr">494</div><div class="ch up">+9.9%</div><div class="vo">25,600 張</div></div>
       </div>
     </div>
     <div class="fg">
-      <div class="fghd"><b>散裝航運</b><span>融資與融券同步減少，避險資金退潮，航運族群短線轉弱，三檔週三同步收黑。</span></div>
+      <div class="fghd"><b>散熱</b><span>多檔個股下半年迎接出貨旺季，液冷滲透率長線提高趨勢仍未改變，三檔週四漲跌互見。</span></div>
       <div class="fgrid">
-        <div class="fgc"><div class="nm"><b>裕民</b>2606</div><div class="pr">72</div><div class="ch down">−7.7%</div><div class="vo">23,451 張</div></div><div class="fgc"><div class="nm"><b>萬海</b>2615</div><div class="pr">115</div><div class="ch down">−9.1%</div><div class="vo">84,896 張</div></div><div class="fgc"><div class="nm"><b>中航</b>2612</div><div class="pr">61.5</div><div class="ch down">−3.6%</div><div class="vo">3,331 張</div></div>
+        <div class="fgc"><div class="nm"><b>奇鋐</b>3017</div><div class="pr">3340</div><div class="ch up">+5.9%</div><div class="vo">3,810 張</div></div><div class="fgc"><div class="nm"><b>健策</b>3653</div><div class="pr">5645</div><div class="ch down">−1.4%</div><div class="vo">1,620 張</div></div><div class="fgc"><div class="nm"><b>雙鴻</b>3324</div><div class="pr">1060</div><div class="ch down">−1.4%</div><div class="vo">3,180 張</div></div>
       </div>
     </div>
     <div class="fg">
-      <div class="fghd"><b>矽晶圓</b><span>近期終端市場需求改善，矽晶圓產業迎接 3 年來首度全面上漲，三檔週三漲跌互見。</span></div>
+      <div class="fghd"><b>散裝航運</b><span>族群指標股週四漲跌互見，裕民與中航收紅、萬海收黑，萬海五日均量為三檔中最高。</span></div>
       <div class="fgrid">
-        <div class="fgc"><div class="nm"><b>台勝科</b>3532</div><div class="pr">382</div><div class="ch up">+1.1%</div><div class="vo">12,726 張</div></div><div class="fgc"><div class="nm"><b>環球晶</b>6488</div><div class="pr">949</div><div class="ch down">−3.2%</div><div class="vo">9,788 張</div></div><div class="fgc"><div class="nm"><b>合晶</b>6182</div><div class="pr">107</div><div class="ch down">−0.9%</div><div class="vo">60,717 張</div></div>
+        <div class="fgc"><div class="nm"><b>裕民</b>2606</div><div class="pr">74.3</div><div class="ch up">+3.2%</div><div class="vo">24,100 張</div></div><div class="fgc"><div class="nm"><b>萬海</b>2615</div><div class="pr">113.5</div><div class="ch down">−1.3%</div><div class="vo">78,723 張</div></div><div class="fgc"><div class="nm"><b>中航</b>2612</div><div class="pr">62</div><div class="ch up">+0.8%</div><div class="vo">3,509 張</div></div>
       </div>
     </div>
   </div>
 </section>
 <div class="disc">
   <h4>資料來源與免責聲明</h4>
-  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》2026/08/27。所有數據為 2026/08/26（週三）收盤資料。當沖金額占比為當日當沖金額前五大類股之占總當沖金額比。</p>
+  <p><b>資料來源：</b>中國信託證券投資顧問《今日台股盤勢重點》2026/08/28。所有數據為 2026/08/27（週四）收盤資料。當沖金額占比為當日當沖金額前五大類股之占總當沖金額比。</p>
   <p>本報告係本公司於特定日期就現有資訊所提出，雖已力求正確與完整，但因時間及市場客觀因素改變所造成產業、市場或個股之相關條件改變，本公司將不做預告或更新；且本報告並非依特定投資目的或特定對象之財務狀況所完成，其目的並非針對客戶於買賣證券、選擇權、期貨或其他證券相關商品提供詢價或推介服務，亦非進行交易之要約。</p>
   <p>本報告所列個股僅為籌碼與技術面資訊之整理，不構成任何買賣建議或獲利保證。族群分類僅依產業屬性排列，不代表對個股之評價或未來表現之預期。投資人應自行考量本身之需求、投資風險及承受度，並就投資結果自行負責。非經本公司同意，任何人不得將本報告加以引用或轉載。</p>
   <p>中國信託證券投資顧問股份有限公司獨立經營管理　·　台北市南港區經貿二路 188 號 5 樓及 18 樓　·　(02) 5569-1988　·　營業執照字號：114 金管投顧新字第 014 號</p>
